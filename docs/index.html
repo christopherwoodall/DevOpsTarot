@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
   <canvas id="particleCanvas"></canvas>
@@ -105,11 +106,11 @@
       main.innerHTML = `
         <div class="landing-screen">
           <div class="button-group">
-            <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ONE CARD ]</button>
-            <button class="cyber-btn cyan" onclick="drawThreeSpread()">[ DRAW 3-CARD SPREAD ]</button>
+            <button class="cyber-btn" onclick="drawSingleSpread()">🎴 DRAW ONE CARD</button>
+            <button class="cyber-btn cyan" onclick="drawThreeSpread()">🔮 DRAW 3-CARD SPREAD</button>
           </div>
           <div class="cards-link-section">
-            <a href="cards.html" class="cyber-btn gold">[ BROWSE ALL 78 CARDS ]</a>
+            <a href="cards.html" class="cyber-btn gold">📚 BROWSE ALL 78 CARDS</a>
           </div>
         </div>
       `;
@@ -156,8 +157,8 @@
             </div>
           </div>
           <div class="button-group">
-            <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ANOTHER ]</button>
-            <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
+            <button class="cyber-btn" onclick="drawSingleSpread()">🎴 DRAW ANOTHER</button>
+            <button class="cyber-btn cyan" onclick="renderLanding()">🔄 START OVER</button>
           </div>
         </div>
       `;
@@ -201,8 +202,8 @@
           </div>
           <div id="threeSpreadSummary" style="width: 100%; max-width: 900px; margin-top: 1rem;"></div>
           <div class="button-group">
-            <button class="cyber-btn" onclick="drawThreeSpread()">[ DRAW NEW SPREAD ]</button>
-            <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
+            <button class="cyber-btn" onclick="drawThreeSpread()">🔮 DRAW NEW SPREAD</button>
+            <button class="cyber-btn cyan" onclick="renderLanding()">🔄 START OVER</button>
           </div>
         </div>
       `;
@@ -274,7 +275,26 @@
         w = canvas.width = window.innerWidth;
         h = canvas.height = window.innerHeight;
       });
-      const symbols = ['0', '1', '{', '}', ';', '/>', 'git', 'k8s', 'sudo', 'docker', '200', '404', '503', 'gRPC'];
+      const symbols = ['0', '1', '{', '}', ';', '/>', 'git', 'k8s', 'sudo', 'docker', '200', '404', '503', 'gRPC',
+        'CI/CD', 'AGILE', 'DevOps', 'SRE', 'IaC', 'YAML', 'JSON', 'API', 'REST', 'GraphQL',
+        'KUBERNETES', 'HELM', 'TERRAFORM', 'ANSIBLE', 'PUPPET', 'CLOUD', 'AWS', 'AZURE', 'GCP',
+        'SERVERLESS', 'MICROSERVICES', 'CONTAINERS', 'PODS', 'NODES', 'CLUSTERS', 'ORCHESTRATE',
+        'MONITOR', 'OBSERVE', 'TRACE', 'LOG', 'METRIC', 'ALERT', 'PAGERDUTY', 'DATADOG',
+        'PROMETHEUS', 'GRAFANA', 'ELK', 'SPLUNK', 'NEWRELIC', 'JAEGER', 'ZIPKIN',
+        'JENKINS', 'GITHUB', 'GITLAB', 'CIRCLECI', 'TRAVIS', 'BAZEL', 'BAZOOKA',
+        'DEPLOY', 'ROLLBACK', 'CANARY', 'BLUE/GREEN', 'A/B', 'FEATURE FLAGS', 'DARK LAUNCH',
+        'SCALING', 'AUTO-SCALE', 'LOAD BAL', 'CDN', 'EDGE', 'CACHE', 'REDIS', 'MEMCACHED',
+        'POSTGRES', 'MONGO', 'DYNAMO', 'BIGTABLE', 'SPANNER', 'COCKROACH', 'CASSANDRA',
+        'KAFKA', 'RABBITMQ', 'SQS', 'PUB/SUB', 'EVENTS', 'STREAM', 'REALTIME',
+        'BLOCKCHAIN', 'WEB3', 'NFT', 'HYPE', 'BURNOUT', 'CRUNCH', 'SPRINT', 'RETRO',
+        'STANDUP', 'KANBAN', 'SCRUM', 'VELOCITY', 'STORY POINTS', 'TECH DEBT', 'REFACTOR',
+        'LEGACY', 'DEPRECATED', 'EOL', 'MIGRATE', 'MODERNIZE', 'TRANSFORM', 'DIGITAL',
+        'AI/ML', 'LLM', 'GPT', 'NEURAL', 'TENSORFLOW', 'PYTORCH', 'HUGGINGFACE',
+        'ZERO TRUST', 'VAULT', 'SECRETS', 'TLS', 'MTLS', 'OAUTH', 'JWT', 'SAML', 'SSO',
+        'PENTEST', 'AUDIT', 'COMPLIANCE', 'SOC2', 'ISO27001', 'HIPAA', 'GDPR', 'CCPA',
+        'DOWNTIME', 'INCIDENT', 'POSTMORTEM', 'BLAMELESS', 'RCA', 'MTTR', 'MTBF', 'SLO', 'SLA', 'SLI',
+        'CHAOS', 'GREMLIN', 'LITMUS', 'FAULT INJECT', 'RESILIENCE', 'RELIABILITY', 'RECOVERY',
+        'COST', 'OPTIMIZE', 'RIGHTSIZE', 'SPOT INST', 'RESERVED', 'SAVINGS PLAN', 'BILL SHOCK'];
       const particles = [];
       const numParticles = 45;
       for (let i = 0; i < numParticles; i++) {

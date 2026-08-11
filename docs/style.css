@@ -117,7 +117,7 @@ header {
 }
 
 .cyber-btn {
-  background: rgba(19, 23, 34, 0.85);
+  background: rgba(19, 23, 34, 0.92);
   border: 2px solid var(--neon-green);
   color: var(--neon-green);
   font-family: var(--font-code);
@@ -128,61 +128,87 @@ header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.15s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
+  text-decoration: none;
+  box-shadow: 0 4px 0 rgba(0, 255, 102, 0.35), 0 0 12px rgba(0, 255, 102, 0.15);
   animation: btnPulse 2.5s ease-in-out infinite;
 }
 
+.cyber-btn::after {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
 @keyframes btnPulse {
-  0%, 100% { box-shadow: 0 0 12px rgba(0, 255, 102, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(0, 255, 102, 0.45); }
+  0%, 100% { box-shadow: 0 4px 0 rgba(0, 255, 102, 0.35), 0 0 12px rgba(0, 255, 102, 0.2); }
+  50% { box-shadow: 0 4px 0 rgba(0, 255, 102, 0.35), 0 0 20px rgba(0, 255, 102, 0.45); }
 }
 
 .cyber-btn:hover {
   background: var(--neon-green);
   color: var(--bg-dark);
-  box-shadow: 0 0 30px rgba(0, 255, 102, 0.8);
-  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 0 rgba(0, 255, 102, 0.45), 0 0 25px rgba(0, 255, 102, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.cyber-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.cyber-btn:active {
+  box-shadow: 0 1px 0 rgba(0, 255, 102, 0.35), 0 0 8px rgba(0, 255, 102, 0.3);
+  transform: translateY(2px) scale(0.98);
 }
 
 .cyber-btn.cyan {
   border-color: var(--neon-cyan);
   color: var(--neon-cyan);
-  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+  box-shadow: 0 4px 0 rgba(0, 229, 255, 0.35), 0 0 12px rgba(0, 229, 255, 0.15);
   animation-name: btnPulseCyan;
 }
 
 @keyframes btnPulseCyan {
-  0%, 100% { box-shadow: 0 0 12px rgba(0, 229, 255, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.45); }
+  0%, 100% { box-shadow: 0 4px 0 rgba(0, 229, 255, 0.35), 0 0 12px rgba(0, 229, 255, 0.2); }
+  50% { box-shadow: 0 4px 0 rgba(0, 229, 255, 0.35), 0 0 20px rgba(0, 229, 255, 0.45); }
 }
 
 .cyber-btn.cyan:hover {
   background: var(--neon-cyan);
   color: var(--bg-dark);
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.8);
-  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 0 rgba(0, 229, 255, 0.45), 0 0 25px rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.cyber-btn.cyan:active {
+  box-shadow: 0 1px 0 rgba(0, 229, 255, 0.35), 0 0 8px rgba(0, 229, 255, 0.3);
+  transform: translateY(2px) scale(0.98);
 }
 
 .cyber-btn.gold {
   border-color: var(--neon-gold);
   color: var(--neon-gold);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 0 rgba(255, 215, 0, 0.35), 0 0 12px rgba(255, 215, 0, 0.15);
   animation-name: btnPulseGold;
 }
 
 @keyframes btnPulseGold {
-  0%, 100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.45); }
+  0%, 100% { box-shadow: 0 4px 0 rgba(255, 215, 0, 0.35), 0 0 12px rgba(255, 215, 0, 0.2); }
+  50% { box-shadow: 0 4px 0 rgba(255, 215, 0, 0.35), 0 0 20px rgba(255, 215, 0, 0.45); }
 }
 
 .cyber-btn.gold:hover {
   background: var(--neon-gold);
   color: var(--bg-dark);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 0 rgba(255, 215, 0, 0.45), 0 0 25px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.cyber-btn.gold:active {
+  box-shadow: 0 1px 0 rgba(255, 215, 0, 0.35), 0 0 8px rgba(255, 215, 0, 0.3);
+  transform: translateY(2px) scale(0.98);
 }
 
 .button-group {
@@ -556,11 +582,30 @@ header {
   display: inline-block;
   margin-bottom: 1.5rem;
   font-family: var(--font-code);
+  font-weight: 700;
+  font-size: 0.9rem;
   color: var(--neon-cyan);
   text-decoration: none;
-  transition: color 0.2s ease;
+  background: rgba(19, 23, 34, 0.92);
+  border: 2px solid var(--neon-cyan);
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 0 rgba(0, 229, 255, 0.35), 0 0 12px rgba(0, 229, 255, 0.15);
 }
 
 .back-link:hover {
-  color: var(--neon-green);
+  background: var(--neon-cyan);
+  color: var(--bg-dark);
+  box-shadow: 0 6px 0 rgba(0, 229, 255, 0.45), 0 0 25px rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.back-link:active {
+  box-shadow: 0 1px 0 rgba(0, 229, 255, 0.35), 0 0 8px rgba(0, 229, 255, 0.3);
+  transform: translateY(2px) scale(0.98);
 }
