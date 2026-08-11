@@ -4,590 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DevOps Tarot // Query The System</title>
-
-  <!-- OpenGraph & Twitter Social Meta Tags -->
   <meta property="og:title" content="DevOps Tarot" />
   <meta property="og:description" content="Query the system. 78 cards of operational wisdom." />
   <meta property="og:image" content="social-preview.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="social-preview.png" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg-dark: #0b0d12;
-      --panel-bg: #131722;
-      --panel-border: #1e2638;
-      --neon-green: #00ff66;
-      --neon-cyan: #00e5ff;
-      --neon-magenta: #ff007f;
-      --neon-gold: #ffd700;
-      --text-main: #e2e8f0;
-      --text-muted: #94a3b8;
-      --font-code: 'Fira Code', monospace, monospace;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      min-height: 100vh;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    /* Canvas background */
-    #particleCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.35;
-    }
-
-    /* Main Container */
-    #app {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    /* Header */
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-      width: 100%;
-    }
-
-    .logo-badge {
-      display: inline-block;
-      font-family: var(--font-code);
-      font-size: 0.85rem;
-      color: var(--neon-cyan);
-      background: rgba(0, 229, 255, 0.08);
-      border: 1px solid rgba(0, 229, 255, 0.3);
-      padding: 0.35rem 0.85rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .app-title {
-      font-family: var(--font-code);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 700;
-      color: var(--neon-green);
-      text-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
-      letter-spacing: -1px;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .app-subtitle {
-      font-family: var(--font-code);
-      font-size: 1.1rem;
-      color: var(--neon-cyan);
-      opacity: 0.9;
-    }
-
-    /* Controls Header Bar */
-    .audio-toggle-bar {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      z-index: 50;
-      display: flex;
-      gap: 0.75rem;
-    }
-
-    .cyber-btn-sm {
-      background: var(--panel-bg);
-      border: 1px solid var(--neon-cyan);
-      color: var(--neon-cyan);
-      font-family: var(--font-code);
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .cyber-btn-sm:hover {
-      background: var(--neon-cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-    }
-
-    /* Buttons */
-    .cyber-btn {
-      background: rgba(19, 23, 34, 0.85);
-      border: 2px solid var(--neon-green);
-      color: var(--neon-green);
-      font-family: var(--font-code);
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 0.85rem 2rem;
-      border-radius: 6px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
-    }
-
-    .cyber-btn:hover {
-      background: var(--neon-green);
-      color: var(--bg-dark);
-      box-shadow: 0 0 25px rgba(0, 255, 102, 0.7);
-      transform: translateY(-2px);
-    }
-
-    .cyber-btn.cyan {
-      border-color: var(--neon-cyan);
-      color: var(--neon-cyan);
-      box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
-    }
-
-    .cyber-btn.cyan:hover {
-      background: var(--neon-cyan);
-      color: var(--bg-dark);
-      box-shadow: 0 0 25px rgba(0, 229, 255, 0.7);
-    }
-
-    .button-group {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-
-    /* Landing Screen */
-    .landing-screen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 1rem;
-      width: 100%;
-      max-width: 800px;
-    }
-
-    .deck-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      width: 100%;
-      margin: 2.5rem 0;
-    }
-
-    .stat-card {
-      background: var(--panel-bg);
-      border: 1px solid var(--panel-border);
-      border-top: 3px solid var(--neon-cyan);
-      padding: 1.2rem;
-      border-radius: 6px;
-      text-align: center;
-    }
-
-    .stat-card .num {
-      font-family: var(--font-code);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--neon-green);
-    }
-
-    .stat-card .label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-      font-family: var(--font-code);
-    }
-
-    /* Tarot Spread Area */
-    .spread-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 0.4s ease forwards;
-    }
-
-    .cards-flex {
-      display: flex;
-      gap: 2.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 2rem 0;
-      width: 100%;
-    }
-
-    /* Card Item (3D Flip Effect) */
-    .card-wrapper {
-      perspective: 1200px;
-      width: 280px;
-      height: 490px;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .card-wrapper .pos-label {
-      position: absolute;
-      top: -38px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-family: var(--font-code);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--neon-cyan);
-      background: rgba(19, 23, 34, 0.8);
-      border: 1px solid var(--neon-cyan);
-      padding: 0.3rem 0;
-      border-radius: 4px;
-      letter-spacing: 1px;
-      z-index: 5;
-    }
-
-    .card-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-      border-radius: 12px;
-    }
-
-    .card-wrapper:hover .card-inner {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
-    }
-
-    .card-wrapper.flipped .card-inner {
-      transform: rotateY(180deg) translateY(-4px);
-    }
-
-    .card-face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 2px solid var(--neon-green);
-      box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
-    }
-
-    .card-face img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-face.back {
-      background: #090b10;
-      border-color: var(--neon-cyan);
-    }
-
-    .card-face.front {
-      transform: rotateY(180deg);
-      background: #0a0a0c;
-    }
-
-    .card-face.front.is-reversed img {
-      transform: rotate(180deg);
-    }
-
-    /* Card Details Panel */
-    .details-panel {
-      background: var(--panel-bg);
-      border: 1px solid var(--panel-border);
-      border-left: 4px solid var(--neon-green);
-      padding: 1.75rem;
-      border-radius: 8px;
-      max-width: 800px;
-      width: 100%;
-      margin-top: 1.5rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      animation: slideUp 0.4s ease forwards;
-    }
-
-    .details-panel.reversed-style {
-      border-left-color: var(--neon-magenta);
-    }
-
-    .card-title-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--panel-border);
-      padding-bottom: 0.75rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .card-name-text {
-      font-family: var(--font-code);
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--neon-green);
-    }
-
-    .orientation-badge {
-      font-family: var(--font-code);
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .orientation-badge.upright {
-      background: rgba(0, 255, 102, 0.15);
-      border: 1px solid var(--neon-green);
-      color: var(--neon-green);
-    }
-
-    .orientation-badge.reversed {
-      background: rgba(255, 0, 127, 0.15);
-      border: 1px solid var(--neon-magenta);
-      color: var(--neon-magenta);
-    }
-
-    .meaning-block {
-      margin-bottom: 1rem;
-    }
-
-    .meaning-label {
-      font-family: var(--font-code);
-      font-size: 0.85rem;
-      color: var(--neon-cyan);
-      margin-bottom: 0.35rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .meaning-text {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-main);
-    }
-
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(5, 7, 12, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal-content {
-      background: var(--panel-bg);
-      border: 2px solid var(--neon-cyan);
-      border-radius: 12px;
-      max-width: 900px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 2rem;
-      position: relative;
-      box-shadow: 0 0 40px rgba(0, 229, 255, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .modal-content {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: transparent;
-      border: 1px solid var(--neon-magenta);
-      color: var(--neon-magenta);
-      font-family: var(--font-code);
-      font-size: 1.2rem;
-      width: 36px;
-      height: 36px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .modal-card-img {
-      width: 100%;
-      border-radius: 8px;
-      border: 2px solid var(--neon-green);
-    }
-
-    .modal-card-img.reversed {
-      transform: rotate(180deg);
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Search/Codex Drawer */
-    .codex-section {
-      width: 100%;
-      margin-top: 3rem;
-      border-top: 1px solid var(--panel-border);
-      padding-top: 2rem;
-    }
-
-    .codex-title {
-      font-family: var(--font-code);
-      font-size: 1.3rem;
-      color: var(--neon-cyan);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .search-input {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto 1.5rem auto;
-      display: block;
-      background: var(--panel-bg);
-      border: 1px solid var(--neon-cyan);
-      color: var(--text-main);
-      font-family: var(--font-code);
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      outline: none;
-    }
-
-    .codex-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 1rem;
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 0.5rem;
-    }
-
-    .codex-thumb {
-      background: var(--panel-bg);
-      border: 1px solid var(--panel-border);
-      border-radius: 6px;
-      padding: 0.5rem;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s ease;
-    }
-
-    .codex-thumb:hover {
-      border-color: var(--neon-green);
-      transform: scale(1.05);
-    }
-
-    .codex-thumb img {
-      width: 100%;
-      border-radius: 4px;
-    }
-
-    .codex-thumb .name {
-      font-family: var(--font-code);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.35rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Particle Background Canvas -->
   <canvas id="particleCanvas"></canvas>
-
-  <!-- Audio Controls -->
-  <div class="audio-toggle-bar">
+  <div class="mode-toggle-bar">
     <button class="cyber-btn-sm" id="modeBtn" onclick="toggleMode()">📜 ORIGINAL MODE</button>
-    <button class="cyber-btn-sm" id="soundBtn" onclick="toggleSound()">🔊 SOUND: ON</button>
   </div>
-
   <div id="app">
     <header>
       <div class="logo-badge">SYSTEM VERSION 2.0 // DEVOPS ORACLE</div>
       <h1 class="app-title">DEVOPS TAROT</h1>
-      <p class="app-subtitle" id="typewriterSub">Query the system. 78 cards of operational wisdom.</p>
+      <p class="app-subtitle">Query the system. 78 cards of operational wisdom.</p>
     </header>
-
-    <!-- Main Dynamic Container -->
-    <main id="mainContent" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-      <!-- Populated via JS -->
-    </main>
-
-    <!-- Codex Deck Browser Section -->
-    <section class="codex-section">
-      <h2 class="codex-title">⬡ SYSTEM CODEX (78 CARDS) ⬡</h2>
-      <input type="text" class="search-input" id="codexSearch" placeholder="Search cards by name or concept..." oninput="filterCodex()" />
-      <div class="codex-grid" id="codexGrid"></div>
-    </section>
+    <main id="mainContent" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></main>
   </div>
 
-  <!-- Detail Modal -->
   <div class="modal-overlay" id="cardModal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -614,7 +55,6 @@
   </div>
 
   <script>
-    // Cards data loaded from external JSON for leaner HTML
     let TAROT_CARDS_DEVOPS = [];
     let TAROT_CARDS_ORIGINAL = [];
     let TAROT_CARDS = [];
@@ -630,7 +70,6 @@
         TAROT_CARDS_ORIGINAL = data.original || [];
         TAROT_CARDS = TAROT_CARDS_ORIGINAL;
         dataLoaded = true;
-        renderCodex();
         renderLanding();
       } catch (e) {
         console.error('Failed to load card data:', e);
@@ -638,48 +77,13 @@
       }
     }
 
-    // Sound Synthesizer (Web Audio API)
-    let soundEnabled = true;
-    const AudioCtx = window.AudioContext || window.webkitAudioContext;
-    let audioCtx = null;
-
-    function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new AudioCtx();
-      }
-    }
-
-    function playSynthBeep(freq = 440, type = 'sine', duration = 0.1) {
-      if (!soundEnabled) return;
-      try {
-        initAudio();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {}
-    }
-
-    function toggleSound() {
-      soundEnabled = !soundEnabled;
-      document.getElementById('soundBtn').innerText = soundEnabled ? '🔊 SOUND: ON' : '🔇 SOUND: OFF';
-    }
-
     function toggleMode() {
       currentMode = currentMode === 'devops' ? 'original' : 'devops';
       TAROT_CARDS = currentMode === 'devops' ? TAROT_CARDS_DEVOPS : TAROT_CARDS_ORIGINAL;
       document.getElementById('modeBtn').innerText = currentMode === 'devops' ? '⚡ OPS MODE' : '📜 ORIGINAL MODE';
-      // Re-render active view if any
       if (currentSpread.length > 0) {
         const main = document.getElementById('mainContent');
         if (main.querySelector('.cards-flex')) {
-          // Re-render current spread based on card count
           if (currentSpread.length === 1) {
             drawSingleSpread();
           } else if (currentSpread.length === 3) {
@@ -687,14 +91,10 @@
           }
         }
       }
-      // Refresh codex
-      renderCodex();
     }
 
-    // State
-    let currentSpread = []; // Array of { card, isReversed, positionName }
+    let currentSpread = [];
 
-    // Initialization
     window.addEventListener('DOMContentLoaded', () => {
       initParticleBackground();
       loadCardsData();
@@ -705,23 +105,16 @@
       main.innerHTML = `
         <div class="landing-screen">
           <div class="deck-stats">
-            <div class="stat-card">
-              <div class="num">78</div>
-              <div class="label">CARDS IN DECK</div>
-            </div>
-            <div class="stat-card">
-              <div class="num">22</div>
-              <div class="label">MAJOR ARCANA</div>
-            </div>
-            <div class="stat-card">
-              <div class="num">56</div>
-              <div class="label">MINOR ARCANA</div>
-            </div>
+            <div class="stat-card"><div class="num">78</div><div class="label">CARDS IN DECK</div></div>
+            <div class="stat-card"><div class="num">22</div><div class="label">MAJOR ARCANA</div></div>
+            <div class="stat-card"><div class="num">56</div><div class="label">MINOR ARCANA</div></div>
           </div>
-
           <div class="button-group">
             <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ONE CARD ]</button>
             <button class="cyber-btn cyan" onclick="drawThreeSpread()">[ DRAW 3-CARD SPREAD ]</button>
+          </div>
+          <div class="cards-link-section">
+            <a href="cards.html" class="cyber-btn gold">[ BROWSE ALL 78 CARDS ]</a>
           </div>
         </div>
       `;
@@ -731,32 +124,26 @@
       const shuffled = [...TAROT_CARDS].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count).map(card => ({
         card: card,
-        isReversed: Math.random() < 0.5
+        isReversed: Math.floor(Math.random() * 100) % 2 === 1
       }));
     }
 
-    // Single Card Spread
     function drawSingleSpread() {
-      playSynthBeep(587, 'triangle', 0.15);
       currentSpread = getRandomCards(1);
       const item = currentSpread[0];
-
       const main = document.getElementById('mainContent');
       main.innerHTML = `
         <div class="spread-container">
           <div class="cards-flex">
             <div class="card-wrapper" id="singleCard" onclick="flipSingleCard()">
               <div class="card-inner">
-                <div class="card-face back">
-                  <img src="cards/card-back.png" alt="Card Back" />
-                </div>
+                <div class="card-face back"><img src="cards/card-back.png" alt="Card Back" /></div>
                 <div class="card-face front ${item.isReversed ? 'is-reversed' : ''}">
                   <img src="${item.card.image}" alt="${item.card.name}" />
                 </div>
               </div>
             </div>
           </div>
-
           <div class="details-panel ${item.isReversed ? 'reversed-style' : ''}" id="singleDetails" style="display: none;">
             <div class="card-title-row">
               <span class="card-name-text">${item.card.name}</span>
@@ -773,18 +160,13 @@
               <div class="meaning-text" style="color: var(--text-muted);">${item.isReversed ? item.card.upright : item.card.reversed}</div>
             </div>
           </div>
-
           <div class="button-group">
             <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ANOTHER ]</button>
             <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
           </div>
         </div>
       `;
-
-      // Auto flip after deal delay
-      setTimeout(() => {
-        flipSingleCard();
-      }, 500);
+      setTimeout(() => { flipSingleCard(); }, 500);
     }
 
     function flipSingleCard() {
@@ -792,41 +174,29 @@
       const details = document.getElementById('singleDetails');
       if (el && !el.classList.contains('flipped')) {
         el.classList.add('flipped');
-        playSynthBeep(880, 'sine', 0.2);
         if (details) {
           setTimeout(() => details.style.display = 'block', 400);
         }
       }
     }
 
-    // Three Card Spread (Past, Present, Future)
     function drawThreeSpread() {
-      playSynthBeep(523, 'triangle', 0.2);
       const drawn = getRandomCards(3);
       const positions = [
         { label: "PAST (Legacy)", color: "var(--neon-cyan)" },
         { label: "PRESENT (Production)", color: "var(--neon-green)" },
         { label: "FUTURE (Deployment)", color: "var(--neon-gold)" }
       ];
-
-      currentSpread = drawn.map((d, i) => ({
-        ...d,
-        position: positions[i]
-      }));
-
+      currentSpread = drawn.map((d, i) => ({ ...d, position: positions[i] }));
       const main = document.getElementById('mainContent');
       main.innerHTML = `
         <div class="spread-container">
           <div class="cards-flex">
             ${currentSpread.map((item, idx) => `
               <div class="card-wrapper" id="spreadCard_${idx}" onclick="handleSpreadCardClick(${idx})">
-                <div class="pos-label" style="border-color: ${item.position.color}; color: ${item.position.color};">
-                  ${item.position.label}
-                </div>
+                <div class="pos-label" style="border-color: ${item.position.color}; color: ${item.position.color};">${item.position.label}</div>
                 <div class="card-inner">
-                  <div class="card-face back">
-                    <img src="cards/card-back.png" alt="Card Back" />
-                  </div>
+                  <div class="card-face back"><img src="cards/card-back.png" alt="Card Back" /></div>
                   <div class="card-face front ${item.isReversed ? 'is-reversed' : ''}">
                     <img src="${item.card.image}" alt="${item.card.name}" />
                   </div>
@@ -834,58 +204,40 @@
               </div>
             `).join('')}
           </div>
-
-          <div id="threeSpreadSummary" style="width: 100%; max-width: 900px; margin-top: 1rem;">
-            <!-- Rendered after flips -->
-          </div>
-
+          <div id="threeSpreadSummary" style="width: 100%; max-width: 900px; margin-top: 1rem;"></div>
           <div class="button-group">
             <button class="cyber-btn" onclick="drawThreeSpread()">[ DRAW NEW SPREAD ]</button>
             <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
           </div>
         </div>
       `;
-
-      // Sequenced auto flips
       currentSpread.forEach((item, idx) => {
         setTimeout(() => {
           const cardEl = document.getElementById(`spreadCard_${idx}`);
-          if (cardEl) {
-            cardEl.classList.add('flipped');
-            playSynthBeep(440 + idx * 200, 'sine', 0.15);
-          }
-          if (idx === 2) {
-            renderThreeSpreadSummary();
-          }
+          if (cardEl) { cardEl.classList.add('flipped'); }
+          if (idx === 2) { renderThreeSpreadSummary(); }
         }, 600 + idx * 500);
       });
     }
 
     function handleSpreadCardClick(idx) {
       const item = currentSpread[idx];
-      if (item) {
-        openModal(item.card, item.isReversed);
-      }
+      if (item) { openModal(item.card, item.isReversed); }
     }
 
     function renderThreeSpreadSummary() {
       const summaryEl = document.getElementById('threeSpreadSummary');
       if (!summaryEl) return;
-
       summaryEl.innerHTML = `
         <div class="details-panel" style="border-left-color: var(--neon-cyan);">
-          <h3 style="font-family: var(--font-code); color: var(--neon-cyan); margin-bottom: 1rem;">
-            ⬡ SPREAD DIAGNOSTICS & SYSTEM ANALYSIS ⬡
-          </h3>
+          <h3 style="font-family: var(--font-code); color: var(--neon-cyan); margin-bottom: 1rem;">⬡ SPREAD DIAGNOSTICS & SYSTEM ANALYSIS ⬡</h3>
           <div style="display: grid; gap: 1rem;">
             ${currentSpread.map(item => `
               <div style="background: rgba(11, 13, 18, 0.6); padding: 1rem; border-radius: 6px; border-left: 3px solid ${item.position.color};">
                 <div style="font-family: var(--font-code); font-weight: 700; color: ${item.position.color}; margin-bottom: 0.25rem;">
                   ${item.position.label}: ${item.card.name} ${item.isReversed ? '<span style="color: var(--neon-magenta)">[REVERSED]</span>' : '<span style="color: var(--neon-green)">[UPRIGHT]</span>'}
                 </div>
-                <div style="font-size: 0.95rem; line-height: 1.5;">
-                  ${item.isReversed ? item.card.reversed : item.card.upright}
-                </div>
+                <div style="font-size: 0.95rem; line-height: 1.5;">${item.isReversed ? item.card.reversed : item.card.upright}</div>
                 <div style="font-size: 0.8rem; color: var(--neon-cyan); margin-top: 0.35rem; cursor: pointer;" onclick="openModalById('${item.card.id}', ${item.isReversed})">
                   ❯ Click card to view full high-res schematic
                 </div>
@@ -896,20 +248,16 @@
       `;
     }
 
-    // Modal Handlers
     function openModal(card, isReversed = false) {
-      playSynthBeep(659, 'sine', 0.1);
       const img = document.getElementById('modalImg');
       img.src = card.image;
       img.className = 'modal-card-img' + (isReversed ? ' reversed' : '');
-      
       document.getElementById('modalTitle').innerText = card.name;
       document.getElementById('modalBadge').innerText = isReversed ? '[ REVERSED ]' : '[ UPRIGHT ]';
       document.getElementById('modalBadge').className = 'logo-badge ' + (isReversed ? 'reversed-style' : '');
       document.getElementById('modalUpright').innerText = card.upright;
       document.getElementById('modalReversed').innerText = card.reversed;
       document.getElementById('modalScene').innerText = card.scene;
-
       document.getElementById('cardModal').classList.add('active');
     }
 
@@ -922,49 +270,18 @@
       document.getElementById('cardModal').classList.remove('active');
     }
 
-    // Codex Deck Browser
-    function renderCodex() {
-      const grid = document.getElementById('codexGrid');
-      grid.innerHTML = TAROT_CARDS.map(card => `
-        <div class="codex-thumb" onclick="openModalById('${card.id}')">
-          <img src="${card.image}" alt="${card.name}" loading="lazy" />
-          <div class="name">${card.name}</div>
-        </div>
-      `).join('');
-    }
-
-    function filterCodex() {
-      const query = document.getElementById('codexSearch').value.toLowerCase();
-      const filtered = TAROT_CARDS.filter(c => 
-        c.name.toLowerCase().includes(query) || 
-        c.upright.toLowerCase().includes(query) ||
-        c.reversed.toLowerCase().includes(query)
-      );
-      const grid = document.getElementById('codexGrid');
-      grid.innerHTML = filtered.map(card => `
-        <div class="codex-thumb" onclick="openModalById('${card.id}')">
-          <img src="${card.image}" alt="${card.name}" loading="lazy" />
-          <div class="name">${card.name}</div>
-        </div>
-      `).join('');
-    }
-
-    // Particle Background Canvas Logic
     function initParticleBackground() {
       const canvas = document.getElementById('particleCanvas');
       const ctx = canvas.getContext('2d');
       let w = canvas.width = window.innerWidth;
       let h = canvas.height = window.innerHeight;
-
       window.addEventListener('resize', () => {
         w = canvas.width = window.innerWidth;
         h = canvas.height = window.innerHeight;
       });
-
       const symbols = ['0', '1', '{', '}', ';', '/>', 'git', 'k8s', 'sudo', 'docker', '200', '404', '503', 'gRPC'];
       const particles = [];
       const numParticles = 45;
-
       for (let i = 0; i < numParticles; i++) {
         particles.push({
           x: Math.random() * w,
@@ -977,27 +294,21 @@
           color: Math.random() < 0.5 ? '#00ff66' : '#00e5ff'
         });
       }
-
       function animate() {
         ctx.clearRect(0, 0, w, h);
         ctx.font = '14px "Fira Code", monospace';
-
         particles.forEach(p => {
           p.y -= p.speedY;
           p.x += p.speedX;
-
           if (p.y < -20) p.y = h + 20;
           if (p.x < -20) p.x = w + 20;
           if (p.x > w + 20) p.x = -20;
-
           ctx.fillStyle = p.color;
           ctx.globalAlpha = p.opacity;
           ctx.fillText(p.text, p.x, p.y);
         });
-
         requestAnimationFrame(animate);
       }
-
       animate();
     }
   </script>

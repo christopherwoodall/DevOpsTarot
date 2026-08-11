@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Tarot // Card Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="mode-toggle-bar">
+    <button class="cyber-btn-sm" id="modeBtn" onclick="toggleMode()">📜 ORIGINAL MODE</button>
+  </div>
+  <div id="app">
+    <header>
+      <div class="logo-badge">SYSTEM VERSION 2.0 // DEVOPS ORACLE</div>
+      <h1 class="app-title">DEVOPS TAROT</h1>
+      <p class="app-subtitle">Browse the full deck. Search by name or meaning.</p>
+    </header>
+    <a href="index.html" class="back-link">← Back to Draw</a>
+    <section class="codex-section">
+      <h2 class="codex-title">⬡ SYSTEM CODEX (78 CARDS) ⬡</h2>
+      <input type="text" class="search-input" id="codexSearch" placeholder="Search cards by name or concept..." oninput="filterCodex()" />
+      <div class="codex-grid" id="codexGrid"></div>
+    </section>
+  </div>
+
+  <div class="modal-overlay" id="cardModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div>
+        <img src="" id="modalImg" class="modal-card-img" alt="Card Artwork" />
+      </div>
+      <div>
+        <div class="logo-badge" id="modalBadge">UPRIGHT</div>
+        <h2 class="card-name-text" id="modalTitle" style="margin-bottom: 1rem;">Card Name</h2>
+        <div class="meaning-block">
+          <div class="meaning-label">Upright Meaning:</div>
+          <div class="meaning-text" id="modalUpright">...</div>
+        </div>
+        <div class="meaning-block" style="margin-top: 1.25rem;">
+          <div class="meaning-label" style="color: var(--neon-magenta);">Reversed Meaning:</div>
+          <div class="meaning-text" id="modalReversed">...</div>
+        </div>
+        <div class="meaning-block" style="margin-top: 1.25rem;">
+          <div class="meaning-label" style="color: var(--neon-gold);">DevOps Visual Scene:</div>
+          <div class="meaning-text" id="modalScene" style="font-size: 0.95rem; font-style: italic;">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let TAROT_CARDS_DEVOPS = [];
+    let TAROT_CARDS_ORIGINAL = [];
+    let TAROT_CARDS = [];
+    let currentMode = 'original';
+    let dataLoaded = false;
+
+    async function loadCardsData() {
+      try {
+        const res = await fetch('cards-data.json');
+        if (!res.ok) throw new Error('Failed to load cards-data.json');
+        const data = await res.json();
+        TAROT_CARDS_DEVOPS = data.devops || [];
+        TAROT_CARDS_ORIGINAL = data.original || [];
+        TAROT_CARDS = TAROT_CARDS_ORIGINAL;
+        dataLoaded = true;
+        renderCodex();
+      } catch (e) {
+        console.error('Failed to load card data:', e);
+        document.getElementById('codexGrid').innerHTML = '<div style="text-align:center;padding:2rem;color:#ff007f;font-family:Fira Code,monospace">[ ERROR: Unable to load cards-data.json ]</div>';
+      }
+    }
+
+    function toggleMode() {
+      currentMode = currentMode === 'devops' ? 'original' : 'devops';
+      TAROT_CARDS = currentMode === 'devops' ? TAROT_CARDS_DEVOPS : TAROT_CARDS_ORIGINAL;
+      document.getElementById('modeBtn').innerText = currentMode === 'devops' ? '⚡ OPS MODE' : '📜 ORIGINAL MODE';
+      renderCodex();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initParticleBackground();
+      loadCardsData();
+    });
+
+    function renderCodex() {
+      const grid = document.getElementById('codexGrid');
+      grid.innerHTML = TAROT_CARDS.map(card => `
+        <div class="codex-thumb" onclick="openModalById('${card.id}')">
+          <img src="${card.image}" alt="${card.name}" loading="lazy" />
+          <div class="name">${card.name}</div>
+        </div>
+      `).join('');
+    }
+
+    function filterCodex() {
+      const query = document.getElementById('codexSearch').value.toLowerCase();
+      const filtered = TAROT_CARDS.filter(c =>
+        c.name.toLowerCase().includes(query) ||
+        c.upright.toLowerCase().includes(query) ||
+        c.reversed.toLowerCase().includes(query)
+      );
+      const grid = document.getElementById('codexGrid');
+      grid.innerHTML = filtered.map(card => `
+        <div class="codex-thumb" onclick="openModalById('${card.id}')">
+          <img src="${card.image}" alt="${card.name}" loading="lazy" />
+          <div class="name">${card.name}</div>
+        </div>
+      `).join('');
+    }
+
+    function openModal(card, isReversed = false) {
+      const img = document.getElementById('modalImg');
+      img.src = card.image;
+      img.className = 'modal-card-img' + (isReversed ? ' reversed' : '');
+      document.getElementById('modalTitle').innerText = card.name;
+      document.getElementById('modalBadge').innerText = isReversed ? '[ REVERSED ]' : '[ UPRIGHT ]';
+      document.getElementById('modalBadge').className = 'logo-badge ' + (isReversed ? 'reversed-style' : '');
+      document.getElementById('modalUpright').innerText = card.upright;
+      document.getElementById('modalReversed').innerText = card.reversed;
+      document.getElementById('modalScene').innerText = card.scene;
+      document.getElementById('cardModal').classList.add('active');
+    }
+
+    function openModalById(cardId, isReversed = false) {
+      const card = TAROT_CARDS.find(c => c.id === cardId);
+      if (card) openModal(card, isReversed);
+    }
+
+    function closeModal(e) {
+      document.getElementById('cardModal').classList.remove('active');
+    }
+
+    function initParticleBackground() {
+      const canvas = document.getElementById('particleCanvas');
+      const ctx = canvas.getContext('2d');
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+      const symbols = ['0', '1', '{', '}', ';', '/>', 'git', 'k8s', 'sudo', 'docker', '200', '404', '503', 'gRPC'];
+      const particles = [];
+      const numParticles = 45;
+      for (let i = 0; i < numParticles; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          text: symbols[Math.floor(Math.random() * symbols.length)],
+          speedY: 0.3 + Math.random() * 0.8,
+          speedX: (Math.random() - 0.5) * 0.4,
+          size: 12 + Math.random() * 14,
+          opacity: 0.15 + Math.random() * 0.45,
+          color: Math.random() < 0.5 ? '#00ff66' : '#00e5ff'
+        });
+      }
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.font = '14px "Fira Code", monospace';
+        particles.forEach(p => {
+          p.y -= p.speedY;
+          p.x += p.speedX;
+          if (p.y < -20) p.y = h + 20;
+          if (p.x < -20) p.x = w + 20;
+          if (p.x > w + 20) p.x = -20;
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.opacity;
+          ctx.fillText(p.text, p.x, p.y);
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>
