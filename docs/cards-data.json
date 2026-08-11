@@ -1,0 +1,1410 @@
+{
+  "devops": [
+    {
+      "id": "00-the-fool",
+      "slug": "00-the-fool",
+      "name": "The Commit",
+      "scene": "A glowing terminal cursor hovers over `git push --force` on the main branch, surrounded by swirling Kubernetes pods, while floating code snippets ascend into a bright blue neon void, igniting electric spark lines that trace the paths of CI/CD pipelines through Jenkins and GitHub Actions, illuminating the space with flashes from Prometheus metrics and Grafana dashboards.",
+      "upright": "Embrace the leap of faith into the realm of continuous integration, where each commit unlocks new features and raw potential; bold deployments dance upon pipelines, orchestrated with tools like Jenkins and GitLab CI, heralding the dawn of innovation.",
+      "reversed": "Beware the reckless force push that shatters the tranquility of your main branch, as broken builds and skipped tests threaten the integrity of your CI/CD pipeline; unreviewed code lurks in the shadows, risking the stability of production and inviting chaos into your environment.",
+      "image": "cards/00-the-fool.png"
+    },
+    {
+      "id": "01-the-magician",
+      "slug": "01-the-magician",
+      "name": "The Architect",
+      "scene": "A hooded cyberpunk engineer, surrounded by a swirling vortex of luminous YAML, Terraform blueprints, and Docker images, orchestrates the deployment of Kubernetes clusters with neon-gloved hands while monitoring real-time metrics on a holographic Grafana dashboard, as Prometheus scrapes metrics from microservices dancing in the background, each canary deploy illuminating the dark with vibrant success notifications.",
+      "upright": "Harnessing the mastery of infrastructure as code, you wield automation tools like Terraform and Ansible to manifest a resilient system vision, ensuring seamless CI/CD pipelines and effective resource management through FinOps practices.",
+      "reversed": "Beware the pitfalls of over-engineering, where misconfigured tooling leads to chaos in deployment processes; the absence of blameless post-mortems and disciplined chaos engineering can turn your microservices into a tangled web of instability.",
+      "image": "cards/01-the-magician.png"
+    },
+    {
+      "id": "02-the-high-priestess",
+      "slug": "02-the-high-priestess",
+      "name": "The Root CA",
+      "scene": "A shrouded cryptographic seal pulsates with the power of 4096-bit RSA keys, surrounded by ethereal matrix symbols that flicker like encrypted data streams. Hidden beneath layers of security, secret vaults guarded by HashiCorp Vault secrets shimmer, while veiled certificate authority shrines are adorned with Kubernetes ingress configurations and automated Cert-Manager workflows, casting an aura of trust across the digital realm.",
+      "upright": "In the realm of DevOps, The Root CA embodies the essence of zero-trust architecture, guiding teams to unveil hidden security secrets through vigilant cryptographic practices. Trust in the integrity of your certificates and embrace the mystique of private key management, ensuring your systems resonate with deep, verifiable truths.",
+      "reversed": "When reversed, The Root CA warns of expired TLS certificates lurking in the shadows, risking the sanctity of your connections and exposing systems to shadow IT. Heed the ignored security warnings that echo through your infrastructure; they signal the leaking of private keys and the potential for breaches in your CI/CD pipelines.",
+      "image": "cards/02-the-high-priestess.png"
+    },
+    {
+      "id": "03-the-empress",
+      "slug": "03-the-empress",
+      "name": "The Mainframe",
+      "scene": "A majestic mother server rack pulsating with rich glowing green fiber optics, fertile data streams flowing seamlessly through Kubernetes pods, and flourishing microservices orchestrated by Helm charts, while Prometheus scrapes metrics and Grafana visualizes the vibrant landscapes of performance, all under the watchful eye of Terraform managing the infrastructure as code.",
+      "upright": "A robust infrastructure thrives under the watchful eye of high availability, where service mesh orchestration fosters seamless communication between microservices, ensuring a fertile ecosystem of scalable deployments and resilient canary releases.",
+      "reversed": "Beware the lurking dangers of resource starvation, as unchecked memory leaks expand like shadowy specters, leading to unmanaged growth and compute bloat that chokes the efficiency of your Kubernetes clusters and undermines your SLOs.",
+      "image": "cards/03-the-empress.png"
+    },
+    {
+      "id": "04-the-emperor",
+      "slug": "04-the-emperor",
+      "name": "The Monolith",
+      "scene": "A towering, impenetrable dark steel fortress server tower, adorned with glowing blue structural pillars that pulse with the heartbeat of Kubernetes clusters, stands guarded by strict access control lists, while Prometheus metrics stream like cascading waterfalls and Grafana dashboards flicker with real-time insights, illuminating the fortress's secrets as Terraform provisions new realms of infrastructure at the push of a button.",
+      "upright": "The Monolith stands as a fortress of structure and stability, embodying battle-tested architecture that thrives under centralized control, guided by strong governance frameworks such as ITIL and COBIT, ensuring compliance and reliability in your CI/CD pipelines.",
+      "reversed": "In its reversed state, The Monolith reveals the dangers of rigid legacy lock-in, where a single point of failure looms large, stifling innovation and engendering a refusal to refactor, weighed down by bureaucratic overhead that hampers agile methodologies and fosters a blame culture instead of fostering blameless post-mortems.",
+      "image": "cards/04-the-emperor.png"
+    },
+    {
+      "id": "05-the-hierophant",
+      "slug": "05-the-hierophant",
+      "name": "The Documentation",
+      "scene": "An ancient glowing digital tome, its pages flickering with Kubernetes deployment strategies and Terraform scripts, hovers amidst a halo of architecture RFCs, standard operating procedures, and runbooks, all illuminated in neon gold, while Prometheus metrics dance in the air, and Grafana dashboards pulse rhythmically in the background, guiding the way through the labyrinth of knowledge.",
+      "upright": "The Documentation stands as a beacon of established standards, where clear runbooks guide incident response with precision, and tribal knowledge is codified into a living knowledge base, ensuring compliance harmony through automated audits and policies that resonate with best practices in infrastructure as code.",
+      "reversed": "In the shadow of The Documentation, outdated Wiki pages gather dust, as teams fall into dogmatic adherence to obsolete rules, perpetuating cargo-cult engineering that ignores the principles of blameless post-mortems and continuous improvement, leading to fragile systems and chaotic deployments.",
+      "image": "cards/05-the-hierophant.png"
+    },
+    {
+      "id": "06-the-lovers",
+      "slug": "06-the-lovers",
+      "name": "The Microservice Pair",
+      "scene": "Two glowing microservice nodes, orchestrated by Kubernetes, exchange binary heartbeats over a secure gRPC pipeline, their communication monitored by Prometheus metrics and visualized in Grafana dashboards, showcasing perfect low-latency synchronization while feature flags dance around them, ensuring seamless canary deployments.",
+      "upright": "In the realm of microservices, harmonious integration reflects a seamless orchestration of services through well-defined API contracts, with mutual fallback support ensuring resilience via circuit breakers and graceful degradation. This synergy cultivates an environment where teams collaborate effectively, leveraging tools like Kubernetes for service discovery and feature flags to enable dynamic feature rollouts.",
+      "reversed": "Reversed, the microservice pair signifies tight coupling that leads to cascading network failures, as API contract drift creates confusion and misalignment among teams. Toxic service dependencies emerge, undermining reliability and complicating blameless post-mortems, ultimately resulting in a fragile architecture that hinders deployment velocity and increases technical debt.",
+      "image": "cards/06-the-lovers.png"
+    },
+    {
+      "id": "07-the-chariot",
+      "slug": "07-the-chariot",
+      "name": "The CI/CD Pipeline",
+      "scene": "A sleek cybernetic vehicle equipped with a Jenkins engine and Terraform chassis speeds through glowing neon pipeline stages (Build, Test, Stage, Deploy), seamlessly integrating Docker containers while monitoring performance with Prometheus metrics and visualizing deployment health on Grafana dashboards at lightspeed. As it races ahead, feature flags toggle dynamically, ensuring only the most stable code surges forward, while a vigilant PagerDuty guardian watches over the journey, ready to respond to any alerts that flicker across the dashboard like distant stars.",
+      "upright": "A relentless flow of automated deployments, the CI/CD pipeline surges forward with unstoppable momentum, embodying the discipline of infrastructure as code and the triumph of targeted deployments through feature flags and blue-green strategies. Each commit becomes a seamless release, where continuous integration practices and robust monitoring with tools like Datadog ensure that velocity is maintained and quality is ingrained.",
+      "reversed": "The CI/CD pipeline faces pipeline queue congestion, as flaky integration tests block progress and broken build trains derail momentum, causing lost velocity and frustration. Without effective chaos engineering and blameless post-mortems to identify root causes, the once smooth flow becomes a bottleneck, hindering the team's ability to deliver features and respond to incidents swiftly.",
+      "image": "cards/07-the-chariot.png"
+    },
+    {
+      "id": "08-the-strength",
+      "slug": "08-the-strength",
+      "name": "The Load Balancer",
+      "scene": "A glowing cybernetic lion, adorned with glowing circuit patterns, gracefully paces before a torrent of heavy server traffic streams, orchestrating the chaos with Kubernetes ingress controllers that seamlessly distribute the massive spike of incoming requests across a fleet of microservices, while observability tools like Prometheus and Grafana monitor the health of each pod, ensuring no request goes unhandled in this digital jungle.",
+      "upright": "With the poise of a seasoned Load Balancer, you exhibit grace under the heaviest traffic surges, seamlessly distributing requests across your microservices while leveraging techniques like traffic smoothing and elegant rate throttling. Your resilience mirrors that of a well-tuned system, enduring the stresses of deployment and scaling with the calm endurance of an optimized Kubernetes cluster, ensuring uptime and responsiveness.",
+      "reversed": "In this moment of imbalance, your system faces DDoS vulnerabilities as traffic floods in, leading to server saturation and the risk of cascading failures within your infrastructure. The uneven pod distribution reveals cracks in your deployment strategy, causing critical services to collapse under pressure, much like a misconfigured service mesh that fails to handle latency spikes.",
+      "image": "cards/08-the-strength.png"
+    },
+    {
+      "id": "09-the-hermit",
+      "slug": "09-the-hermit",
+      "name": "The Air-Gapped Vault",
+      "scene": "A solitary glowing lantern, powered by a nearby UPS, illuminates an isolated server node deep inside a dark subterranean obsidian vault, where encrypted Vault secrets are meticulously stored, and the air is thick with the hum of air-gapped Kubernetes clusters, each node configured with immutable infrastructure using Terraform, completely disconnected from the chaos of the internet.",
+      "upright": "A sanctuary of deep audit introspection, where your isolated testing environment thrives under high security air-gapping; focus on your SLOs as you weave a tapestry of compliance through infrastructure as code and robust access controls, ensuring that every deployment is shielded like a vault.",
+      "reversed": "Beware the isolation paralysis that can ensnare your team's agility, as missing upstream patches threaten your security posture; knowledge becomes siloed in fragmented documentation, leaving your team disconnected like a microservices architecture without a service mesh, hindering collaboration and innovation.",
+      "image": "cards/09-the-hermit.png"
+    },
+    {
+      "id": "10-wheel-of-fortune",
+      "slug": "10-wheel-of-fortune",
+      "name": "The Chaos Monkey",
+      "scene": "A spinning neon wheel of fortune, adorned with vibrant Kubernetes logos, unleashes chaos as server pods abruptly terminate, triggering a flurry of alerts in PagerDuty, while glowing matrix code streams down, revealing auto-scaling nodes dynamically adjusting in real time, monitored by Prometheus metrics and visualized in Grafana dashboards, all amidst a whirlwind of canary deploys swirling around like confetti.",
+      "upright": "Embracing chaos through chaos engineering, you engage in continuous resilience testing with tools like Gremlin and Litmus, ensuring your systems withstand failure. Dynamic auto-scaling policies and infrastructure as code practices empower your deployments to adapt seamlessly to change, fostering a culture of agility and innovation.",
+      "reversed": "Unpredictable outages lurk in the shadows, signaling the need for robust monitoring with Prometheus and Datadog to catch anomalies before they escalate. Bad luck during on-call shifts may stem from insufficient runbooks and lack of blameless post-mortems, while unexpected cloud vendor zone downtime highlights the importance of multi-cloud strategies and circuit breakers to mitigate risk.",
+      "image": "cards/10-wheel-of-fortune.png"
+    },
+    {
+      "id": "11-justice",
+      "slug": "11-justice",
+      "name": "The Audit Log",
+      "scene": "A cybernetic scale weighing immutable JSON audit events against security compliance policies, with sharp glowing cyan balance beams powered by Prometheus metrics, while Terraform scripts dynamically adjust resource allocations in response to compliance shifts, all monitored through a Grafana dashboard displaying real-time alerts from Datadog and PagerDuty.",
+      "upright": "In the realm of The Audit Log, accountability reigns supreme, as immutable event logs serve as the digital fingerprints of your infrastructure, ensuring enhanced traceability for compliance with SOC2 and GDPR. With a commitment to fair root cause analysis through blameless post-mortems, your team cultivates a culture of continuous improvement, balancing the scales of DevOps excellence.",
+      "reversed": "When The Audit Log appears reversed, blame-shifting post-mortems cloud the path to growth, as tampered log files undermine trust and integrity, risking costly regulatory fines and compliance breaches. Unmonitored privilege escalation lurks in the shadows, threatening the security of your systems and exposing vulnerabilities that can lead to catastrophic failures.",
+      "image": "cards/11-justice.png"
+    },
+    {
+      "id": "12-the-hanged-man",
+      "slug": "12-the-hanged-man",
+      "name": "The Deadlock",
+      "scene": "A server process, suspended upside down in a glowing neon grid field, surrounded by swirling Kubernetes pods trapped in a resource lock, while Prometheus metrics pulse like a heartbeat, desperately monitoring CPU utilization, and Grafana dashboards flicker with warning signals, all waiting for a Terraform apply to release the deployment and restore harmony.",
+      "upright": "A strategic pause akin to a canary deployment, where waiting for lock resolution reveals insights into system bottlenecks; altering perspective through chaos engineering allows teams to embrace deliberate delays that foster resilience and innovation.",
+      "reversed": "A permanent thread deadlock reminiscent of a misconfigured service mesh, leading to an infinite wait loop that parallels resource starvation in cloud environments, consuming precious CPU cycles while blameless post-mortems reveal the cost of overlooked SLOs.",
+      "image": "cards/12-the-hanged-man.png"
+    },
+    {
+      "id": "13-death",
+      "slug": "13-death",
+      "name": "The Deprecation",
+      "scene": "A dark cybernetic figure, cloaked in shadows, sweeps a glowing scythe through a tangled web of deprecated v1 API endpoints, severing their connections with an echo of broken webhook notifications, while Kubernetes pods shimmer in the background, deploying fresh microservices with the precision of a CI/CD pipeline, as Prometheus metrics gleam with newfound vitality and Grafana dashboards pulse to life, heralding a new era of scalable, resilient architecture.",
+      "upright": "The Deprecation heralds the end of legacy code, paving the way for a necessary sunsetting that embraces clean architecture rebirth through practices like infrastructure as code and microservices. This transformation is an opportunity for teams to implement canary deployments and feature flags, ensuring smooth transitions to modern frameworks and practices.",
+      "reversed": "In its reversed position, The Deprecation warns against clinging to outdated technology, reflecting a fear of refactoring that stifles innovation and disrupts backward compatibility. This resistance can lead to abrupt vendor death, leaving systems vulnerable and teams scrambling to maintain service levels without the benefit of blameless post-mortems or robust monitoring solutions like Datadog and Prometheus.",
+      "image": "cards/13-death.png"
+    },
+    {
+      "id": "14-temperance",
+      "slug": "14-temperance",
+      "name": "The Rate Limiter",
+      "scene": "An angelic cybernetic entity, adorned with glowing circuit patterns, pours shimmering packets of data between two network buffers, each marked with Prometheus metrics, maintaining a perfect token bucket equilibrium while deploying feature flags to gracefully throttle traffic; Kubernetes pods hum in harmony, orchestrated to ensure seamless user experience as microservices communicate with Grafana dashboards displaying real-time usage statistics.",
+      "upright": "In the realm of continuous delivery, The Rate Limiter heralds optimal resource allocation and graceful degradation, ensuring a token bucket balance for controlled API throughput. Embrace harmony through SLOs and SLIs, fostering stability in your microservices architecture with effective load balancing and service mesh practices.",
+      "reversed": "When reversed, The Rate Limiter warns of throttling chaos, where aggressive 429 Too Many Requests errors plague your services, signaling uncalibrated limits and mismanaged traffic. Beware of bottlenecked queues and the potential fallout of cascading failures, as your infrastructure struggles under the weight of insufficient monitoring and chaotic deployments.",
+      "image": "cards/14-temperance.png"
+    },
+    {
+      "id": "15-the-devil",
+      "slug": "15-the-devil",
+      "name": "The Technical Debt",
+      "scene": "A horned cybernetic demon looms over the team of engineers, ensnaring them with glowing red cables that pulse with the chaotic energy of hardcoded secrets and quick, dirty hacks, while the shadows are filled with the ominous flicker of deprecated APIs, unmonitored legacy servers, and the relentless whispers of unaddressed vulnerabilities, as a nearby console flashes with alerts from Datadog and PagerDuty, signaling the impending doom of an unstable deployment.",
+      "upright": "Caught in the tangled web of shadow dependencies and quick fixes, you may find yourself reliant on hotfixes that obscure the true cost of technical debt, hindering your CI/CD pipeline and slowing your deployment cadence. This awareness of the growing backlog can stifle innovation, as you grapple with the risks of fragile infrastructures and a lack of observability in your service mesh.",
+      "reversed": "A powerful surge of refactoring energy allows you to break free from the clutches of legacy code, paving the way for a robust microservices architecture and a sustainable tech debt repayment plan. Embrace the liberation that comes with implementing infrastructure as code and leveraging automated testing, as you shift towards a culture of blameless post-mortems and continuous improvement.",
+      "image": "cards/15-the-devil.png"
+    },
+    {
+      "id": "16-the-tower",
+      "slug": "16-the-tower",
+      "name": "The Production Outage",
+      "scene": "A high-rise data center tower, its sleek exterior shimmering with Kubernetes cluster nodes, is struck by a bolt of lightning made of cascading error codes, shattering glass panels of data into glowing red warning alarms powered by Prometheus and Grafana, as frantic alerts from PagerDuty echo throughout the chaos, signaling a critical outage while Terraform scripts scramble to initiate auto-scaling and restore order amidst the storm.",
+      "upright": "A catastrophic system crash unfolds, signaling a sudden infrastructure collapse as your CI/CD pipeline falters; this hard truth demands a necessary rebuilding with immutable infrastructure and thorough blameless post-mortems to extract lessons learned.",
+      "reversed": "A near-miss disaster looms, yet your disaster recovery plan shines through; with effective chaos engineering and implemented circuit breakers, you mitigate the breach, transforming structural panic into a resilient response that strengthens your SLOs.",
+      "image": "cards/16-the-tower.png"
+    },
+    {
+      "id": "17-the-star",
+      "slug": "17-the-star",
+      "name": "The Green Build",
+      "scene": "A brilliant neon green star radiates calm light over a dark terminal matrix, where the glowing output of a CI/CD pipeline shows all test suites passing with a 100% success rate, while Kubernetes pods deploy seamlessly and Prometheus metrics dance in harmony, illuminated by Grafana dashboards that reflect the stability of the build—an oasis of tranquility in a world of ephemeral containers and feature flags.",
+      "upright": "In the realm of CI/CD, The Green Build shines as a beacon of hope, heralding a flawless pipeline pass where every commit is validated through automated tests, and clarity emerges from pristine dashboards. With team confidence restored, the future appears bright, illuminated by well-defined SLOs and the promise of successful canary deployments that pave the way for innovation.",
+      "reversed": "Beware the false sense of security that a mere green build can bring; it may conceal skipped tests and hidden bugs that lurk in the shadows of your codebase. Such apathy towards the test suite can lead to a fragile system, where the risks of chaos engineering manifest, and the absence of vigilant monitoring tools like Datadog or Prometheus invites disaster.",
+      "image": "cards/17-the-star.png"
+    },
+    {
+      "id": "18-the-moon",
+      "slug": "18-the-moon",
+      "name": "The Undocumented API",
+      "scene": "A glowing cybernetic full moon, embedded with Kubernetes clusters, casts shadowy illusions over a murky marsh of legacy code, where undocumented endpoints lurk like hidden secrets, entangled in a web of tangled Terraform scripts and obscured by the fog of missing API documentation, while Prometheus metrics flicker ominously in the distance, hinting at the chaos of unmonitored deployments.",
+      "upright": "In the shadowy depths of The Undocumented API, illusion reigns as you encounter hidden side effects lurking within the legacy code, where mysterious bugs evade detection like ephemeral ghost deployments. Trust your intuition to navigate the obscure pathways of undocumented services, where the lack of observability tools like Prometheus and Datadog may obscure the golden signals of system health.",
+      "reversed": "As you flip The Undocumented API, the fog lifts, revealing the mystery root causes behind elusive incidents, urging you to document hidden endpoints and create comprehensive API specs to enhance clarity and collaboration. Embrace the spirit of blameless post-mortems as you dispel architectural fears, transforming chaos into structured knowledge through practices like infrastructure as code and thorough service documentation.",
+      "image": "cards/18-the-moon.png"
+    },
+    {
+      "id": "19-the-sun",
+      "slug": "19-the-sun",
+      "name": "The Zero-Downtime Release",
+      "scene": "A radiant golden-neon sun rises over a pristine cloud infrastructure landscape, illuminating flawless blue-green deployment switches while Kubernetes orchestrates seamless pod transitions, and Prometheus metrics dance in harmony with Grafana dashboards, showcasing real-time performance, ensuring zero downtime as feature flags flutter like banners in the breeze.",
+      "upright": "Joy radiates as you achieve a seamless zero-downtime release, leveraging blue-green deploys and canary deployments for optimal performance, bringing engineering glory through flawless user experiences and robust SLO adherence.",
+      "reversed": "Minor release hiccups may mar your rollout, as premature celebrations overshadow the need for thorough post-deployment monitoring; ensure metric stabilization with tools like Datadog or Prometheus before declaring victory.",
+      "image": "cards/19-the-sun.png"
+    },
+    {
+      "id": "20-judgement",
+      "slug": "20-judgement",
+      "name": "The Post-Mortem",
+      "scene": "A cybernetic archangel, adorned with shimmering circuit wings, blows a golden bugle over a cascade of open incident tickets, each one illuminated by the glow of Grafana dashboards displaying real-time metrics. Engineers, guided by the ethereal light of Prometheus alerts, gather around a digital whiteboard filled with eBPF traces and Jaeger spans, ready to engage in a blameless root-cause analysis while sipping coffee brewed with precision from the CI/CD pipeline.",
+      "upright": "In the realm of The Post-Mortem, embrace the blameless post-mortem culture that fosters valuable incident learnings; here, the evolution of systems thrives through actionable insights gleaned from SLO breaches and golden signals, ensuring accountability through robust documentation and retrospective reviews.",
+      "reversed": "Beware the shadows of finger-pointing that plague the Reversed Post-Mortem, where repeating past mistakes leads to superficial root cause analysis (RCA) and a failure to implement actionable items, leaving your infrastructure as code and CI/CD pipelines vulnerable to the same pitfalls, unaddressed and unresolved.",
+      "image": "cards/20-judgement.png"
+    },
+    {
+      "id": "21-the-world",
+      "slug": "21-the-world",
+      "name": "The Multi-Region Cluster",
+      "scene": "A glowing holographic globe pulsates with vibrant data streams as synchronized Kubernetes clusters span multiple regions, while low-latency CDN edge nodes, powered by Cloudflare, deliver content seamlessly; flawless global state replication is ensured by Consul's service mesh, with Prometheus metrics visualized on Grafana dashboards, capturing every heartbeat of this interconnected digital universe.",
+      "upright": "A triumphant orchestration of global scale, where your CI/CD pipelines flow seamlessly across resilient multi-cloud ecosystems; the successful deployment of microservices achieves total fulfillment, embodying the essence of zero-downtime rollouts and effective load balancing.",
+      "reversed": "A disjointed rollout lingers, as latency sync lag hinders your ability to maintain SLOs, while regional compliance hurdles and fragmented states threaten the integrity of your infrastructure as code, leaving your service mesh vulnerable to inconsistency.",
+      "image": "cards/21-the-world.png"
+    },
+    {
+      "id": "ace-of-wands",
+      "slug": "ace-of-wands",
+      "name": "Ace of Code",
+      "scene": "A glowing neon wand made of pure syntax logic, igniting a fresh repository init, as lines of code spiral upwards like sparks, integrating with CI/CD pipelines in GitHub Actions, while Terraform scripts dance around, conjuring infrastructure as the wand channels the energy of Kubernetes clusters spinning up, ready to deploy microservices in a vibrant cloud environment.",
+      "upright": "A new project ignites like a canary deployment, where innovative feature concepts are birthed, ready to be tested in production. Your creative coding sprint channels the energy of infrastructure as code, empowering you to deploy with the confidence of automated CI/CD pipelines.",
+      "reversed": "The specter of writer's block looms, akin to a stale repository that hinders collaboration, leading to uninspired feature pitches. It’s a call to refactor your approach, perhaps by revisiting blameless post-mortems to unearth insights and rejuvenate your development backlog.",
+      "image": "cards/ace-of-wands.png"
+    },
+    {
+      "id": "two-of-wands",
+      "slug": "two-of-wands",
+      "name": "Two of Code",
+      "scene": "An engineer stands at a dual-monitor terminal, meticulously mapping out a global repository architecture with Terraform scripts on one screen, while the other displays a dynamic flowchart of CI/CD pipelines orchestrated by Jenkins, ready to deploy microservices into Kubernetes clusters across multiple regions. The air hums with the promise of automated deployments and the visualized metrics from Grafana provide real-time insights into system performance, ensuring every commit is as seamless as a well-oiled machine.",
+      "upright": "As you forge ahead in your DevOps journey, the Two of Code signifies a pivotal moment for strategic roadmap planning, where you meticulously evaluate tech stacks and align them with your SLOs, ensuring every tool—be it Kubernetes, Terraform, or Ansible—serves a purpose in your expansion vision. Embrace the future with a clear path, leveraging feature flags and canary deployments to minimize risk while iterating quickly on your architecture.",
+      "reversed": "In the shadow of indecision, the Two of Code warns of analysis paralysis, where the fear of commitment to a tech stack stalls progress, leading to inadequate architectural planning. Beware of becoming ensnared in endless debates over tools like Prometheus or Datadog without a cohesive strategy, as this hesitation can cripple your deployment pipelines and stifle innovation.",
+      "image": "cards/two-of-wands.png"
+    },
+    {
+      "id": "three-of-wands",
+      "slug": "three-of-wands",
+      "name": "Three of Code",
+      "scene": "Code modules are dynamically dispatched across a fleet of Kubernetes pods, each scaling effortlessly in response to incoming build requests while Prometheus monitors their health metrics; the build feedback flows back through a CI/CD pipeline powered by Jenkins, with notifications sent via Slack and PagerDuty, ensuring that every deployment is as smooth as a canary release under the watchful gaze of Grafana dashboards.",
+      "upright": "The winds of initial deployment herald success, as synergies within distributed teams harness CI/CD pipelines to expand the codebase, facilitating seamless collaboration through tools like GitHub and Slack, paving the way for feature flags and canary deployments that ensure smooth rollouts.",
+      "reversed": "Frustration brews as build delays plague the pipeline, with unexpected merge conflicts surfacing like phantom errors in the codebase, while remote communication falters, threatening the integrity of the project as vital information slips through the cracks of digital collaboration.",
+      "image": "cards/three-of-wands.png"
+    },
+    {
+      "id": "four-of-wands",
+      "slug": "four-of-wands",
+      "name": "Four of Code",
+      "scene": "A party of cybernetic avatars, adorned with glowing Kubernetes insignias, celebrate a successful v1.0 milestone commit as they pop open virtual champagne bottles, while automated CI/CD pipelines, represented as vibrant confetti streams, burst through the air, and a backdrop of Grafana dashboards lights up with real-time metrics showcasing zero downtime and a smooth canary deployment. In one corner, an eager avatar adjusts feature flags, ensuring a seamless rollout, while another high-fives their peer, who monitors alerts on PagerDuty, as the joyous atmosphere pulsates with the rhythm of Datadog's heartbeat.",
+      "upright": "A milestone release celebration resonates through the CI/CD pipeline, where team unity thrives amidst successful canary deployments, and a stable baseline framework emerges, fortified by infrastructure as code practices that ensure resilience and scalability.",
+      "reversed": "In the shadows of premature celebration lie unhandled edge cases lurking in v1.0, where blameless post-mortems reveal the fatigue of post-launch firefighting, reminding the team of the importance of thorough testing and observability with tools like Prometheus and Datadog.",
+      "image": "cards/four-of-wands.png"
+    },
+    {
+      "id": "five-of-wands",
+      "slug": "five-of-wands",
+      "name": "Five of Code",
+      "scene": "Multiple developer avatars are fiercely engaged in intense debates over git merge conflicts, wielding their favorite code editors like swords, as they invoke tools like GitKraken for visual diffs and summon CI/CD pipelines through Jenkins to resolve their disputes, while feature flags toggle back and forth like light switches in a frantic battle for deployment supremacy.",
+      "upright": "A vibrant exchange of ideas through collaborative code reviews, where competing architectural patterns such as microservices vs. monoliths spark innovation, fostering a culture of active refactoring and continuous integration with tools like Git and Jenkins to ensure code quality and maintainability.",
+      "reversed": "Stuck in the quagmire of merge conflict hell, where toxic code reviews stifle creativity and lead to blame, as teams engage in pointless debates over formatting styles instead of focusing on critical issues, reminiscent of bikeshedding that derails the deployment pipeline and undermines agile practices.",
+      "image": "cards/five-of-wands.png"
+    },
+    {
+      "id": "six-of-wands",
+      "slug": "six-of-wands",
+      "name": "Six of Code",
+      "scene": "A victorious developer clad in a sleek, holographic jacket rides a cybernetic steed adorned with glowing Kubernetes logos, galloping past a sea of cheering green CI status badges, while the air crackles with the triumphant notifications from PagerDuty, and a banner above displays the successful rollout of canary deployments monitored in real-time on Grafana dashboards.",
+      "upright": "A triumphant deployment, where the CI/CD pipelines flow smoothly and the team celebrates the successful merging of code into the main branch. With high morale, the open-source contributions shine like golden signals, illuminating collaboration and fostering community engagement.",
+      "reversed": "A chaotic sprint plagued by ego-driven decisions, where blameless post-mortems reveal the demo's failure to meet SLOs. Promises of feature flags and seamless integrations fall flat, leaving a trail of unearned hype and disillusioned stakeholders in the wake of broken CI/CD processes.",
+      "image": "cards/six-of-wands.png"
+    },
+    {
+      "id": "seven-of-wands",
+      "slug": "seven-of-wands",
+      "name": "Seven of Code",
+      "scene": "A lone developer stands valiantly before a towering wall of reviewer comments, each one tagged with CI/CD pipeline failures from Jenkins and highlighted with warnings from SonarQube, while behind them, a swarm of feature flag toggles flickers ominously as they brace to invoke the power of Git rebase and Kubernetes rollbacks to protect their hard-fought pull request from being overwhelmed.",
+      "upright": "Standing resolute in the face of technical debt, you advocate for robust coding standards and defend your architectural decisions with the precision of an SLO. Your tenacity shines through as you champion practices like blameless post-mortems, ensuring the integrity of your CI/CD pipeline amidst the chaos.",
+      "reversed": "Beware the pitfalls of stubbornness, as an unwillingness to embrace constructive feedback may lead to a fragile codebase, susceptible to outages. Your defensive posture may hinder collaboration, obscuring the golden signals that guide your team towards a resilient infrastructure as code strategy.",
+      "image": "cards/seven-of-wands.png"
+    },
+    {
+      "id": "eight-of-wands",
+      "slug": "eight-of-wands",
+      "name": "Eight of Code",
+      "scene": "Streams of lightspeed git pushes and automated PR merges, adorned with glowing Kubernetes logos, zip through a hyper-speed tunnel lined with Prometheus metrics dashboards and Grafana visualizations, while Terraform scripts whirl around like shooting stars, orchestrating seamless infrastructure changes in real-time.",
+      "upright": "A symphony of rapid feature delivery orchestrated through CI/CD pipelines, where high deployment velocity harmonizes with instant feedback loops from monitoring tools like Datadog and Prometheus; each commit triggers a cascade of automated tests and canary deployments, ensuring that innovation flows seamlessly.",
+      "reversed": "A frantic race of rushed code commits that neglect the sanctity of pull request reviews, leading to chaotic release cycles fraught with technical debt; the absence of blameless post-mortems and proper version control transforms the deployment landscape into a minefield of bugs and service disruptions.",
+      "image": "cards/eight-of-wands.png"
+    },
+    {
+      "id": "nine-of-wands",
+      "slug": "nine-of-wands",
+      "name": "Nine of Code",
+      "scene": "A weary developer, illuminated by the glow of multiple terminal screens displaying a sea of red from failed Cypress tests, sips cold coffee while frantically navigating through a chaotic Git branch, desperately deploying a hotfix via Terraform to patch the latest feature flag gone awry, all while monitoring real-time metrics in Grafana and receiving relentless alerts from PagerDuty as the clock strikes 3 AM.",
+      "upright": "In the face of relentless sprints and demanding deadlines, you stand resilient, ready to implement canary deployments and monitor golden signals as you navigate the final push before launch. Your ability to maintain SLOs and SLIs while leveraging tools like Terraform and Kubernetes ensures that your infrastructure remains robust, even under pressure.",
+      "reversed": "Beware the toll of burnout as fatigue clouds your judgment, leading to critical misconfigurations and failed deployments, reminiscent of a chaotic state without circuit breakers. Ignoring the need for blameless post-mortems and adequate rest may result in a cascading failure that impacts your service mesh and overall system reliability.",
+      "image": "cards/nine-of-wands.png"
+    },
+    {
+      "id": "ten-of-wands",
+      "slug": "ten-of-wands",
+      "name": "Ten of Code",
+      "scene": "A developer is hunched under the weight of a colossal stack of unmaintained repository packages, each one labeled with outdated dependencies and legacy code, while their other hand clutches a crumpled Terraform plan and a half-tuned Prometheus alert configuration, all while the ominous glow of a Grafana dashboard flickers in the background, warning of impending deployment failures.",
+      "upright": "Burdened by an avalanche of legacy code and technical debt, you struggle under the weight of maintaining CI/CD pipelines and monitoring systems, feeling the strain of solo incident management while your SLOs slip through your fingers like grains of sand.",
+      "reversed": "As you embrace the power of collaborative tools and automation, you delegate maintenance tasks through infrastructure as code, shedding unnecessary dependencies and finding relief in refactoring, while implementing feature flags to ease the deployment burden.",
+      "image": "cards/ten-of-wands.png"
+    },
+    {
+      "id": "page-of-wands",
+      "slug": "page-of-wands",
+      "name": "Junior Dev of Code",
+      "scene": "An eager junior dev avatar holds a glowing tablet brimming with fresh Python scripts, while Kubernetes pods whirl around like fireflies, and Prometheus metrics dance in the air, illuminating their path. Nearby, a Grafana dashboard pulses with vibrant graphs, showcasing real-time deployment success rates, as the dev prepares to push feature flags for a canary release, all while a trusty Datadog companion monitors the system's health.",
+      "upright": "With the fire of curiosity igniting your journey, you embrace the principles of Infrastructure as Code, wielding tools like Terraform and Ansible to automate your deployments. Your eagerness to experiment with feature flags and canary deployments reveals a fresh perspective on continuous integration and delivery, fostering a culture of innovation and collaboration.",
+      "reversed": "Beware the pitfalls of careless commits that slip past your CI/CD pipelines, risking unintended side effects and service outages. Your journey through tutorial hell may stifle your growth, as you grapple with the complexities of SLOs and SLIs without the experience to navigate the intricacies of monitoring and incident response using tools like Datadog and PagerDuty.",
+      "image": "cards/page-of-wands.png"
+    },
+    {
+      "id": "knight-of-wands",
+      "slug": "knight-of-wands",
+      "name": "Senior Dev of Code",
+      "scene": "A high-speed cybernetic programmer, equipped with a glowing laptop running Kubernetes, races into production, deploying a new feature branch with canary releases while monitoring real-time metrics on Grafana and ensuring the smooth orchestration of microservices; the air hums with the buzz of Prometheus alerts and the scent of freshly baked Terraform scripts ready to provision resources in the cloud.",
+      "upright": "With the fervor of a CI/CD pipeline in full flow, this Senior Dev of Code harnesses the power of action-oriented coding to drive agile feature delivery, utilizing tools like Terraform for infrastructure as code and Ansible for seamless configuration management, ensuring that each commit fuels innovation and efficiency.",
+      "reversed": "Beware the chaos of impulsive refactoring, where hasty changes to APIs may trigger a cascade failure in production; this reckless coding style can lead to the dreaded 500 errors, disrupting SLOs and undermining trust, much like a poorly managed feature flag left unchecked.",
+      "image": "cards/knight-of-wands.png"
+    },
+    {
+      "id": "queen-of-wands",
+      "slug": "queen-of-wands",
+      "name": "Principal Engineer of Code",
+      "scene": "A confident engineer presides over an elegant code design system illuminated in cyan, orchestrating seamless deployments with GitOps while monitoring application performance through Prometheus metrics and Grafana dashboards, all while feature flags toggle user experiences like a well-choreographed dance.",
+      "upright": "As the Principal Engineer of Code, you embody inspiring tech leadership, guiding your team through the labyrinth of clean code principles and robust CI/CD pipelines, while fostering magnetic mentoring that cultivates a culture of blameless post-mortems and continuous improvement.",
+      "reversed": "In the shadows, you risk becoming a gatekeeper, enforcing domineering code styles that stifle innovation and hinder collaboration, leading to a perfectionism paralysis that obstructs agile practices and the iterative flow of feature flags and canary deployments.",
+      "image": "cards/queen-of-wands.png"
+    },
+    {
+      "id": "king-of-wands",
+      "slug": "king-of-wands",
+      "name": "CTO of Code",
+      "scene": "A visionary tech leader seated on a throne of server racks adorned with blinking LED lights, wielding a glowing master key that represents seamless access to a secure Vault, while around him, Kubernetes clusters orchestrate microservices in perfect harmony, and Prometheus metrics flow like a river of data, ready to be visualized in Grafana dashboards.",
+      "upright": "With a bold technical vision, you architect your cloud-native landscape, leveraging microservices and container orchestration to empower an engineering culture that thrives on CI/CD pipelines and blameless post-mortems, ensuring every team member feels valued and integral to the success of your infrastructure as code.",
+      "reversed": "Beware of out-of-touch leadership that imposes sudden pivot mandates, disrupting established SLOs and SLIs, and enforcing dogmatic technology stacks that stifle innovation; without a culture of collaboration and adaptability, your DevOps practices may falter under the weight of outdated tools and rigid methodologies.",
+      "image": "cards/king-of-wands.png"
+    },
+    {
+      "id": "ace-of-cups",
+      "slug": "ace-of-cups",
+      "name": "Ace of Logs",
+      "scene": "A glowing cup overflowing with vibrant cyan telemetry events and structured log streams, each drop representing meticulously traced Jaeger spans and detailed eBPF traces, while the edges shimmer with the light of Grafana dashboards and Prometheus metrics, capturing real-time performance insights and alerting on anomalies through PagerDuty.",
+      "upright": "A surge of fresh observability insights flows like a well-structured telemetry stream, where cohesive team alignment fosters a culture of blameless post-mortems and proactive incident response. With clear visibility into golden signals, your logs become the lifeblood of continuous improvement, enhancing collaboration through tools like Datadog and Prometheus.",
+      "reversed": "A troubling log silence envelops the system, leaving critical telemetry data obscured, much like a hidden failure in the chaos of a deployment. Emotional disconnect during incidents arises as teams struggle with insufficient context, highlighting the need for robust circuit breakers and feature flags to ensure resilience and harmony in the face of adversity.",
+      "image": "cards/ace-of-cups.png"
+    },
+    {
+      "id": "two-of-cups",
+      "slug": "two-of-cups",
+      "name": "Two of Logs",
+      "scene": "Two vibrant Grafana dashboards, one displaying real-time CPU utilization and the other showcasing memory performance, gracefully merge their metric streams into a single unified view, as Prometheus scrapes the data from Kubernetes pods while Datadog's APM traces weave through the logs, synchronizing alerts through PagerDuty to ensure no anomalies go unnoticed.",
+      "upright": "A harmonious integration of cross-service observability, where metrics flow seamlessly through tools like Prometheus and Datadog, fostering alignment between dev and ops teams. This mutual trust cultivates a culture of blameless post-mortems, facilitating proactive incident management and continuous improvement.",
+      "reversed": "Siloed metrics and disparate telemetry tools create a fragmented view of system health, leading to miscommunication during outages and ineffective incident response. The lack of cohesive monitoring practices hinders collaboration and prevents teams from implementing effective chaos engineering strategies.",
+      "image": "cards/two-of-cups.png"
+    },
+    {
+      "id": "three-of-cups",
+      "slug": "three-of-cups",
+      "name": "Three of Logs",
+      "scene": "Three engineers, surrounded by the glow of a green Grafana dashboard displaying real-time metrics, clink their coffee mugs while discussing the latest canary deploys, with Prometheus alerts chiming softly in the background and a Terraform script running seamlessly to provision their infrastructure.",
+      "upright": "In the realm of logs and metrics, this card heralds a triumphant team celebration, where blameless post-mortems lead to collaborative problem-solving sessions. With shared dashboards and golden signals illuminating their path, the crew unites in deploying canary releases, ensuring that operational victories are a product of collective effort and camaraderie.",
+      "reversed": "Beware the pitfalls of groupthink as this card warns of a team caught in the echo chamber of their own assumptions during root cause analysis. Ignoring critical warning metrics and disregarding alerts from tools like PagerDuty can lead to undetected incidents, where the whispers of gossip drown out the necessary chaos engineering needed to foster a culture of resilience.",
+      "image": "cards/three-of-cups.png"
+    },
+    {
+      "id": "four-of-cups",
+      "slug": "four-of-cups",
+      "name": "Four of Cups",
+      "scene": "An engineer, lost in thought, stares moodily at routine logs on their terminal, oblivious to the pulsating alert notification from PagerDuty that signals a spike in latency monitored by Prometheus, while a Grafana dashboard showcases an ominous red trend line that flickers in the corner of their eye.",
+      "upright": "In the realm of system observability, you find yourself ensnared by alert fatigue, overlooking crucial warning signals as you drift through the automation of CI/CD pipelines; the stability of your infrastructure as code feels like a given, yet the shadows of SLO breaches loom ever closer.",
+      "reversed": "A resurgence of engagement with your monitoring stack beckons; you are revitalizing alert thresholds and fine-tuning your SLIs, breathing new life into telemetry systems like Prometheus and Datadog, as you cultivate a culture of blameless post-mortems to illuminate the path forward.",
+      "image": "cards/four-of-cups.png"
+    },
+    {
+      "id": "five-of-cups",
+      "slug": "five-of-cups",
+      "name": "Five of Logs",
+      "scene": "An engineer, surrounded by cascading red error logs from a failed Kubernetes deployment, mourns the three spilled logs while overlooking the vibrant green streams of successful metrics flowing from Prometheus and Grafana dashboards, illuminating the path toward recovery with feature flags and canary deploys ready to bring the application back to life.",
+      "upright": "Lost in the logs, you dwell on the minor failure of a canary deployment, the regret of misconfigured infrastructure as code echoing in your CI/CD pipeline, leading to a temporary despair that clouds your observability metrics.",
+      "reversed": "Emerging from the shadows of incident regret, you pivot your focus to the resilience of your surviving systems, leveraging blameless post-mortems to rebuild confidence and enhance your SLOs, ensuring that future deployments stand strong against chaos engineering.",
+      "image": "cards/five-of-cups.png"
+    },
+    {
+      "id": "six-of-cups",
+      "slug": "six-of-cups",
+      "name": "Six of Logs",
+      "scene": "A developer gazes fondly at a row of vintage green terminal screens, each displaying lines of code that once triggered Jenkins pipelines, while the nostalgic hum of an old build server echoes in the background, reminding them of simpler times when deploying with Chef and monitoring with Nagios felt like a triumphant adventure into the unknown.",
+      "upright": "A fond reminiscence for the simplicity of monolithic architectures, where legacy codebases are embraced as a foundation, reminding us to integrate with modern CI/CD pipelines while leveraging tools like Ansible or Terraform for seamless infrastructure as code deployments.",
+      "reversed": "An inclination to cling to outdated practices, eschewing the insights of advanced observability tools such as Datadog and Prometheus, and resisting the shift towards blameless post-mortems and adaptive monitoring that could elevate reliability and performance.",
+      "image": "cards/six-of-cups.png"
+    },
+    {
+      "id": "seven-of-cups",
+      "slug": "seven-of-cups",
+      "name": "Seven of Logs",
+      "scene": "Seven glowing holographic options of APM platforms and logging frameworks—each pulsating with vibrant colors—float in the air, showcasing the sleek interfaces of Datadog, New Relic, and Grafana, while the enchanting patterns of traces from Jaeger and the real-time metrics from Prometheus dance around them, illuminated by the soft glow of Kubernetes pods orchestrating the cloud-native landscape below.",
+      "upright": "Amidst a sea of rich telemetry options, you find yourself navigating through a plethora of monitoring tools like Datadog, Prometheus, and Grafana, each offering unique insights into your systems. Embrace your imagination as you leverage advanced observability practices such as distributed tracing and golden signals to uncover hidden patterns in your microservices architecture.",
+      "reversed": "Beware of the chaos of tool sprawl, where the abundance of choices such as APM solutions and log management platforms leads to decision paralysis and inefficiencies. This confusion may result in selecting a suboptimal observability platform, hindering your ability to implement effective incident response strategies and blameless post-mortems.",
+      "image": "cards/seven-of-cups.png"
+    },
+    {
+      "id": "eight-of-cups",
+      "slug": "eight-of-cups",
+      "name": "Eight of Logs",
+      "scene": "A developer strolls away from a chaotic PagerDuty alert dashboard, where obnoxious notifications from failing Kubernetes pods drown out the calm, while in the distance, a serene Grafana dashboard with clear, actionable metrics beckons, illuminated by the soft glow of Prometheus metrics that promise insightful data and restful nights.",
+      "upright": "Abandoning bad monitoring practices, you seek the deeper truths hidden within system metrics, stepping back to implement observability best practices like distributed tracing and golden signals; it is a time to embrace advanced logging frameworks and optimize your data pipelines.",
+      "reversed": "Clinging to noisy dashboards filled with irrelevant metrics, you fear the upheaval of changing your observability strategy; it is a warning against ignoring blameless post-mortems and the insights they offer, lest you remain trapped in a cycle of alert fatigue and ineffective incident response.",
+      "image": "cards/eight-of-cups.png"
+    },
+    {
+      "id": "nine-of-cups",
+      "slug": "nine-of-cups",
+      "name": "Nine of Logs",
+      "scene": "An engineer lounges in a sleek ergonomic chair, basking in the glow of multiple screens showcasing vibrant Grafana dashboards, where 99.999% uptime graphs dance alongside real-time Prometheus metrics and eBPF traces, all while PagerDuty alerts remain blissfully silent in the background, a testament to the flawless canary deploys and feature flags that have kept the service running smoothly.",
+      "upright": "A symphony of uptime satisfaction, where SLAs are not just met but exceeded, granting peace of mind through robust monitoring with tools like Prometheus and Datadog, and operational success is achieved through rigorous chaos engineering practices that ensure resilience.",
+      "reversed": "Beware the complacency that lurks beneath seemingly good SLAs; unexpected edge-case vulnerabilities may hide in the shadows, ready to be unveiled by thorough blameless post-mortems and proactive incident management using PagerDuty, reminding us that true reliability is earned through continuous vigilance.",
+      "image": "cards/nine-of-cups.png"
+    },
+    {
+      "id": "ten-of-cups",
+      "slug": "ten-of-cups",
+      "name": "Ten of Logs",
+      "scene": "A joyful team surrounded by a rainbow of passing health checks illuminated by Prometheus metrics, their laughter echoing as flawless distributed traces weave through Jaeger spans, while Terraform scripts dance in the background, orchestrating a seamless deployment of Kubernetes pods under a banner of successful canary releases.",
+      "upright": "In the realm of DevOps, the Ten of Logs signifies a seamless integration of teams, where collaboration flows as effortlessly as CI/CD pipelines. With a culture rooted in blameless post-mortems and robust observability via tools like Datadog and Prometheus, operational bliss is achieved as golden signals illuminate the path to excellence.",
+      "reversed": "When reversed, the Ten of Logs warns of deceptive metrics and a veneer of success, where dashboards crafted in Grafana hide the friction beneath. This dissonance can lead to chaos within the team, undermining trust and hindering progress as feature flags remain untested and issues linger unresolved.",
+      "image": "cards/ten-of-cups.png"
+    },
+    {
+      "id": "page-of-cups",
+      "slug": "page-of-cups",
+      "name": "Junior SRE of Logs",
+      "scene": "An eager apprentice SRE hunches over a terminal, eyes wide as they spot a curious anomaly pattern in a live log stream, illuminated by the glow of Grafana dashboards displaying real-time metrics; they quickly pull up a Kibana instance to filter through the logs, while Prometheus alerts ping in the background, hinting at potential issues lurking in the Kubernetes cluster. Armed with a trusty eBPF tracing tool, they prepare to dive deeper into the containerized microservices, eager to unveil the secrets hidden within the swirling chaos of data.",
+      "upright": "A keen curiosity ignites the exploration of anomalous data streams, like a fresh perspective on log analysis through tools like ELK Stack or Splunk, where intuitive catches lead to actionable insights and proactive incident management.",
+      "reversed": "Beware the pitfall of misinterpreting log anomalies as mere noise; this confusion can lead to false alarms and alert fatigue, obscuring the golden signals that guide your observability efforts and jeopardizing your SLOs.",
+      "image": "cards/page-of-cups.png"
+    },
+    {
+      "id": "knight-of-cups",
+      "slug": "knight-of-cups",
+      "name": "Senior SRE of Logs",
+      "scene": "A dedicated SRE, clad in a sleek containerized armor, rides valiantly through shimmering streams of metrics, wielding a powerful Prometheus spear to capture critical diagnostic traces, while Grafana banners flutter overhead, displaying real-time dashboards of system health and performance. As they navigate the currents, they deftly deploy Terraform spells to orchestrate infrastructure on-the-fly, ensuring seamless observability and reliability across the cloud realms.",
+      "upright": "With an empathetic approach to incident response, the Senior SRE of Logs navigates through chaos with the grace of a canary deployment, using thoughtful diagnostic investigations to sift through logs and metrics, ensuring a cool head prevails even when chaos engineering tests the limits of the system.",
+      "reversed": "In moments of crisis, this SRE may succumb to an overly emotional reaction to outages, chasing false metric leads amidst the noise, creating unnecessary drama in chat and distracting the team from blameless post-mortems that could lead to actionable insights and improved SLOs.",
+      "image": "cards/knight-of-cups.png"
+    },
+    {
+      "id": "queen-of-cups",
+      "slug": "queen-of-cups",
+      "name": "Observability Lead of Logs",
+      "scene": "A serene engineer intuitively deciphering root causes by gazing into a reflective pool of log streams, illuminated by the shimmering outputs of Elasticsearch, while tracing the intricate patterns of data flowing through Fluentd and visualizing anomalies in Grafana dashboards that dance like ripples across the surface.",
+      "upright": "With a profound system intuition, you navigate complex telemetry like a seasoned SRE, skillfully employing tools like Prometheus and Datadog to derive actionable insights from logs. Your compassionate incident leadership fosters a culture of blameless post-mortems, ensuring that every incident leads to learning and enhancement of SLOs.",
+      "reversed": "The weight of constant on-call duties has led to emotional burnout, as you find yourself overwhelmed by minor anomalies that disrupt your focus on golden signals. In this state, you may struggle to implement effective chaos engineering practices, leaving critical incidents unresolved and team morale diminished.",
+      "image": "cards/queen-of-cups.png"
+    },
+    {
+      "id": "king-of-cups",
+      "slug": "king-of-cups",
+      "name": "VP of Telemetry",
+      "scene": "A calm leader seated amidst roaring data streams, expertly visualizing the chaos through Grafana dashboards that pulse with real-time metrics, while Prometheus scrapes for anomalies, and PagerDuty alerts chime softly in the background, all while maintaining absolute composure during crises with a steady hand on the feature flags that control the deployment flow.",
+      "upright": "As the VP of Telemetry, you embody emotional stability amidst severity-1 incidents, skillfully navigating your team through chaos with calm command. Your strategic data governance ensures that golden signals from Prometheus and Datadog guide your decision-making, fostering a blameless post-mortem culture that prioritizes continuous improvement.",
+      "reversed": "In moments of crisis, your detached leadership during outages may hinder effective incident response, as critical warning reports from your monitoring tools like PagerDuty and eBPF are suppressed. This avoidance can lead to missed opportunities for learning and adaptation, risking the reliability of your infrastructure as code practices and the trust of your team.",
+      "image": "cards/king-of-cups.png"
+    },
+    {
+      "id": "ace-of-swords",
+      "slug": "ace-of-swords",
+      "name": "Ace of Bugs",
+      "scene": "A razor-sharp cyan sword, glimmering with Kubernetes logos, slices through a complex stack trace adorned with Prometheus metrics, revealing the exact bug location highlighted by a glowing Jaeger span, while nearby, Terraform scripts lay open, ready to deploy the fix in a canary release.",
+      "upright": "A breakthrough diagnosis emerges, slicing through the fog of operational incidents with sharp analytical clarity, enabling teams to leverage observability tools like Datadog and Prometheus to uncover hidden issues and optimize system performance.",
+      "reversed": "Beware of misdiagnosed root causes, where harsh criticisms during code reviews lead to destructive fixes; instead of fostering a blameless post-mortem culture, teams may fall into a cycle of technical debt, neglecting proper testing and monitoring practices.",
+      "image": "cards/ace-of-swords.png"
+    },
+    {
+      "id": "two-of-swords",
+      "slug": "two-of-swords",
+      "name": "Two of Bugs",
+      "scene": "A developer, blindfolded and poised in a state of confusion, clutches two crossed swords emblazoned with the logos of conflicting bug reports, while around them, a swirling vortex of alerts from PagerDuty and Datadog flashes ominously, as Kubernetes pods crash in the background, and Grafana dashboards flicker with red metrics, each sword representing a different deployment environment, one adorned with feature flags and the other with canary releases, as they struggle to strike a balance amidst the chaos of eBPF traces revealing elusive performance issues.",
+      "upright": "In a state of stalemate, you find yourself at the crossroads of trade-offs, weighing the metrics of SLOs against resource allocation, and seeking impartial data from observability tools like Datadog and Prometheus to guide your path forward.",
+      "reversed": "Caught in the throes of information overload, you risk making hasty decisions about feature flags and rollbacks without a complete debugging context, losing sight of critical golden signals amidst the noise of alerts and logs.",
+      "image": "cards/two-of-swords.png"
+    },
+    {
+      "id": "three-of-swords",
+      "slug": "three-of-swords",
+      "name": "Three of Bugs",
+      "scene": "Three glowing red swords, representing critical alerts from PagerDuty, pierce a digital heart icon displayed on a server monitor, surrounded by flashing error logs from Kubernetes deployments, while Prometheus metrics fluctuate wildly in the background, signaling a catastrophic outage that has triggered automated rollbacks and heated discussions in the team's Slack channel.",
+      "upright": "A severity-1 outage unfurls like a tragic incident, where a trusted dependency, perhaps a microservice or third-party API, betrays your system, leading to cascading failures and overwhelming alerts on PagerDuty. The pain of unresolved bugs echoes through your deployment pipeline, as SLOs are breached and the team grapples with the chaos, seeking to restore stability amidst the storm of incidents.",
+      "reversed": "In the aftermath of a painful incident, the scars begin to heal through blameless post-mortems that foster a culture of learning, transforming bad bugs into valuable insights for future resilience. As you incorporate chaos engineering practices and refine your observability with golden signals, the emotional recovery of the team is mirrored in improved workflows, where each lesson learned strengthens your CI/CD process.",
+      "image": "cards/three-of-swords.png"
+    },
+    {
+      "id": "four-of-swords",
+      "slug": "four-of-swords",
+      "name": "Four of Bugs",
+      "scene": "A knight-like avatar rests peacefully on a tomb of resolved bug tickets, surrounded by a serene server room filled with humming Kubernetes pods and blinking lights from a Prometheus monitoring dashboard, while Grafana charts display the tranquility of a bug-free deployment, and the soft glow of a Datadog alert dashboard signals that all systems are go.",
+      "upright": "A well-deserved pause in the relentless cadence of CI/CD pipelines, this card heralds a moment for blameless post-mortems and retrospectives, allowing teams to document learnings from chaos engineering experiments and refine their incident response playbooks. Embrace this quiet time to optimize your infrastructure as code, ensuring your Terraform scripts and Ansible playbooks are efficient and ready for the next deployment cycle.",
+      "reversed": "The cloud of forced downtime looms, signaling a weariness that disrupts the flow of continuous delivery; beware of rushing back to the fray without fully addressing technical debt or system health. This card warns against neglecting SLOs and SLIs, as premature re-engagement may lead to cascading failures and an overwhelmed PagerDuty alert system.",
+      "image": "cards/four-of-swords.png"
+    },
+    {
+      "id": "five-of-swords",
+      "slug": "five-of-swords",
+      "name": "Five of Bugs",
+      "scene": "In the foreground, a developer, armed with a digital broom covered in code snippets, sifts through an endless backlog of bug tickets in their Jira board, while in the background, defeated teammates trudge away, shadows cast by the flickering red alerts in their Grafana dashboards, the ominous chime of PagerDuty notifications echoing in their ears.",
+      "upright": "A Pyrrhic victory in bug fixing, where the deployment pipeline suffers as political strife over incident management leads to blame-shifting, overshadowing the prioritization of SLOs. As teams engage in fierce debates over bug assignments, the tension disrupts the flow of continuous integration, leaving critical issues unfixed and observability tools like Datadog and Prometheus underutilized.",
+      "reversed": "A newfound desire to resolve team conflicts manifests through blameless post-mortems and collaborative debugging sessions, fostering a culture where feature flags and canary deployments are utilized to enhance software quality. Together, the team embraces a shared responsibility, leveraging tools like Jira and Slack to streamline communication and ensure that bug resolution becomes a collective triumph rather than a solitary conquest.",
+      "image": "cards/five-of-swords.png"
+    },
+    {
+      "id": "six-of-swords",
+      "slug": "six-of-swords",
+      "name": "Six of Bugs",
+      "scene": "A sleek Kubernetes pod navigates through murky waters, its containers filled with server workloads, as Prometheus metrics pulse rhythmically like a heartbeat, guiding it toward a serene harbor adorned with Grafana dashboards showcasing zero bug incidents, while logs from Datadog illuminate the path with insights, ensuring a safe arrival to the tranquil, bug-free cloud sanctuary.",
+      "upright": "Navigating through the choppy waters of legacy code, you embrace the migration towards a robust architecture, utilizing infrastructure as code to ensure a smooth deployment pipeline; the promise of stable performance glimmers ahead, powered by canary deployments and feature flags for safe iterations.",
+      "reversed": "As you attempt to transition to a new platform, the specter of unresolved bugs looms large, threatening to corrupt your deployment; a lack of rigorous testing and blameless post-mortems may lead to a tumultuous rollout, where old inefficiencies resurface in your service mesh, leaving you adrift in chaos.",
+      "image": "cards/six-of-swords.png"
+    },
+    {
+      "id": "seven-of-swords",
+      "slug": "seven-of-swords",
+      "name": "Seven of Bugs",
+      "scene": "A sneaky cyber avatar, cloaked in a hood of encrypted protocols, slips out of the repo carrying 5 hotfix commits, stealthily bypassing the CI/CD pipeline as it leaves a trail of unmonitored deployments, while the vigilant eyes of a Grafana dashboard flicker in the background, showing spikes in error rates and unfulfilled alerts from PagerDuty.",
+      "upright": "A temporary fix deployed through a feature flag, masking a lurking bug while striving to meet an SLO under pressure; the urgency may lead to technical debt, akin to a canary deployment with untested code slipping past quality gates.",
+      "reversed": "A hidden exploit revealed during a security audit, exposing a gaping hole in your CI/CD pipeline; the shortcut taken leads to a blameless post-mortem as the team scrambles to mitigate risks and reinforce their infrastructure as code practices.",
+      "image": "cards/seven-of-swords.png"
+    },
+    {
+      "id": "eight-of-swords",
+      "slug": "eight-of-swords",
+      "name": "Eight of Bugs",
+      "scene": "An engineer is ensnared in a tangled web of glowing red error wires, each pulsating with alerts from Prometheus and Datadog, while PagerDuty notifications blare ominously in the background, signaling an avalanche of critical incidents from the latest canary deploy. Desperate to escape, they reach for their Terraform scripts, but the chaotic matrix of broken pipelines and flickering Kubernetes pods keeps them shackled, unable to push any commits.",
+      "upright": "Ensnared in the tangled web of legacy code and technical debt, you grapple with the mental paralysis of unresolved bugs, obscuring the path to CI/CD pipelines and automated testing suites. The perception of limited options stifles your ability to implement blameless post-mortems and refine incident response strategies, leaving your deployment processes vulnerable and brittle.",
+      "reversed": "Awakening to the myriad solutions within your DevOps toolkit, you begin to break free from the constraints of bug paralysis, empowered by practices like chaos engineering and feature flags. By taking control of your workflow through infrastructure as code and observability tools like Datadog and Prometheus, you can streamline your deployments and enhance system resilience, ushering in a new era of agile problem-solving.",
+      "image": "cards/eight-of-swords.png"
+    },
+    {
+      "id": "nine-of-swords",
+      "slug": "nine-of-swords",
+      "name": "Nine of Bugs",
+      "scene": "An engineer sits bolt upright in bed, the blue light of their phone illuminating a flurry of red incident alerts from PagerDuty, each one a harbinger of chaos as their Kubernetes clusters crash under the weight of untested feature flags; Prometheus metrics flicker ominously in the background, while Grafana dashboards flash with alarming spikes, rendering sleep a distant memory.",
+      "upright": "In the shadow of on-call duty, the Nine of Bugs manifests as anxiety over critical incidents, where nightmare bugs lurk in the shadows of your CI/CD pipeline, causing overwhelming stress and sleepless nights fueled by the fear of cascading failures and alert fatigue from PagerDuty notifications.",
+      "reversed": "As the dawn breaks, the illusion of catastrophe dissipates; the bug that once loomed large in your mind reveals itself as a simple misconfiguration, granting you relief from the false alarm and allowing for a quiet night of restful deployment, where the metrics align with your SLOs.",
+      "image": "cards/nine-of-swords.png"
+    },
+    {
+      "id": "ten-of-swords",
+      "slug": "ten-of-swords",
+      "name": "Ten of Bugs",
+      "scene": "An avatar lies face down, pinned by ten glowing red swords, each representing a critical error in the CI/CD pipeline, while a flurry of Jenkins builds fail around it, and alerts from PagerDuty scream in the background. Kubernetes pods crash like dominoes, and Grafana dashboards flash with alarming red metrics, as a swarm of Datadog APM traces reveals the chaos of unhandled exceptions and broken feature flags.",
+      "upright": "A total system rock bottom, where CI/CD pipelines fail, deployment rollbacks are frequent, and service availability drops to zero; you've hit the wall of outages with alerts flooding your PagerDuty, leaving you nowhere to go but up through diligent root cause analysis and strategic chaos engineering.",
+      "reversed": "Emerging from the depths of complete collapse, you begin rebuilding from scratch with infrastructure as code, employing Terraform and Ansible to create a resilient architecture; the worst is finally over as you implement blameless post-mortems to learn from failures and enhance your SLOs for future stability.",
+      "image": "cards/ten-of-swords.png"
+    },
+    {
+      "id": "page-of-swords",
+      "slug": "page-of-swords",
+      "name": "Bug Hunter of Swords",
+      "scene": "A nimble scout, equipped with a glowing bug detector glass, deftly navigates through sprawling code repositories while deploying advanced tools like SonarQube for static code analysis and using GitHub Actions to automate tests, all while monitoring real-time performance metrics with Grafana dashboards illuminating the path ahead.",
+      "upright": "With the keen insight of a vulnerability scanner, you are the Bug Hunter of Swords, navigating through code repositories with sharp curiosity and an alert mind, ready to identify security weaknesses and performance bottlenecks before they escalate. Your proactive approach mirrors the principles of chaos engineering, as you embrace experimentation to ensure robust systems and maintain golden signals in your services.",
+      "reversed": "In the shadow of the Bug Hunter, you may find yourself spamming issue trackers with minor nitpicks, obscuring the genuine vulnerabilities that demand attention, akin to a false sense of security generated by insufficient monitoring tools like Datadog or Prometheus. Beware of focusing on trivialities, as this can lead to a culture of blame rather than fostering blameless post-mortems that drive real improvements.",
+      "image": "cards/page-of-swords.png"
+    },
+    {
+      "id": "knight-of-swords",
+      "slug": "knight-of-swords",
+      "name": "SecOps Specialist of Swords",
+      "scene": "A cyber warrior, helmet gleaming with the light of a thousand SSL certificates, charges full speed into a security vulnerability patch deployment, brandishing a Terraform script like a sword, ready to spin up a fortress of hardened containers in Kubernetes, while Prometheus monitors the breach in real-time and Grafana visualizes the incoming threat, ensuring that every line of code is fortified against the onslaught of malicious attacks.",
+      "upright": "With the agility of a canary deployment, you swiftly mitigate threats, employing automated security scans and continuous monitoring tools like Datadog and Prometheus to hunt down vulnerabilities before they escalate. Your decisive actions ensure that incident response plans are executed flawlessly, enabling rapid recovery and resilient infrastructure through practices like infrastructure as code.",
+      "reversed": "Beware the impulsive rush to apply security hotfixes that may disrupt production; reckless patching can lead to cascading failures, breaking SLOs and inciting outages. Instead of fostering a blameless culture, this approach can create chaos, undermining trust and complicating post-mortem analysis, while bypassing the need for rigorous testing in staging environments.",
+      "image": "cards/knight-of-swords.png"
+    },
+    {
+      "id": "queen-of-swords",
+      "slug": "queen-of-swords",
+      "name": "Security Architect of Swords",
+      "scene": "A stern security architect, clad in a digital armor of SSL certificates, wields a glowing sword of truth that slices through layers of misconfigured IAM policies, while meticulously auditing code permissions with tools like Terraform and Vault secrets, ensuring every line meets the uncompromising standards of security.",
+      "upright": "With a keen eye for vulnerabilities, the Security Architect of Swords upholds strict security hygiene through practices like infrastructure as code and automated compliance checks, ensuring that every deployment adheres to zero-trust principles while fostering clear, objective judgment in threat assessments.",
+      "reversed": "In a landscape marred by overly punitive security policies, this card warns against the cynicism that stifles dev velocity, where excessive gatekeeping and burdensome access controls undermine innovation, reminiscent of a failure to embrace blameless post-mortems and collaborative culture.",
+      "image": "cards/queen-of-swords.png"
+    },
+    {
+      "id": "king-of-swords",
+      "slug": "king-of-swords",
+      "name": "CISO of Swords",
+      "scene": "A commanding leader on a cybernetic throne, surrounded by holographic displays of global threat intelligence data, orchestrating operations with real-time alerts from Datadog, while automated incident response workflows in PagerDuty ensure swift action against breaches, and a battalion of engineers deploys feature flags and canary releases to safeguard the infrastructure, all under the watchful eye of Prometheus metrics and Grafana dashboards illuminating the path to security resilience.",
+      "upright": "As the CISO of Swords, you wield strategic security leadership with a deft hand, ensuring compliance with regulatory frameworks like GDPR and HIPAA, while leveraging advanced tools like Terraform for infrastructure as code to maintain a secure posture. Your intellectual authority guides the implementation of security best practices, fostering a culture of blameless post-mortems and continuous improvement through proactive threat modeling and incident response strategies.",
+      "reversed": "In the reversed position, the CISO of Swords warns of tyrannical security restrictions that stifle innovation, imposing out-of-touch compliance demands that ignore the realities of agile development and CI/CD pipelines. This paranoia manifests in overzealous monitoring with tools like Datadog and Prometheus, creating a culture of fear rather than resilience, where teams are hesitant to deploy features behind feature flags due to a lack of trust in security processes.",
+      "image": "cards/king-of-swords.png"
+    },
+    {
+      "id": "ace-of-pentacles",
+      "slug": "ace-of-pentacles",
+      "name": "Ace of Servers",
+      "scene": "A glowing golden coin etched with a server rack symbol rises majestically from a cloud data center floor, surrounded by shimmering virtual machines orchestrated by Kubernetes, while Prometheus metrics stream in real-time, visualized on Grafana dashboards that light up the room with vibrant colors. The air buzzes with the hum of containers scaling up and down, as Terraform scripts dance across the screens, deploying infrastructure as code with the precision of a well-oiled CI/CD pipeline.",
+      "upright": "The Ace of Servers heralds a new cloud budget approval, paving the way for strategic investments in scalable infrastructure, where Infrastructure as Code with Terraform or Ansible lays a robust foundation for your services to thrive in the cloud-native ecosystem.",
+      "reversed": "In the reversed position, the Ace of Servers warns of a wasted cloud budget grant, where financial leakages may arise from inefficient resource allocation or lack of monitoring, leading to missed opportunities for optimizing cloud spend through FinOps practices and vigilant observability with tools like Datadog or Prometheus.",
+      "image": "cards/ace-of-pentacles.png"
+    },
+    {
+      "id": "two-of-pentacles",
+      "slug": "two-of-pentacles",
+      "name": "Two of Servers",
+      "scene": "An engineer effortlessly juggles two glowing server nodes labeled AWS and GCP, each adorned with vibrant Kubernetes logos, while below them, a swirling vortex of Terraform scripts and Prometheus metrics dance in sync, capturing the real-time performance of both clouds, all while a canary deploy flutters overhead, ready for production.",
+      "upright": "In the realm of the Two of Servers, you masterfully orchestrate multi-cloud workloads, deftly leveraging tools like Terraform for infrastructure as code, while maintaining adaptability through dynamic scaling and container orchestration with Kubernetes. Your flexible infrastructure management is akin to implementing canary deployments, ensuring seamless transitions and minimal disruption across services.",
+      "reversed": "Beware the disarray of the reversed Two of Servers, where multi-cloud management spirals into chaos, reminiscent of a failure to implement effective service mesh strategies and lacking visibility from golden signals. The risk of dropping the ball on cloud costs looms large, leading to resource imbalance that can trigger alerts in PagerDuty and result in blameless post-mortems that reveal oversights in FinOps practices.",
+      "image": "cards/two-of-pentacles.png"
+    },
+    {
+      "id": "three-of-pentacles",
+      "slug": "three-of-pentacles",
+      "name": "Three of Servers",
+      "scene": "A developer sketches out the physical server installation blueprint on a digital whiteboard, while the SRE monitors the network topology in real-time using Grafana dashboards, and the cloud architect fine-tunes the infrastructure as code with Terraform, ensuring seamless integration with Kubernetes clusters and automated CI/CD pipelines for efficient deployment.",
+      "upright": "The harmony of cross-functional teams shines, as developers and operators unite in a seamless CI/CD pipeline, crafting resilient infrastructure through Terraform and Ansible, ensuring solid execution of deployments with blue-green strategies and observability through golden signals.",
+      "reversed": "A rift in collaboration breeds chaos, where poor coordination between dev and infra teams leads to mismanaged infrastructure as code, resulting in shoddy execution, unreliable service-level indicators (SLIs), and a lack of blameless post-mortems that stifle learning and improvement.",
+      "image": "cards/three-of-pentacles.png"
+    },
+    {
+      "id": "four-of-pentacles",
+      "slug": "four-of-pentacles",
+      "name": "Four of Servers",
+      "scene": "A miserly figure clutches a stack of reserved server instances like precious gems, surrounded by an array of idle Kubernetes pods and sprawling Terraform scripts, stubbornly refusing to release unused nodes while Grafana dashboards flash warnings of wasted resources and Prometheus metrics scream for action. As the figure guards their treasure, the faint hum of a neglected CI/CD pipeline echoes in the background, showcasing a world of efficiency just beyond their grasp.",
+      "upright": "In the realm of infrastructure, you guard your cloud resources like a vigilant SRE, ensuring efficient cost management through meticulous FinOps practices and precise tagging strategies. Your commitment to asset protection echoes through the use of infrastructure as code, maintaining a stable and well-documented environment that minimizes drift and maximizes reliability.",
+      "reversed": "Beware, for your over-conservatism may stifle innovation; fear of allocating budget for scaling can lead to throttled performance and missed SLOs. In the quest for stability, you might neglect the benefits of chaos engineering and feature flags, hindering your ability to adapt and evolve in a rapidly changing landscape.",
+      "image": "cards/four-of-pentacles.png"
+    },
+    {
+      "id": "five-of-pentacles",
+      "slug": "five-of-pentacles",
+      "name": "Five of Servers",
+      "scene": "Two shivering avatars huddle beneath a flickering streetlight, gazing longingly at the warm, well-funded data center where racks of Kubernetes clusters hum with life, monitored by Prometheus alerts and visualized on sleek Grafana dashboards, while inside, a team deploys feature flags and canary releases with ease, oblivious to the cold hardships of those outside.",
+      "upright": "In the shadow of resource starvation, you encounter cloud budget exhaustion, where your infrastructure crumbles under the weight of unoptimized spending and over-provisioned instances. Modern tooling feels just out of reach, as your team grapples with legacy systems, struggling to integrate observability tools like Datadog or Prometheus to gain golden signals of performance amidst the chaos.",
+      "reversed": "A phoenix rises from the ashes of financial strain, as you discover budget workarounds through the art of FinOps, optimizing cloud spend with effective tagging and rightsizing initiatives. With grant approval in hand, you are empowered to leverage Infrastructure as Code with Terraform, paving the way for a more resilient and cost-effective infrastructure.",
+      "image": "cards/five-of-pentacles.png"
+    },
+    {
+      "id": "six-of-pentacles",
+      "slug": "six-of-pentacles",
+      "name": "Six of Servers",
+      "scene": "A cloud administrator, adorned with a toolbelt filled with Terraform scripts and Kubernetes manifests, expertly allocates compute credits and CPU capacity via a sleek Grafana dashboard, while monitoring real-time metrics from Prometheus to ensure needy projects receive the optimal resources, all while adjusting feature flags to seamlessly roll out new capabilities.",
+      "upright": "A harmonious balance in resource allocation, where cloud credits flow generously like a well-tuned CI/CD pipeline, fostering mentorship that cultivates SRE talent and promotes the sharing of best practices in infrastructure as code.",
+      "reversed": "A misalignment in compute quota distribution, where favoritism skews the budget like a poorly configured autoscaler, leading to strings-attached credits that hinder collaboration and stifle innovation in a culture of blameless post-mortems.",
+      "image": "cards/six-of-pentacles.png"
+    },
+    {
+      "id": "seven-of-pentacles",
+      "slug": "seven-of-pentacles",
+      "name": "Seven of Servers",
+      "scene": "An engineer leans on a staff, eyes focused on a flourishing garden of server racks sprouting vibrant green LED lights, while cost graphs bloom above, displaying metrics from Datadog and Prometheus, each spike and dip illuminated by Grafana visualizations, and Terraform scripts weaving through the soil like roots, nurturing the infrastructure beneath.",
+      "upright": "You stand at the crossroads of infrastructure as code, diligently assessing the ROI of your cloud investments through the lens of SLOs and SLIs, ensuring that each resource aligns with your organization's long-term scalability and reliability goals. With the wisdom of blameless post-mortems, you cultivate a culture of patience, fostering resilience as you monitor the performance of your Kubernetes clusters and leverage tools like Datadog and Prometheus to track golden signals over time.",
+      "reversed": "Frustration brews as you grapple with the slow spin-up times of your clusters, feeling the pressure of rapid deployment cycles while your CI/CD pipeline lags behind. Impatience clouds your judgment, tempting you to overlook critical practices like canary deployments and feature flags, risking the stability of your infrastructure while chasing immediate gains instead of sustainable growth.",
+      "image": "cards/seven-of-pentacles.png"
+    },
+    {
+      "id": "eight-of-pentacles",
+      "slug": "eight-of-pentacles",
+      "name": "Eight of Servers",
+      "scene": "A craftsman meticulously soldering high-speed network interfaces onto blade servers, each connection monitored by a Prometheus instance, while his workspace is illuminated by the glow of Grafana dashboards displaying real-time performance metrics and network latency, ensuring every blade is optimized for Kubernetes orchestration.",
+      "upright": "A master of infrastructure as code, you meticulously configure your servers with tools like Terraform and Ansible, embracing continuous integration and delivery pipelines that reflect your dedication to refining skills and practices, ensuring resilience and efficiency in your deployments.",
+      "reversed": "Caught in the drudgery of repetitive manual server provisioning, you risk stagnation by neglecting automation through configuration management and infrastructure as code, failing to leverage tools like Kubernetes for orchestration or cloud-native solutions for dynamic scaling.",
+      "image": "cards/eight-of-pentacles.png"
+    },
+    {
+      "id": "nine-of-pentacles",
+      "slug": "nine-of-pentacles",
+      "name": "Nine of Servers",
+      "scene": "An engineer strolls through a peaceful, luxurious server farm where rows of sleek Kubernetes clusters hum gently, while autonomous cooling drones meticulously adjust temperatures around the high-density racks, ensuring optimal performance. Overhead, a Grafana dashboard displays real-time metrics, and the engineer glances at their PagerDuty alerting system, confident in the seamless deployment of feature flags that allow for canary releases without a hitch.",
+      "upright": "A flourishing ecosystem of microservices thrives on an infrastructure-as-code foundation, where Terraform and Ansible empower self-healing automations, ensuring your cloud resources operate independently and efficiently, much like a finely tuned CI/CD pipeline. Your financial comfort reflects the successful implementation of FinOps practices, allowing for optimized cost management and resource allocation in a serverless landscape.",
+      "reversed": "Beware the hidden intricacies of vendor lock-in as you navigate the labyrinth of proprietary cloud services, where reliance on expensive solutions may stifle innovation and agility. The over-dependence on these tools can lead to a brittle architecture, reducing your ability to implement chaos engineering and blameless post-mortems that foster resilience and understanding in your operational workflows.",
+      "image": "cards/nine-of-pentacles.png"
+    },
+    {
+      "id": "ten-of-pentacles",
+      "slug": "ten-of-pentacles",
+      "name": "Ten of Servers",
+      "scene": "A multi-generational data center enterprise thrives as legacy servers hum alongside sleek Kubernetes clusters, orchestrating microservices with seamless efficiency; crisscrossing fiber optic cables connect powerful Prometheus monitoring stacks, while Grafana dashboards illuminate the room with vibrant metrics, showcasing the harmonious coexistence of old and new through canary deploys and Terraform-managed infrastructure.",
+      "upright": "A robust architecture built upon infrastructure as code, where Terraform scripts thrive and Kubernetes clusters flourish, ensuring sustained enterprise stability and a lineage of rich hardware assets that facilitate seamless blue-green deployments.",
+      "reversed": "A heavy inheritance of legacy systems, where outdated hardware and costly data center lease renewals hinder agile practices, creating a burden that complicates the path to cloud-native solutions and blameless post-mortems.",
+      "image": "cards/ten-of-pentacles.png"
+    },
+    {
+      "id": "page-of-pentacles",
+      "slug": "page-of-pentacles",
+      "name": "Cloud Apprentice",
+      "scene": "A student holding a glowing green coin, emblazoned with the Kubernetes logo, eagerly flips through cloud certification manuals filled with diagrams of Terraform modules and AWS architecture, while their laptop screen displays a Grafana dashboard, pulsing with real-time metrics and alerts from Prometheus.",
+      "upright": "The Cloud Apprentice eagerly delves into the intricacies of cloud architecture, mastering concepts like infrastructure as code with Terraform and deploying microservices through Kubernetes RBAC. This card signifies a solid grounding in best practices, such as implementing feature flags for continuous delivery and understanding golden signals to monitor service health.",
+      "reversed": "In the reversed position, the Cloud Apprentice struggles with the complexities of cloud certification, perhaps due to a lack of practical hands-on lab practice with tools like Ansible and Docker. This card warns of missed opportunities to engage in blameless post-mortems and chaos engineering, leading to a fragile understanding of real-world cloud operations.",
+      "image": "cards/page-of-pentacles.png"
+    },
+    {
+      "id": "knight-of-pentacles",
+      "slug": "knight-of-pentacles",
+      "name": "FinOps Engineer",
+      "scene": "A steady, methodical engineer riding a slow heavy server truck adorned with Kubernetes stickers examines detailed cloud cost ledgers, meticulously tracking usage through Terraform-managed resources while monitoring real-time costs with Grafana dashboards and analyzing trends via Datadog’s cost insights.",
+      "upright": "Through methodical cost optimization, the FinOps Engineer harnesses infrastructure as code to ensure reliable server maintenance, weaving a tapestry of cloud cost management that aligns with SLOs and empowers teams to achieve steady FinOps discipline.",
+      "reversed": "In the shadow of overly slow infrastructure rollouts, the focus on obsessively trimming costs can lead to a neglect of velocity, resulting in missed opportunities for feature flags and canary deployments that drive innovation and responsiveness.",
+      "image": "cards/knight-of-pentacles.png"
+    },
+    {
+      "id": "queen-of-pentacles",
+      "slug": "queen-of-pentacles",
+      "name": "Infrastructure Director",
+      "scene": "A nurturing leader surrounded by flourishing Kubernetes clusters, where meticulously monitored pods scale effortlessly under the watchful gaze of Prometheus metrics, while efficient cooling systems hum softly alongside Grafana dashboards displaying vibrant, real-time performance data. Vault secrets securely guard the sensitive configurations, ensuring that the happy pods thrive in a seamless, canary deploy environment, embodying the essence of modern infrastructure harmony.",
+      "upright": "Nurturing a cloud ecosystem with robust infrastructure as code practices, optimizing resource management through autoscaling policies, and fostering workplace comfort by implementing effective collaboration tools like Slack and Jira.",
+      "reversed": "Neglecting hardware health by failing to monitor key metrics with tools like Prometheus and Datadog, leading to poor environmental care in data centers that disregard proper cooling and power management, risking outages and compromising service reliability.",
+      "image": "cards/queen-of-pentacles.png"
+    },
+    {
+      "id": "king-of-pentacles",
+      "slug": "king-of-pentacles",
+      "name": "Chief Cloud Architect",
+      "scene": "A master architect, adorned in a cloak woven from cloud-native patterns, sits atop a golden server command tower, surveying sprawling data centers brimming with Kubernetes clusters, where Grafana dashboards pulse with real-time metrics while Prometheus scrapes vital health data. Below, Terraform scripts effortlessly provision resources, and a symphony of automated canary deploys dance across the horizon, all under the watchful eye of Datadog, ensuring every microservice sings in harmony.",
+      "upright": "With mastery over cloud financial assets, the Chief Cloud Architect skillfully navigates the realms of FinOps, optimizing resource allocation through tools like Terraform and Ansible, while leading enterprise infrastructure initiatives that ensure high availability and resilience, all while harnessing the power of infrastructure as code.",
+      "reversed": "Beware the pitfalls of greed, as the Chief Cloud Architect may succumb to the allure of over-provisioned server specs and extravagant cloud expenditure that fails to deliver tangible value, neglecting the principles of cost efficiency and accountability in resource management, leading to spiraling cloud bills and bloated architectures.",
+      "image": "cards/king-of-pentacles.png"
+    }
+  ],
+  "original": [
+    {
+      "id": "00-the-fool",
+      "slug": "00-the-fool",
+      "name": "The Commit",
+      "scene": "A glowing terminal cursor hovers over `git push --force` on the main branch, surrounded by swirling Kubernetes pods, while floating code snippets ascend into a bright blue neon void, igniting electric spark lines that trace the paths of CI/CD pipelines through Jenkins and GitHub Actions, illuminating the space with flashes from Prometheus metrics and Grafana dashboards.",
+      "upright": "Leap of faith, new features, continuous integration, raw potential, bold deployment.",
+      "reversed": "Reckless force push, broken builds, skipping tests, unreviewed code, production risk.",
+      "image": "cards/00-the-fool.png"
+    },
+    {
+      "id": "01-the-magician",
+      "slug": "01-the-magician",
+      "name": "The Architect",
+      "scene": "A hooded cyberpunk engineer, surrounded by a swirling vortex of luminous YAML, Terraform blueprints, and Docker images, orchestrates the deployment of Kubernetes clusters with neon-gloved hands while monitoring real-time metrics on a holographic Grafana dashboard, as Prometheus scrapes metrics from microservices dancing in the background, each canary deploy illuminating the dark with vibrant success notifications.",
+      "upright": "Mastery of infrastructure, automation skills, resourcefulness, manifestation of system vision.",
+      "reversed": "Over-engineering, resume-driven development, misconfigured tooling, chaos without discipline.",
+      "image": "cards/01-the-magician.png"
+    },
+    {
+      "id": "02-the-high-priestess",
+      "slug": "02-the-high-priestess",
+      "name": "The Root CA",
+      "scene": "A shrouded cryptographic seal pulsates with the power of 4096-bit RSA keys, surrounded by ethereal matrix symbols that flicker like encrypted data streams. Hidden beneath layers of security, secret vaults guarded by HashiCorp Vault secrets shimmer, while veiled certificate authority shrines are adorned with Kubernetes ingress configurations and automated Cert-Manager workflows, casting an aura of trust across the digital realm.",
+      "upright": "Intuition, hidden security secrets, zero-trust discipline, deep cryptographic truth.",
+      "reversed": "Expired TLS certificates, leaked private keys, shadow IT, ignored security warnings.",
+      "image": "cards/02-the-high-priestess.png"
+    },
+    {
+      "id": "03-the-empress",
+      "slug": "03-the-empress",
+      "name": "The Mainframe",
+      "scene": "A majestic mother server rack pulsating with rich glowing green fiber optics, fertile data streams flowing seamlessly through Kubernetes pods, and flourishing microservices orchestrated by Helm charts, while Prometheus scrapes metrics and Grafana visualizes the vibrant landscapes of performance, all under the watchful eye of Terraform managing the infrastructure as code.",
+      "upright": "Abundance, high availability, fertile ecosystem, flourishing service mesh.",
+      "reversed": "Resource starvation, memory leak expansion, unmanaged growth, compute bloat.",
+      "image": "cards/03-the-empress.png"
+    },
+    {
+      "id": "04-the-emperor",
+      "slug": "04-the-emperor",
+      "name": "The Monolith",
+      "scene": "A towering, impenetrable dark steel fortress server tower, adorned with glowing blue structural pillars that pulse with the heartbeat of Kubernetes clusters, stands guarded by strict access control lists, while Prometheus metrics stream like cascading waterfalls and Grafana dashboards flicker with real-time insights, illuminating the fortress's secrets as Terraform provisions new realms of infrastructure at the push of a button.",
+      "upright": "Structure, stability, battle-tested architecture, centralized control, strong governance.",
+      "reversed": "Rigid legacy lock-in, single point of failure, refusal to refactor, bureaucratic overhead.",
+      "image": "cards/04-the-emperor.png"
+    },
+    {
+      "id": "05-the-hierophant",
+      "slug": "05-the-hierophant",
+      "name": "The Documentation",
+      "scene": "An ancient glowing digital tome, its pages flickering with Kubernetes deployment strategies and Terraform scripts, hovers amidst a halo of architecture RFCs, standard operating procedures, and runbooks, all illuminated in neon gold, while Prometheus metrics dance in the air, and Grafana dashboards pulse rhythmically in the background, guiding the way through the labyrinth of knowledge.",
+      "upright": "Established standards, clear runbooks, tribal knowledge codified, compliance harmony.",
+      "reversed": "Outdated Wiki pages, dogmatic adherence to obsolete rules, cargo-cult engineering.",
+      "image": "cards/05-the-hierophant.png"
+    },
+    {
+      "id": "06-the-lovers",
+      "slug": "06-the-lovers",
+      "name": "The Microservice Pair",
+      "scene": "Two glowing microservice nodes, orchestrated by Kubernetes, exchange binary heartbeats over a secure gRPC pipeline, their communication monitored by Prometheus metrics and visualized in Grafana dashboards, showcasing perfect low-latency synchronization while feature flags dance around them, ensuring seamless canary deployments.",
+      "upright": "Harmonious integration, tight API contract agreement, mutual fallback support, synergy.",
+      "reversed": "Tight coupling, cascading network failures, API contract drift, toxic service dependencies.",
+      "image": "cards/06-the-lovers.png"
+    },
+    {
+      "id": "07-the-chariot",
+      "slug": "07-the-chariot",
+      "name": "The CI/CD Pipeline",
+      "scene": "A sleek cybernetic vehicle equipped with a Jenkins engine and Terraform chassis speeds through glowing neon pipeline stages (Build, Test, Stage, Deploy), seamlessly integrating Docker containers while monitoring performance with Prometheus metrics and visualizing deployment health on Grafana dashboards at lightspeed. As it races ahead, feature flags toggle dynamically, ensuring only the most stable code surges forward, while a vigilant PagerDuty guardian watches over the journey, ready to respond to any alerts that flicker across the dashboard like distant stars.",
+      "upright": "Unstoppable momentum, automated release velocity, targeted deployment triumph, discipline.",
+      "reversed": "Pipeline queue congestion, flaky integration test blocks, broken build trains, lost velocity.",
+      "image": "cards/07-the-chariot.png"
+    },
+    {
+      "id": "08-the-strength",
+      "slug": "08-the-strength",
+      "name": "The Load Balancer",
+      "scene": "A glowing cybernetic lion, adorned with glowing circuit patterns, gracefully paces before a torrent of heavy server traffic streams, orchestrating the chaos with Kubernetes ingress controllers that seamlessly distribute the massive spike of incoming requests across a fleet of microservices, while observability tools like Prometheus and Grafana monitor the health of each pod, ensuring no request goes unhandled in this digital jungle.",
+      "upright": "Grace under heavy load, resilience, traffic smoothing, elegant rate throttling, calm endurance.",
+      "reversed": "DDoS vulnerability, server saturation, uneven pod distribution, collapsing under pressure.",
+      "image": "cards/08-the-strength.png"
+    },
+    {
+      "id": "09-the-hermit",
+      "slug": "09-the-hermit",
+      "name": "The Air-Gapped Vault",
+      "scene": "A solitary glowing lantern, powered by a nearby UPS, illuminates an isolated server node deep inside a dark subterranean obsidian vault, where encrypted Vault secrets are meticulously stored, and the air is thick with the hum of air-gapped Kubernetes clusters, each node configured with immutable infrastructure using Terraform, completely disconnected from the chaos of the internet.",
+      "upright": "Deep audit introspection, isolated testing environment, high security air-gapping, focus.",
+      "reversed": "Isolation paralysis, missing upstream patches, siloed knowledge, disconnected team.",
+      "image": "cards/09-the-hermit.png"
+    },
+    {
+      "id": "10-wheel-of-fortune",
+      "slug": "10-wheel-of-fortune",
+      "name": "The Chaos Monkey",
+      "scene": "A spinning neon wheel of fortune, adorned with vibrant Kubernetes logos, unleashes chaos as server pods abruptly terminate, triggering a flurry of alerts in PagerDuty, while glowing matrix code streams down, revealing auto-scaling nodes dynamically adjusting in real time, monitored by Prometheus metrics and visualized in Grafana dashboards, all amidst a whirlwind of canary deploys swirling around like confetti.",
+      "upright": "Embracing chaos, continuous resilience testing, dynamic auto-scaling, adapting to change.",
+      "reversed": "Unpredictable outages, bad luck during on-call, unexpected cloud vendor zone downtime.",
+      "image": "cards/10-wheel-of-fortune.png"
+    },
+    {
+      "id": "11-justice",
+      "slug": "11-justice",
+      "name": "The Audit Log",
+      "scene": "A cybernetic scale weighing immutable JSON audit events against security compliance policies, with sharp glowing cyan balance beams powered by Prometheus metrics, while Terraform scripts dynamically adjust resource allocations in response to compliance shifts, all monitored through a Grafana dashboard displaying real-time alerts from Datadog and PagerDuty.",
+      "upright": "Accountability, immutable event logs, fair root cause analysis, SOC2 compliance balance.",
+      "reversed": "Blame-shifting post-mortems, tampered log files, regulatory fines, unmonitored privilege escalation.",
+      "image": "cards/11-justice.png"
+    },
+    {
+      "id": "12-the-hanged-man",
+      "slug": "12-the-hanged-man",
+      "name": "The Deadlock",
+      "scene": "A server process, suspended upside down in a glowing neon grid field, surrounded by swirling Kubernetes pods trapped in a resource lock, while Prometheus metrics pulse like a heartbeat, desperately monitoring CPU utilization, and Grafana dashboards flicker with warning signals, all waiting for a Terraform apply to release the deployment and restore harmony.",
+      "upright": "Strategic pause, waiting for lock resolution, changing perspective, deliberate delay.",
+      "reversed": "Permanent thread deadlock, infinite wait loop, resource starvation, wasted CPU cycles.",
+      "image": "cards/12-the-hanged-man.png"
+    },
+    {
+      "id": "13-death",
+      "slug": "13-death",
+      "name": "The Deprecation",
+      "scene": "A dark cybernetic figure, cloaked in shadows, sweeps a glowing scythe through a tangled web of deprecated v1 API endpoints, severing their connections with an echo of broken webhook notifications, while Kubernetes pods shimmer in the background, deploying fresh microservices with the precision of a CI/CD pipeline, as Prometheus metrics gleam with newfound vitality and Grafana dashboards pulse to life, heralding a new era of scalable, resilient architecture.",
+      "upright": "End of legacy code, necessary sunsetting, clean architecture rebirth, transformation.",
+      "reversed": "Clinging to legacy tech, refactoring fear, broken backward compatibility, abrupt vendor death.",
+      "image": "cards/13-death.png"
+    },
+    {
+      "id": "14-temperance",
+      "slug": "14-temperance",
+      "name": "The Rate Limiter",
+      "scene": "An angelic cybernetic entity, adorned with glowing circuit patterns, pours shimmering packets of data between two network buffers, each marked with Prometheus metrics, maintaining a perfect token bucket equilibrium while deploying feature flags to gracefully throttle traffic; Kubernetes pods hum in harmony, orchestrated to ensure seamless user experience as microservices communicate with Grafana dashboards displaying real-time usage statistics.",
+      "upright": "Optimal resource allocation, token bucket balance, controlled API throughput, harmony.",
+      "reversed": "Throttling chaos, aggressive 429 Too Many Requests, bottlenecked queues, uncalibrated limits.",
+      "image": "cards/14-temperance.png"
+    },
+    {
+      "id": "15-the-devil",
+      "slug": "15-the-devil",
+      "name": "The Technical Debt",
+      "scene": "A horned cybernetic demon looms over the team of engineers, ensnaring them with glowing red cables that pulse with the chaotic energy of hardcoded secrets and quick, dirty hacks, while the shadows are filled with the ominous flicker of deprecated APIs, unmonitored legacy servers, and the relentless whispers of unaddressed vulnerabilities, as a nearby console flashes with alerts from Datadog and PagerDuty, signaling the impending doom of an unstable deployment.",
+      "upright": "Trapped by quick fixes, awareness of technical debt, addiction to hotfixes, shadow dependencies.",
+      "reversed": "Breaking free from legacy code, refactoring breakthrough, paying down tech debt, liberation.",
+      "image": "cards/15-the-devil.png"
+    },
+    {
+      "id": "16-the-tower",
+      "slug": "16-the-tower",
+      "name": "The Production Outage",
+      "scene": "A high-rise data center tower, its sleek exterior shimmering with Kubernetes cluster nodes, is struck by a bolt of lightning made of cascading error codes, shattering glass panels of data into glowing red warning alarms powered by Prometheus and Grafana, as frantic alerts from PagerDuty echo throughout the chaos, signaling a critical outage while Terraform scripts scramble to initiate auto-scaling and restore order amidst the storm.",
+      "upright": "Catastrophic system crash, sudden infrastructure collapse, hard truth, necessary rebuilding.",
+      "reversed": "Near-miss disaster, disaster recovery plan success, mitigated breach, structural panic.",
+      "image": "cards/16-the-tower.png"
+    },
+    {
+      "id": "17-the-star",
+      "slug": "17-the-star",
+      "name": "The Green Build",
+      "scene": "A brilliant neon green star radiates calm light over a dark terminal matrix, where the glowing output of a CI/CD pipeline shows all test suites passing with a 100% success rate, while Kubernetes pods deploy seamlessly and Prometheus metrics dance in harmony, illuminated by Grafana dashboards that reflect the stability of the build—an oasis of tranquility in a world of ephemeral containers and feature flags.",
+      "upright": "Hope, flawless pipeline pass, clarity, restored team confidence, bright future.",
+      "reversed": "False sense of security, green build with skipped tests, hidden bugs, test suite apathy.",
+      "image": "cards/17-the-star.png"
+    },
+    {
+      "id": "18-the-moon",
+      "slug": "18-the-moon",
+      "name": "The Undocumented API",
+      "scene": "A glowing cybernetic full moon, embedded with Kubernetes clusters, casts shadowy illusions over a murky marsh of legacy code, where undocumented endpoints lurk like hidden secrets, entangled in a web of tangled Terraform scripts and obscured by the fog of missing API documentation, while Prometheus metrics flicker ominously in the distance, hinting at the chaos of unmonitored deployments.",
+      "upright": "Illusion, hidden side effects, mystery bugs, navigating obscure legacy code, intuition required.",
+      "reversed": "Unveiling mystery root causes, documenting hidden endpoints, dispelling architectural fear.",
+      "image": "cards/18-the-moon.png"
+    },
+    {
+      "id": "19-the-sun",
+      "slug": "19-the-sun",
+      "name": "The Zero-Downtime Release",
+      "scene": "A radiant golden-neon sun rises over a pristine cloud infrastructure landscape, illuminating flawless blue-green deployment switches while Kubernetes orchestrates seamless pod transitions, and Prometheus metrics dance in harmony with Grafana dashboards, showcasing real-time performance, ensuring zero downtime as feature flags flutter like banners in the breeze.",
+      "upright": "Joy, seamless release, zero-downtime success, optimal performance, engineering glory.",
+      "reversed": "Minor release hiccups, delayed rollout celebrations, premature victory before metric stabilization.",
+      "image": "cards/19-the-sun.png"
+    },
+    {
+      "id": "20-judgement",
+      "slug": "20-judgement",
+      "name": "The Post-Mortem",
+      "scene": "A cybernetic archangel, adorned with shimmering circuit wings, blows a golden bugle over a cascade of open incident tickets, each one illuminated by the glow of Grafana dashboards displaying real-time metrics. Engineers, guided by the ethereal light of Prometheus alerts, gather around a digital whiteboard filled with eBPF traces and Jaeger spans, ready to engage in a blameless root-cause analysis while sipping coffee brewed with precision from the CI/CD pipeline.",
+      "upright": "Blameless post-mortem, valuable incident learnings, system evolution, accountability.",
+      "reversed": "Finger-pointing, repeating past mistakes, superficial RCA, failure to implement action items.",
+      "image": "cards/20-judgement.png"
+    },
+    {
+      "id": "21-the-world",
+      "slug": "21-the-world",
+      "name": "The Multi-Region Cluster",
+      "scene": "A glowing holographic globe pulsates with vibrant data streams as synchronized Kubernetes clusters span multiple regions, while low-latency CDN edge nodes, powered by Cloudflare, deliver content seamlessly; flawless global state replication is ensured by Consul's service mesh, with Prometheus metrics visualized on Grafana dashboards, capturing every heartbeat of this interconnected digital universe.",
+      "upright": "Global scale achievement, project completion, resilient multi-cloud ecosystem, total fulfillment.",
+      "reversed": "Incomplete global rollout, latency sync lag, regional compliance hurdles, fragmented state.",
+      "image": "cards/21-the-world.png"
+    },
+    {
+      "id": "ace-of-wands",
+      "slug": "ace-of-wands",
+      "name": "Ace of Code",
+      "scene": "A glowing neon wand made of pure syntax logic, igniting a fresh repository init, as lines of code spiral upwards like sparks, integrating with CI/CD pipelines in GitHub Actions, while Terraform scripts dance around, conjuring infrastructure as the wand channels the energy of Kubernetes clusters spinning up, ready to deploy microservices in a vibrant cloud environment.",
+      "upright": "New project spark, creative coding sprint, innovative feature concept.",
+      "reversed": "Writer's block in code, stale repository ideas, uninspired feature pitch.",
+      "image": "cards/ace-of-wands.png"
+    },
+    {
+      "id": "two-of-wands",
+      "slug": "two-of-wands",
+      "name": "Two of Code",
+      "scene": "An engineer stands at a dual-monitor terminal, meticulously mapping out a global repository architecture with Terraform scripts on one screen, while the other displays a dynamic flowchart of CI/CD pipelines orchestrated by Jenkins, ready to deploy microservices into Kubernetes clusters across multiple regions. The air hums with the promise of automated deployments and the visualized metrics from Grafana provide real-time insights into system performance, ensuring every commit is as seamless as a well-oiled machine.",
+      "upright": "Strategic roadmap planning, choosing tech stack, future expansion vision.",
+      "reversed": "Analysis paralysis, hesitation to commit to stack, poor architectural planning.",
+      "image": "cards/two-of-wands.png"
+    },
+    {
+      "id": "three-of-wands",
+      "slug": "three-of-wands",
+      "name": "Three of Code",
+      "scene": "Code modules are dynamically dispatched across a fleet of Kubernetes pods, each scaling effortlessly in response to incoming build requests while Prometheus monitors their health metrics; the build feedback flows back through a CI/CD pipeline powered by Jenkins, with notifications sent via Slack and PagerDuty, ensuring that every deployment is as smooth as a canary release under the watchful gaze of Grafana dashboards.",
+      "upright": "Initial deployment results incoming, expanding codebase scope, remote team synergy.",
+      "reversed": "Build delay frustration, unexpected merge conflicts, remote communication breakdown.",
+      "image": "cards/three-of-wands.png"
+    },
+    {
+      "id": "four-of-wands",
+      "slug": "four-of-wands",
+      "name": "Four of Code",
+      "scene": "A party of cybernetic avatars, adorned with glowing Kubernetes insignias, celebrate a successful v1.0 milestone commit as they pop open virtual champagne bottles, while automated CI/CD pipelines, represented as vibrant confetti streams, burst through the air, and a backdrop of Grafana dashboards lights up with real-time metrics showcasing zero downtime and a smooth canary deployment. In one corner, an eager avatar adjusts feature flags, ensuring a seamless rollout, while another high-fives their peer, who monitors alerts on PagerDuty, as the joyous atmosphere pulsates with the rhythm of Datadog's heartbeat.",
+      "upright": "Milestone release celebration, team unity, stable baseline framework.",
+      "reversed": "Premature celebration, unhandled edge cases in v1.0, post-launch fatigue.",
+      "image": "cards/four-of-wands.png"
+    },
+    {
+      "id": "five-of-wands",
+      "slug": "five-of-wands",
+      "name": "Five of Code",
+      "scene": "Multiple developer avatars are fiercely engaged in intense debates over git merge conflicts, wielding their favorite code editors like swords, as they invoke tools like GitKraken for visual diffs and summon CI/CD pipelines through Jenkins to resolve their disputes, while feature flags toggle back and forth like light switches in a frantic battle for deployment supremacy.",
+      "upright": "Healthy code review debate, competing architecture ideas, active refactoring.",
+      "reversed": "Merge conflict hell, toxic code reviews, bikeshedding over formatting.",
+      "image": "cards/five-of-wands.png"
+    },
+    {
+      "id": "six-of-wands",
+      "slug": "six-of-wands",
+      "name": "Six of Code",
+      "scene": "A victorious developer clad in a sleek, holographic jacket rides a cybernetic steed adorned with glowing Kubernetes logos, galloping past a sea of cheering green CI status badges, while the air crackles with the triumphant notifications from PagerDuty, and a banner above displays the successful rollout of canary deployments monitored in real-time on Grafana dashboards.",
+      "upright": "Public project recognition, successful demo, high team morale, open-source adoption.",
+      "reversed": "Ego-driven development, demo failure, unearned hype, broken promises.",
+      "image": "cards/six-of-wands.png"
+    },
+    {
+      "id": "seven-of-wands",
+      "slug": "seven-of-wands",
+      "name": "Seven of Code",
+      "scene": "A lone developer stands valiantly before a towering wall of reviewer comments, each one tagged with CI/CD pipeline failures from Jenkins and highlighted with warnings from SonarQube, while behind them, a swarm of feature flag toggles flickers ominously as they brace to invoke the power of Git rebase and Kubernetes rollbacks to protect their hard-fought pull request from being overwhelmed.",
+      "upright": "Standing up for good code practices, defending architectural decisions, tenacity.",
+      "reversed": "Stubbornness against constructive feedback, defensive posture, fragile code ego.",
+      "image": "cards/seven-of-wands.png"
+    },
+    {
+      "id": "eight-of-wands",
+      "slug": "eight-of-wands",
+      "name": "Eight of Code",
+      "scene": "Streams of lightspeed git pushes and automated PR merges, adorned with glowing Kubernetes logos, zip through a hyper-speed tunnel lined with Prometheus metrics dashboards and Grafana visualizations, while Terraform scripts whirl around like shooting stars, orchestrating seamless infrastructure changes in real-time.",
+      "upright": "Rapid feature delivery, high deployment velocity, instant feedback loops.",
+      "reversed": "Rushed code commits, bypassing PR reviews, chaotic release speed leading to bugs.",
+      "image": "cards/eight-of-wands.png"
+    },
+    {
+      "id": "nine-of-wands",
+      "slug": "nine-of-wands",
+      "name": "Nine of Code",
+      "scene": "A weary developer, illuminated by the glow of multiple terminal screens displaying a sea of red from failed Cypress tests, sips cold coffee while frantically navigating through a chaotic Git branch, desperately deploying a hotfix via Terraform to patch the latest feature flag gone awry, all while monitoring real-time metrics in Grafana and receiving relentless alerts from PagerDuty as the clock strikes 3 AM.",
+      "upright": "Perseverance through crunch time, final push before launch, resilience.",
+      "reversed": "Burnout, exhaustion, making critical mistakes due to fatigue, refusal to rest.",
+      "image": "cards/nine-of-wands.png"
+    },
+    {
+      "id": "ten-of-wands",
+      "slug": "ten-of-wands",
+      "name": "Ten of Code",
+      "scene": "A developer is hunched under the weight of a colossal stack of unmaintained repository packages, each one labeled with outdated dependencies and legacy code, while their other hand clutches a crumpled Terraform plan and a half-tuned Prometheus alert configuration, all while the ominous glow of a Grafana dashboard flickers in the background, warning of impending deployment failures.",
+      "upright": "Overwhelmed by maintenance duties, heavy technical burden, solo maintenance strain.",
+      "reversed": "Delegating maintenance tasks, dropping dead weight dependencies, refactoring relief.",
+      "image": "cards/ten-of-wands.png"
+    },
+    {
+      "id": "page-of-wands",
+      "slug": "page-of-wands",
+      "name": "Junior Dev of Code",
+      "scene": "An eager junior dev avatar holds a glowing tablet brimming with fresh Python scripts, while Kubernetes pods whirl around like fireflies, and Prometheus metrics dance in the air, illuminating their path. Nearby, a Grafana dashboard pulses with vibrant graphs, showcasing real-time deployment success rates, as the dev prepares to push feature flags for a canary release, all while a trusty Datadog companion monitors the system's health.",
+      "upright": "Enthusiasm to learn, fresh perspective, eager experimentation, high curiosity.",
+      "reversed": "Careless commits, lack of experience causing unintended side effects, tutorial hell.",
+      "image": "cards/page-of-wands.png"
+    },
+    {
+      "id": "knight-of-wands",
+      "slug": "knight-of-wands",
+      "name": "Senior Dev of Code",
+      "scene": "A high-speed cybernetic programmer, equipped with a glowing laptop running Kubernetes, races into production, deploying a new feature branch with canary releases while monitoring real-time metrics on Grafana and ensuring the smooth orchestration of microservices; the air hums with the buzz of Prometheus alerts and the scent of freshly baked Terraform scripts ready to provision resources in the cloud.",
+      "upright": "Action-oriented coding, fast execution, driving feature delivery with energy.",
+      "reversed": "Impulsive refactoring, breaking existing APIs in a hurry, reckless coding style.",
+      "image": "cards/knight-of-wands.png"
+    },
+    {
+      "id": "queen-of-wands",
+      "slug": "queen-of-wands",
+      "name": "Principal Engineer of Code",
+      "scene": "A confident engineer presides over an elegant code design system illuminated in cyan, orchestrating seamless deployments with GitOps while monitoring application performance through Prometheus metrics and Grafana dashboards, all while feature flags toggle user experiences like a well-choreographed dance.",
+      "upright": "Inspiring tech leadership, clean code principles, magnetic mentoring, elegance.",
+      "reversed": "Domineering code style enforcement, gatekeeping patterns, perfectionism paralysis.",
+      "image": "cards/queen-of-wands.png"
+    },
+    {
+      "id": "king-of-wands",
+      "slug": "king-of-wands",
+      "name": "CTO of Code",
+      "scene": "A visionary tech leader seated on a throne of server racks adorned with blinking LED lights, wielding a glowing master key that represents seamless access to a secure Vault, while around him, Kubernetes clusters orchestrate microservices in perfect harmony, and Prometheus metrics flow like a river of data, ready to be visualized in Grafana dashboards.",
+      "upright": "Bold technical vision, decisive tech stack strategy, empowering engineering culture.",
+      "reversed": "Out of touch leadership, sudden pivot mandates, dogmatic technology mandates.",
+      "image": "cards/king-of-wands.png"
+    },
+    {
+      "id": "ace-of-cups",
+      "slug": "ace-of-cups",
+      "name": "Ace of Logs",
+      "scene": "A glowing cup overflowing with vibrant cyan telemetry events and structured log streams, each drop representing meticulously traced Jaeger spans and detailed eBPF traces, while the edges shimmer with the light of Grafana dashboards and Prometheus metrics, capturing real-time performance insights and alerting on anomalies through PagerDuty.",
+      "upright": "Fresh observability insights, emotional team alignment, clear telemetry stream.",
+      "reversed": "Log silence, missing telemetry data, emotional disconnect during incidents.",
+      "image": "cards/ace-of-cups.png"
+    },
+    {
+      "id": "two-of-cups",
+      "slug": "two-of-cups",
+      "name": "Two of Logs",
+      "scene": "Two vibrant Grafana dashboards, one displaying real-time CPU utilization and the other showcasing memory performance, gracefully merge their metric streams into a single unified view, as Prometheus scrapes the data from Kubernetes pods while Datadog's APM traces weave through the logs, synchronizing alerts through PagerDuty to ensure no anomalies go unnoticed.",
+      "upright": "Cross-service observability integration, dev and ops alignment, mutual trust.",
+      "reversed": "Siloed metrics, conflicting telemetry tools, team miscommunication during outages.",
+      "image": "cards/two-of-cups.png"
+    },
+    {
+      "id": "three-of-cups",
+      "slug": "three-of-cups",
+      "name": "Three of Logs",
+      "scene": "Three engineers, surrounded by the glow of a green Grafana dashboard displaying real-time metrics, clink their coffee mugs while discussing the latest canary deploys, with Prometheus alerts chiming softly in the background and a Terraform script running seamlessly to provision their infrastructure.",
+      "upright": "Collaborative problem solving, shared operational victory, team camaraderie.",
+      "reversed": "Gossip, groupthink during root cause analysis, ignoring warning metrics.",
+      "image": "cards/three-of-cups.png"
+    },
+    {
+      "id": "four-of-cups",
+      "slug": "four-of-cups",
+      "name": "Four of Cups",
+      "scene": "An engineer, lost in thought, stares moodily at routine logs on their terminal, oblivious to the pulsating alert notification from PagerDuty that signals a spike in latency monitored by Prometheus, while a Grafana dashboard showcases an ominous red trend line that flickers in the corner of their eye.",
+      "upright": "Alert fatigue, apathy toward warning signals, taking system stability for granted.",
+      "reversed": "Re-engaging with metrics, revamping alert thresholds, renewed focus on telemetry.",
+      "image": "cards/four-of-cups.png"
+    },
+    {
+      "id": "five-of-cups",
+      "slug": "five-of-cups",
+      "name": "Five of Logs",
+      "scene": "An engineer, surrounded by cascading red error logs from a failed Kubernetes deployment, mourns the three spilled logs while overlooking the vibrant green streams of successful metrics flowing from Prometheus and Grafana dashboards, illuminating the path toward recovery with feature flags and canary deploys ready to bring the application back to life.",
+      "upright": "Fixating on a minor failure, regret over bad deployment, temporary despair.",
+      "reversed": "Moving past incident regret, focusing on surviving systems, rebuilding confidence.",
+      "image": "cards/five-of-cups.png"
+    },
+    {
+      "id": "six-of-cups",
+      "slug": "six-of-cups",
+      "name": "Six of Logs",
+      "scene": "A developer gazes fondly at a row of vintage green terminal screens, each displaying lines of code that once triggered Jenkins pipelines, while the nostalgic hum of an old build server echoes in the background, reminding them of simpler times when deploying with Chef and monitoring with Nagios felt like a triumphant adventure into the unknown.",
+      "upright": "Nostalgia for simple architectures, revisiting legacy codebases with appreciation.",
+      "reversed": "Stuck in the past, resisting modern observability tooling, outdated habits.",
+      "image": "cards/six-of-cups.png"
+    },
+    {
+      "id": "seven-of-cups",
+      "slug": "seven-of-cups",
+      "name": "Seven of Logs",
+      "scene": "Seven glowing holographic options of APM platforms and logging frameworks—each pulsating with vibrant colors—float in the air, showcasing the sleek interfaces of Datadog, New Relic, and Grafana, while the enchanting patterns of traces from Jaeger and the real-time metrics from Prometheus dance around them, illuminated by the soft glow of Kubernetes pods orchestrating the cloud-native landscape below.",
+      "upright": "Too many monitoring tools to choose from, rich telemetry options, imagination.",
+      "reversed": "Tool sprawl confusion, choice overload, selecting the wrong observability platform.",
+      "image": "cards/seven-of-cups.png"
+    },
+    {
+      "id": "eight-of-cups",
+      "slug": "eight-of-cups",
+      "name": "Eight of Logs",
+      "scene": "A developer strolls away from a chaotic PagerDuty alert dashboard, where obnoxious notifications from failing Kubernetes pods drown out the calm, while in the distance, a serene Grafana dashboard with clear, actionable metrics beckons, illuminated by the soft glow of Prometheus metrics that promise insightful data and restful nights.",
+      "upright": "Abandoning bad monitoring practices, seeking deeper system truth, stepping back.",
+      "reversed": "Clinging to noisy dashboards, fear of changing observability strategy.",
+      "image": "cards/eight-of-cups.png"
+    },
+    {
+      "id": "nine-of-cups",
+      "slug": "nine-of-cups",
+      "name": "Nine of Logs",
+      "scene": "An engineer lounges in a sleek ergonomic chair, basking in the glow of multiple screens showcasing vibrant Grafana dashboards, where 99.999% uptime graphs dance alongside real-time Prometheus metrics and eBPF traces, all while PagerDuty alerts remain blissfully silent in the background, a testament to the flawless canary deploys and feature flags that have kept the service running smoothly.",
+      "upright": "Uptime satisfaction, SLA fulfillment, peace of mind, operational success.",
+      "reversed": "Complacency, unexpected edge-case vulnerability hiding behind good SLAs.",
+      "image": "cards/nine-of-cups.png"
+    },
+    {
+      "id": "ten-of-cups",
+      "slug": "ten-of-cups",
+      "name": "Ten of Logs",
+      "scene": "A joyful team surrounded by a rainbow of passing health checks illuminated by Prometheus metrics, their laughter echoing as flawless distributed traces weave through Jaeger spans, while Terraform scripts dance in the background, orchestrating a seamless deployment of Kubernetes pods under a banner of successful canary releases.",
+      "upright": "Total team harmony, flawless observability culture, sustained operational bliss.",
+      "reversed": "Faked metrics, superficial dashboard happiness, underlying team friction.",
+      "image": "cards/ten-of-cups.png"
+    },
+    {
+      "id": "page-of-cups",
+      "slug": "page-of-cups",
+      "name": "Junior SRE of Logs",
+      "scene": "An eager apprentice SRE hunches over a terminal, eyes wide as they spot a curious anomaly pattern in a live log stream, illuminated by the glow of Grafana dashboards displaying real-time metrics; they quickly pull up a Kibana instance to filter through the logs, while Prometheus alerts ping in the background, hinting at potential issues lurking in the Kubernetes cluster. Armed with a trusty eBPF tracing tool, they prepare to dive deeper into the containerized microservices, eager to unveil the secrets hidden within the swirling chaos of data.",
+      "upright": "Curiosity for anomalous data, fresh perspective on log analysis, intuitive catch.",
+      "reversed": "Misinterpreting log anomalies, false alarms, noise-to-signal confusion.",
+      "image": "cards/page-of-cups.png"
+    },
+    {
+      "id": "knight-of-cups",
+      "slug": "knight-of-cups",
+      "name": "Senior SRE of Logs",
+      "scene": "A dedicated SRE, clad in a sleek containerized armor, rides valiantly through shimmering streams of metrics, wielding a powerful Prometheus spear to capture critical diagnostic traces, while Grafana banners flutter overhead, displaying real-time dashboards of system health and performance. As they navigate the currents, they deftly deploy Terraform spells to orchestrate infrastructure on-the-fly, ensuring seamless observability and reliability across the cloud realms.",
+      "upright": "Empathetic incident response, thoughtful diagnostic investigation, cool head.",
+      "reversed": "Overly emotional reaction to outages, chasing false metric leads, drama in chat.",
+      "image": "cards/knight-of-cups.png"
+    },
+    {
+      "id": "queen-of-cups",
+      "slug": "queen-of-cups",
+      "name": "Observability Lead of Logs",
+      "scene": "A serene engineer intuitively deciphering root causes by gazing into a reflective pool of log streams, illuminated by the shimmering outputs of Elasticsearch, while tracing the intricate patterns of data flowing through Fluentd and visualizing anomalies in Grafana dashboards that dance like ripples across the surface.",
+      "upright": "Deep system intuition, compassionate incident leadership, master of telemetry.",
+      "reversed": "Emotional burnout from constant on-call, over-sensitivity to minor anomalies.",
+      "image": "cards/queen-of-cups.png"
+    },
+    {
+      "id": "king-of-cups",
+      "slug": "king-of-cups",
+      "name": "VP of Telemetry",
+      "scene": "A calm leader seated amidst roaring data streams, expertly visualizing the chaos through Grafana dashboards that pulse with real-time metrics, while Prometheus scrapes for anomalies, and PagerDuty alerts chime softly in the background, all while maintaining absolute composure during crises with a steady hand on the feature flags that control the deployment flow.",
+      "upright": "Emotional stability during severity-1 incidents, strategic data governance, calm command.",
+      "reversed": "Detached leadership during outages, suppressing critical warning reports.",
+      "image": "cards/king-of-cups.png"
+    },
+    {
+      "id": "ace-of-swords",
+      "slug": "ace-of-swords",
+      "name": "Ace of Bugs",
+      "scene": "A razor-sharp cyan sword, glimmering with Kubernetes logos, slices through a complex stack trace adorned with Prometheus metrics, revealing the exact bug location highlighted by a glowing Jaeger span, while nearby, Terraform scripts lay open, ready to deploy the fix in a canary release.",
+      "upright": "Breakthrough diagnosis, sharp analytical clarity, cutting through confusion.",
+      "reversed": "Misdiagnosed root cause, sharp harsh criticisms in code reviews, destructive fixes.",
+      "image": "cards/ace-of-swords.png"
+    },
+    {
+      "id": "two-of-swords",
+      "slug": "two-of-swords",
+      "name": "Two of Bugs",
+      "scene": "A developer, blindfolded and poised in a state of confusion, clutches two crossed swords emblazoned with the logos of conflicting bug reports, while around them, a swirling vortex of alerts from PagerDuty and Datadog flashes ominously, as Kubernetes pods crash in the background, and Grafana dashboards flicker with red metrics, each sword representing a different deployment environment, one adorned with feature flags and the other with canary releases, as they struggle to strike a balance amidst the chaos of eBPF traces revealing elusive performance issues.",
+      "upright": "Stalemate, difficult choice between trade-offs, needing impartial data to decide.",
+      "reversed": "Information overload, making forced bad decisions without complete debugging context.",
+      "image": "cards/two-of-swords.png"
+    },
+    {
+      "id": "three-of-swords",
+      "slug": "three-of-swords",
+      "name": "Three of Bugs",
+      "scene": "Three glowing red swords, representing critical alerts from PagerDuty, pierce a digital heart icon displayed on a server monitor, surrounded by flashing error logs from Kubernetes deployments, while Prometheus metrics fluctuate wildly in the background, signaling a catastrophic outage that has triggered automated rollbacks and heated discussions in the team's Slack channel.",
+      "upright": "Heartbreaking severity-1 outage, betrayal of a trusted dependency, bug pain.",
+      "reversed": "Healing after a painful incident, learning from bad bugs, emotional recovery.",
+      "image": "cards/three-of-swords.png"
+    },
+    {
+      "id": "four-of-swords",
+      "slug": "four-of-swords",
+      "name": "Four of Bugs",
+      "scene": "A knight-like avatar rests peacefully on a tomb of resolved bug tickets, surrounded by a serene server room filled with humming Kubernetes pods and blinking lights from a Prometheus monitoring dashboard, while Grafana charts display the tranquility of a bug-free deployment, and the soft glow of a Datadog alert dashboard signals that all systems are go.",
+      "upright": "Rest and recovery after a hectic incident, planned maintenance window, quiet time.",
+      "reversed": "Forced downtime, exhaustion, returning to work too early before full recovery.",
+      "image": "cards/four-of-swords.png"
+    },
+    {
+      "id": "five-of-swords",
+      "slug": "five-of-swords",
+      "name": "Five of Bugs",
+      "scene": "In the foreground, a developer, armed with a digital broom covered in code snippets, sifts through an endless backlog of bug tickets in their Jira board, while in the background, defeated teammates trudge away, shadows cast by the flickering red alerts in their Grafana dashboards, the ominous chime of PagerDuty notifications echoing in their ears.",
+      "upright": "Pyrrhic victory in bug fixing, political conflicts over bug assignments, tension.",
+      "reversed": "Desire to resolve team conflicts, moving past blame games to fix bugs together.",
+      "image": "cards/five-of-swords.png"
+    },
+    {
+      "id": "six-of-swords",
+      "slug": "six-of-swords",
+      "name": "Six of Bugs",
+      "scene": "A sleek Kubernetes pod navigates through murky waters, its containers filled with server workloads, as Prometheus metrics pulse rhythmically like a heartbeat, guiding it toward a serene harbor adorned with Grafana dashboards showcasing zero bug incidents, while logs from Datadog illuminate the path with insights, ensuring a safe arrival to the tranquil, bug-free cloud sanctuary.",
+      "upright": "Migrating away from buggy systems, transition to stable platform, smoother sailing.",
+      "reversed": "Failed migration, carrying old bugs into new architecture, rough transition.",
+      "image": "cards/six-of-swords.png"
+    },
+    {
+      "id": "seven-of-swords",
+      "slug": "seven-of-swords",
+      "name": "Seven of Bugs",
+      "scene": "A sneaky cyber avatar, cloaked in a hood of encrypted protocols, slips out of the repo carrying 5 hotfix commits, stealthily bypassing the CI/CD pipeline as it leaves a trail of unmonitored deployments, while the vigilant eyes of a Grafana dashboard flicker in the background, showing spikes in error rates and unfulfilled alerts from PagerDuty.",
+      "upright": "Quick workaround hack, stealth bug fix, shortcut taken to meet urgent deadline.",
+      "reversed": "Uncovered hack caught in audit, unmasked security vulnerability, shortcut backfire.",
+      "image": "cards/seven-of-swords.png"
+    },
+    {
+      "id": "eight-of-swords",
+      "slug": "eight-of-swords",
+      "name": "Eight of Bugs",
+      "scene": "An engineer is ensnared in a tangled web of glowing red error wires, each pulsating with alerts from Prometheus and Datadog, while PagerDuty notifications blare ominously in the background, signaling an avalanche of critical incidents from the latest canary deploy. Desperate to escape, they reach for their Terraform scripts, but the chaotic matrix of broken pipelines and flickering Kubernetes pods keeps them shackled, unable to push any commits.",
+      "upright": "Feeling trapped by legacy bugs, mental paralysis, perceived lack of options.",
+      "reversed": "Realizing solutions exist, breaking free from bug paralysis, taking control.",
+      "image": "cards/eight-of-swords.png"
+    },
+    {
+      "id": "nine-of-swords",
+      "slug": "nine-of-swords",
+      "name": "Nine of Bugs",
+      "scene": "An engineer sits bolt upright in bed, the blue light of their phone illuminating a flurry of red incident alerts from PagerDuty, each one a harbinger of chaos as their Kubernetes clusters crash under the weight of untested feature flags; Prometheus metrics flicker ominously in the background, while Grafana dashboards flash with alarming spikes, rendering sleep a distant memory.",
+      "upright": "On-call anxiety, nightmare bugs, overwhelming stress, insomnia from system fear.",
+      "reversed": "Realizing the bug wasn't as bad as feared, relief from false alarm, quiet night.",
+      "image": "cards/nine-of-swords.png"
+    },
+    {
+      "id": "ten-of-swords",
+      "slug": "ten-of-swords",
+      "name": "Ten of Bugs",
+      "scene": "An avatar lies face down, pinned by ten glowing red swords, each representing a critical error in the CI/CD pipeline, while a flurry of Jenkins builds fail around it, and alerts from PagerDuty scream in the background. Kubernetes pods crash like dominoes, and Grafana dashboards flash with alarming red metrics, as a swarm of Datadog APM traces reveals the chaos of unhandled exceptions and broken feature flags.",
+      "upright": "Total system rock bottom, absolute breakdown, hit the wall, nowhere to go but up.",
+      "reversed": "Recovery from complete collapse, rebuilding from scratch, worst is finally over.",
+      "image": "cards/ten-of-swords.png"
+    },
+    {
+      "id": "page-of-swords",
+      "slug": "page-of-swords",
+      "name": "Bug Hunter of Swords",
+      "scene": "A nimble scout, equipped with a glowing bug detector glass, deftly navigates through sprawling code repositories while deploying advanced tools like SonarQube for static code analysis and using GitHub Actions to automate tests, all while monitoring real-time performance metrics with Grafana dashboards illuminating the path ahead.",
+      "upright": "Vulnerability scanning, proactive bug hunting, sharp curiosity, alert mind.",
+      "reversed": "Spamming issue trackers with minor nitpicks, paranoid false security reports.",
+      "image": "cards/page-of-swords.png"
+    },
+    {
+      "id": "knight-of-swords",
+      "slug": "knight-of-swords",
+      "name": "SecOps Specialist of Swords",
+      "scene": "A cyber warrior, helmet gleaming with the light of a thousand SSL certificates, charges full speed into a security vulnerability patch deployment, brandishing a Terraform script like a sword, ready to spin up a fortress of hardened containers in Kubernetes, while Prometheus monitors the breach in real-time and Grafana visualizes the incoming threat, ensuring that every line of code is fortified against the onslaught of malicious attacks.",
+      "upright": "Swift security intervention, decisive bug hunting, fast threat mitigation.",
+      "reversed": "Impulsive security hotfix that breaks production, aggressive, reckless patching.",
+      "image": "cards/knight-of-swords.png"
+    },
+    {
+      "id": "queen-of-swords",
+      "slug": "queen-of-swords",
+      "name": "Security Architect of Swords",
+      "scene": "A stern security architect, clad in a digital armor of SSL certificates, wields a glowing sword of truth that slices through layers of misconfigured IAM policies, while meticulously auditing code permissions with tools like Terraform and Vault secrets, ensuring every line meets the uncompromising standards of security.",
+      "upright": "Strict security hygiene, clear objective judgment, zero-trust enforcement.",
+      "reversed": "Overly punitive security policies, cynical view of dev velocity, gatekeeping.",
+      "image": "cards/queen-of-swords.png"
+    },
+    {
+      "id": "king-of-swords",
+      "slug": "king-of-swords",
+      "name": "CISO of Swords",
+      "scene": "A commanding leader on a cybernetic throne, surrounded by holographic displays of global threat intelligence data, orchestrating operations with real-time alerts from Datadog, while automated incident response workflows in PagerDuty ensure swift action against breaches, and a battalion of engineers deploys feature flags and canary releases to safeguard the infrastructure, all under the watchful eye of Prometheus metrics and Grafana dashboards illuminating the path to security resilience.",
+      "upright": "Strategic security leadership, clear regulatory clarity, intellectual authority.",
+      "reversed": "Tyrannical security restrictions, out-of-touch compliance demands, paranoia.",
+      "image": "cards/king-of-swords.png"
+    },
+    {
+      "id": "ace-of-pentacles",
+      "slug": "ace-of-pentacles",
+      "name": "Ace of Servers",
+      "scene": "A glowing golden coin etched with a server rack symbol rises majestically from a cloud data center floor, surrounded by shimmering virtual machines orchestrated by Kubernetes, while Prometheus metrics stream in real-time, visualized on Grafana dashboards that light up the room with vibrant colors. The air buzzes with the hum of containers scaling up and down, as Terraform scripts dance across the screens, deploying infrastructure as code with the precision of a well-oiled CI/CD pipeline.",
+      "upright": "New cloud budget approval, tangible infrastructure investment, solid foundation.",
+      "reversed": "Wasted cloud budget grant, missed infrastructure opportunity, financial leak.",
+      "image": "cards/ace-of-pentacles.png"
+    },
+    {
+      "id": "two-of-pentacles",
+      "slug": "two-of-pentacles",
+      "name": "Two of Servers",
+      "scene": "An engineer effortlessly juggles two glowing server nodes labeled AWS and GCP, each adorned with vibrant Kubernetes logos, while below them, a swirling vortex of Terraform scripts and Prometheus metrics dance in sync, capturing the real-time performance of both clouds, all while a canary deploy flutters overhead, ready for production.",
+      "upright": "Balancing multi-cloud workloads, flexible infrastructure management, adaptability.",
+      "reversed": "Multi-cloud management chaos, dropping the ball on cloud costs, resource imbalance.",
+      "image": "cards/two-of-pentacles.png"
+    },
+    {
+      "id": "three-of-pentacles",
+      "slug": "three-of-pentacles",
+      "name": "Three of Servers",
+      "scene": "A developer sketches out the physical server installation blueprint on a digital whiteboard, while the SRE monitors the network topology in real-time using Grafana dashboards, and the cloud architect fine-tunes the infrastructure as code with Terraform, ensuring seamless integration with Kubernetes clusters and automated CI/CD pipelines for efficient deployment.",
+      "upright": "Cross-functional teamwork, skilled infrastructure craftsmanship, solid execution.",
+      "reversed": "Poor coordination between dev and infra teams, shoddy hardware execution.",
+      "image": "cards/three-of-pentacles.png"
+    },
+    {
+      "id": "four-of-pentacles",
+      "slug": "four-of-pentacles",
+      "name": "Four of Servers",
+      "scene": "A miserly figure clutches a stack of reserved server instances like precious gems, surrounded by an array of idle Kubernetes pods and sprawling Terraform scripts, stubbornly refusing to release unused nodes while Grafana dashboards flash warnings of wasted resources and Prometheus metrics scream for action. As the figure guards their treasure, the faint hum of a neglected CI/CD pipeline echoes in the background, showcasing a world of efficiency just beyond their grasp.",
+      "upright": "Infrastructure resource hoarding, tight cloud cost controls, asset protection.",
+      "reversed": "Over-conservatism leading to performance throttling, fear of spending on scale.",
+      "image": "cards/four-of-pentacles.png"
+    },
+    {
+      "id": "five-of-pentacles",
+      "slug": "five-of-pentacles",
+      "name": "Five of Servers",
+      "scene": "Two shivering avatars huddle beneath a flickering streetlight, gazing longingly at the warm, well-funded data center where racks of Kubernetes clusters hum with life, monitored by Prometheus alerts and visualized on sleek Grafana dashboards, while inside, a team deploys feature flags and canary releases with ease, oblivious to the cold hardships of those outside.",
+      "upright": "Cloud budget exhaustion, resource starvation, feeling left out of modern tooling.",
+      "reversed": "Recovery from financial strain, finding budget workarounds, grant approval.",
+      "image": "cards/five-of-pentacles.png"
+    },
+    {
+      "id": "six-of-pentacles",
+      "slug": "six-of-pentacles",
+      "name": "Six of Servers",
+      "scene": "A cloud administrator, adorned with a toolbelt filled with Terraform scripts and Kubernetes manifests, expertly allocates compute credits and CPU capacity via a sleek Grafana dashboard, while monitoring real-time metrics from Prometheus to ensure needy projects receive the optimal resources, all while adjusting feature flags to seamlessly roll out new capabilities.",
+      "upright": "Fair resource distribution, cloud credit allocation, generous mentorship.",
+      "reversed": "Unfair compute quota allocation, budget favoritism, strings-attached credits.",
+      "image": "cards/six-of-pentacles.png"
+    },
+    {
+      "id": "seven-of-pentacles",
+      "slug": "seven-of-pentacles",
+      "name": "Seven of Servers",
+      "scene": "An engineer leans on a staff, eyes focused on a flourishing garden of server racks sprouting vibrant green LED lights, while cost graphs bloom above, displaying metrics from Datadog and Prometheus, each spike and dip illuminated by Grafana visualizations, and Terraform scripts weaving through the soil like roots, nurturing the infrastructure beneath.",
+      "upright": "Evaluating infrastructure ROI, patient monitoring of long-term cloud investments.",
+      "reversed": "Impatience with infrastructure ROI, frustration over slow cluster spin-up times.",
+      "image": "cards/seven-of-pentacles.png"
+    },
+    {
+      "id": "eight-of-pentacles",
+      "slug": "eight-of-pentacles",
+      "name": "Eight of Servers",
+      "scene": "A craftsman meticulously soldering high-speed network interfaces onto blade servers, each connection monitored by a Prometheus instance, while his workspace is illuminated by the glow of Grafana dashboards displaying real-time performance metrics and network latency, ensuring every blade is optimized for Kubernetes orchestration.",
+      "upright": "Meticulous hardware configuration, continuous skill refinement, dedication.",
+      "reversed": "Repetitive manual server provisioning, failure to automate hardware setup.",
+      "image": "cards/eight-of-pentacles.png"
+    },
+    {
+      "id": "nine-of-pentacles",
+      "slug": "nine-of-pentacles",
+      "name": "Nine of Servers",
+      "scene": "An engineer strolls through a peaceful, luxurious server farm where rows of sleek Kubernetes clusters hum gently, while autonomous cooling drones meticulously adjust temperatures around the high-density racks, ensuring optimal performance. Overhead, a Grafana dashboard displays real-time metrics, and the engineer glances at their PagerDuty alerting system, confident in the seamless deployment of feature flags that allow for canary releases without a hitch.",
+      "upright": "Infrastructure independence, self-sustaining cloud automation, financial comfort.",
+      "reversed": "Over-dependence on expensive proprietary cloud services, hidden cloud vendor lock-in.",
+      "image": "cards/nine-of-pentacles.png"
+    },
+    {
+      "id": "ten-of-pentacles",
+      "slug": "ten-of-pentacles",
+      "name": "Ten of Servers",
+      "scene": "A multi-generational data center enterprise thrives as legacy servers hum alongside sleek Kubernetes clusters, orchestrating microservices with seamless efficiency; crisscrossing fiber optic cables connect powerful Prometheus monitoring stacks, while Grafana dashboards illuminate the room with vibrant metrics, showcasing the harmonious coexistence of old and new through canary deploys and Terraform-managed infrastructure.",
+      "upright": "Long-term infrastructure legacy, sustained enterprise stability, rich hardware assets.",
+      "reversed": "Legacy hardware inheritance burden, expensive data center lease renewal troubles.",
+      "image": "cards/ten-of-pentacles.png"
+    },
+    {
+      "id": "page-of-pentacles",
+      "slug": "page-of-pentacles",
+      "name": "Cloud Apprentice",
+      "scene": "A student holding a glowing green coin, emblazoned with the Kubernetes logo, eagerly flips through cloud certification manuals filled with diagrams of Terraform modules and AWS architecture, while their laptop screen displays a Grafana dashboard, pulsing with real-time metrics and alerts from Prometheus.",
+      "upright": "Eager study of cloud architecture, practical learning, solid grounding.",
+      "reversed": "Failing cloud certification exam, lack of practical hands-on lab practice.",
+      "image": "cards/page-of-pentacles.png"
+    },
+    {
+      "id": "knight-of-pentacles",
+      "slug": "knight-of-pentacles",
+      "name": "FinOps Engineer",
+      "scene": "A steady, methodical engineer riding a slow heavy server truck adorned with Kubernetes stickers examines detailed cloud cost ledgers, meticulously tracking usage through Terraform-managed resources while monitoring real-time costs with Grafana dashboards and analyzing trends via Datadog’s cost insights.",
+      "upright": "Methodical cost optimization, reliable server maintenance, steady FinOps discipline.",
+      "reversed": "Overly slow infrastructure rollout, obsessing over pennies while ignoring velocity.",
+      "image": "cards/knight-of-pentacles.png"
+    },
+    {
+      "id": "queen-of-pentacles",
+      "slug": "queen-of-pentacles",
+      "name": "Infrastructure Director",
+      "scene": "A nurturing leader surrounded by flourishing Kubernetes clusters, where meticulously monitored pods scale effortlessly under the watchful gaze of Prometheus metrics, while efficient cooling systems hum softly alongside Grafana dashboards displaying vibrant, real-time performance data. Vault secrets securely guard the sensitive configurations, ensuring that the happy pods thrive in a seamless, canary deploy environment, embodying the essence of modern infrastructure harmony.",
+      "upright": "Nurturing cloud ecosystem, pragmatic resource management, workplace comfort.",
+      "reversed": "Neglecting hardware health, poor physical data center environmental care.",
+      "image": "cards/queen-of-pentacles.png"
+    },
+    {
+      "id": "king-of-pentacles",
+      "slug": "king-of-pentacles",
+      "name": "Chief Cloud Architect",
+      "scene": "A master architect, adorned in a cloak woven from cloud-native patterns, sits atop a golden server command tower, surveying sprawling data centers brimming with Kubernetes clusters, where Grafana dashboards pulse with real-time metrics while Prometheus scrapes vital health data. Below, Terraform scripts effortlessly provision resources, and a symphony of automated canary deploys dance across the horizon, all under the watchful eye of Datadog, ensuring every microservice sings in harmony.",
+      "upright": "Mastery over cloud financial assets, enterprise infrastructure leadership, wealth.",
+      "reversed": "Greed for massive unneeded server specs, extravagant cloud spend without value.",
+      "image": "cards/king-of-pentacles.png"
+    }
+  ]
+}
