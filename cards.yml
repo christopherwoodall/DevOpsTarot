@@ -1,0 +1,504 @@
+style: DevOps Corporate Comic Style, bold line art comic aesthetic, thick expressive
+  outlines, bright flat cel-shaded colors, playful exaggerated cartoon characters,
+  office humor energy, dynamic poses, clean cartoon shading, friendly techie vibe.
+  Standard 1:1.75 tarot card ratio, flat 2D front view, centered composition inside
+  a thick gold comic border with decorative corner accents. Isolated on a solid black
+  background (#000000) for transparent PNG removal, zero perspective, zero drop
+  shadows, no text
+cards:
+- id: 00-the-fool
+  scene: A glowing terminal cursor hovers over `git push --force` on the main branch,
+    surrounded by swirling Kubernetes pods, while floating code snippets ascend into
+    a bright blue neon void, igniting electric spark lines that trace the paths of
+    CI/CD pipelines through Jenkins and GitHub Actions, illuminating the space with
+    flashes from Prometheus metrics and Grafana dashboards.
+- id: 01-the-magician
+  scene: A hooded cyberpunk engineer, surrounded by a swirling vortex of luminous
+    YAML, Terraform blueprints, and Docker images, orchestrates the deployment of
+    Kubernetes clusters with neon-gloved hands while monitoring real-time metrics
+    on a holographic Grafana dashboard, as Prometheus scrapes metrics from microservices
+    dancing in the background, each canary deploy illuminating the dark with vibrant
+    success notifications.
+- id: 02-the-high-priestess
+  scene: A shrouded cryptographic seal pulsates with the power of 4096-bit RSA keys,
+    surrounded by ethereal matrix symbols that flicker like encrypted data streams.
+    Hidden beneath layers of security, secret vaults guarded by HashiCorp Vault secrets
+    shimmer, while veiled certificate authority shrines are adorned with Kubernetes
+    ingress configurations and automated Cert-Manager workflows, casting an aura of
+    trust across the digital realm.
+- id: 03-the-empress
+  scene: A majestic mother server rack pulsating with rich glowing green fiber optics,
+    fertile data streams flowing seamlessly through Kubernetes pods, and flourishing
+    microservices orchestrated by Helm charts, while Prometheus scrapes metrics and
+    Grafana visualizes the vibrant landscapes of performance, all under the watchful
+    eye of Terraform managing the infrastructure as code.
+- id: 04-the-emperor
+  scene: A towering, impenetrable dark steel fortress server tower, adorned with glowing
+    blue structural pillars that pulse with the heartbeat of Kubernetes clusters,
+    stands guarded by strict access control lists, while Prometheus metrics stream
+    like cascading waterfalls and Grafana dashboards flicker with real-time insights,
+    illuminating the fortress's secrets as Terraform provisions new realms of infrastructure
+    at the push of a button.
+- id: 05-the-hierophant
+  scene: An ancient glowing digital tome, its pages flickering with Kubernetes deployment
+    strategies and Terraform scripts, hovers amidst a halo of architecture RFCs, standard
+    operating procedures, and runbooks, all illuminated in neon gold, while Prometheus
+    metrics dance in the air, and Grafana dashboards pulse rhythmically in the background,
+    guiding the way through the labyrinth of knowledge.
+- id: 06-the-lovers
+  scene: Two glowing microservice nodes, orchestrated by Kubernetes, exchange binary
+    heartbeats over a secure gRPC pipeline, their communication monitored by Prometheus
+    metrics and visualized in Grafana dashboards, showcasing perfect low-latency synchronization
+    while feature flags dance around them, ensuring seamless canary deployments.
+- id: 07-the-chariot
+  scene: A sleek cybernetic vehicle equipped with a Jenkins engine and Terraform chassis
+    speeds through glowing neon pipeline stages (Build, Test, Stage, Deploy), seamlessly
+    integrating Docker containers while monitoring performance with Prometheus metrics
+    and visualizing deployment health on Grafana dashboards at lightspeed. As it races
+    ahead, feature flags toggle dynamically, ensuring only the most stable code surges
+    forward, while a vigilant PagerDuty guardian watches over the journey, ready to
+    respond to any alerts that flicker across the dashboard like distant stars.
+- id: 08-the-strength
+  scene: A glowing cybernetic lion, adorned with glowing circuit patterns, gracefully
+    paces before a torrent of heavy server traffic streams, orchestrating the chaos
+    with Kubernetes ingress controllers that seamlessly distribute the massive spike
+    of incoming requests across a fleet of microservices, while observability tools
+    like Prometheus and Grafana monitor the health of each pod, ensuring no request
+    goes unhandled in this digital jungle.
+- id: 09-the-hermit
+  scene: A solitary glowing lantern, powered by a nearby UPS, illuminates an isolated
+    server node deep inside a dark subterranean obsidian vault, where encrypted Vault
+    secrets are meticulously stored, and the air is thick with the hum of air-gapped
+    Kubernetes clusters, each node configured with immutable infrastructure using
+    Terraform, completely disconnected from the chaos of the internet.
+- id: 10-wheel-of-fortune
+  scene: A spinning neon wheel of fortune, adorned with vibrant Kubernetes logos,
+    unleashes chaos as server pods abruptly terminate, triggering a flurry of alerts
+    in PagerDuty, while glowing matrix code streams down, revealing auto-scaling nodes
+    dynamically adjusting in real time, monitored by Prometheus metrics and visualized
+    in Grafana dashboards, all amidst a whirlwind of canary deploys swirling around
+    like confetti.
+- id: 11-justice
+  scene: A cybernetic scale weighing immutable JSON audit events against security
+    compliance policies, with sharp glowing cyan balance beams powered by Prometheus
+    metrics, while Terraform scripts dynamically adjust resource allocations in response
+    to compliance shifts, all monitored through a Grafana dashboard displaying real-time
+    alerts from Datadog and PagerDuty.
+- id: 12-the-hanged-man
+  scene: A server process, suspended upside down in a glowing neon grid field, surrounded
+    by swirling Kubernetes pods trapped in a resource lock, while Prometheus metrics
+    pulse like a heartbeat, desperately monitoring CPU utilization, and Grafana dashboards
+    flicker with warning signals, all waiting for a Terraform apply to release the
+    deployment and restore harmony.
+- id: 13-death
+  scene: A dark cybernetic figure, cloaked in shadows, sweeps a glowing scythe through
+    a tangled web of deprecated v1 API endpoints, severing their connections with
+    an echo of broken webhook notifications, while Kubernetes pods shimmer in the
+    background, deploying fresh microservices with the precision of a CI/CD pipeline,
+    as Prometheus metrics gleam with newfound vitality and Grafana dashboards pulse
+    to life, heralding a new era of scalable, resilient architecture.
+- id: 14-temperance
+  scene: An angelic cybernetic entity, adorned with glowing circuit patterns, pours
+    shimmering packets of data between two network buffers, each marked with Prometheus
+    metrics, maintaining a perfect token bucket equilibrium while deploying feature
+    flags to gracefully throttle traffic; Kubernetes pods hum in harmony, orchestrated
+    to ensure seamless user experience as microservices communicate with Grafana dashboards
+    displaying real-time usage statistics.
+- id: 15-the-devil
+  scene: A horned cybernetic demon looms over the team of engineers, ensnaring them
+    with glowing red cables that pulse with the chaotic energy of hardcoded secrets
+    and quick, dirty hacks, while the shadows are filled with the ominous flicker
+    of deprecated APIs, unmonitored legacy servers, and the relentless whispers of
+    unaddressed vulnerabilities, as a nearby console flashes with alerts from Datadog
+    and PagerDuty, signaling the impending doom of an unstable deployment.
+- id: 16-the-tower
+  scene: A high-rise data center tower, its sleek exterior shimmering with Kubernetes
+    cluster nodes, is struck by a bolt of lightning made of cascading error codes,
+    shattering glass panels of data into glowing red warning alarms powered by Prometheus
+    and Grafana, as frantic alerts from PagerDuty echo throughout the chaos, signaling
+    a critical outage while Terraform scripts scramble to initiate auto-scaling and
+    restore order amidst the storm.
+- id: 17-the-star
+  scene: A brilliant neon green star radiates calm light over a dark terminal matrix,
+    where the glowing output of a CI/CD pipeline shows all test suites passing with
+    a 100% success rate, while Kubernetes pods deploy seamlessly and Prometheus metrics
+    dance in harmony, illuminated by Grafana dashboards that reflect the stability
+    of the build—an oasis of tranquility in a world of ephemeral containers and feature
+    flags.
+- id: 18-the-moon
+  scene: A glowing cybernetic full moon, embedded with Kubernetes clusters, casts
+    shadowy illusions over a murky marsh of legacy code, where undocumented endpoints
+    lurk like hidden secrets, entangled in a web of tangled Terraform scripts and
+    obscured by the fog of missing API documentation, while Prometheus metrics flicker
+    ominously in the distance, hinting at the chaos of unmonitored deployments.
+- id: 19-the-sun
+  scene: A radiant golden-neon sun rises over a pristine cloud infrastructure landscape,
+    illuminating flawless blue-green deployment switches while Kubernetes orchestrates
+    seamless pod transitions, and Prometheus metrics dance in harmony with Grafana
+    dashboards, showcasing real-time performance, ensuring zero downtime as feature
+    flags flutter like banners in the breeze.
+- id: 20-judgement
+  scene: A cybernetic archangel, adorned with shimmering circuit wings, blows a golden
+    bugle over a cascade of open incident tickets, each one illuminated by the glow
+    of Grafana dashboards displaying real-time metrics. Engineers, guided by the ethereal
+    light of Prometheus alerts, gather around a digital whiteboard filled with eBPF
+    traces and Jaeger spans, ready to engage in a blameless root-cause analysis while
+    sipping coffee brewed with precision from the CI/CD pipeline.
+- id: 21-the-world
+  scene: A glowing holographic globe pulsates with vibrant data streams as synchronized
+    Kubernetes clusters span multiple regions, while low-latency CDN edge nodes, powered
+    by Cloudflare, deliver content seamlessly; flawless global state replication is
+    ensured by Consul's service mesh, with Prometheus metrics visualized on Grafana
+    dashboards, capturing every heartbeat of this interconnected digital universe.
+- id: ace-of-wands
+  scene: A glowing neon wand made of pure syntax logic, igniting a fresh repository
+    init, as lines of code spiral upwards like sparks, integrating with CI/CD pipelines
+    in GitHub Actions, while Terraform scripts dance around, conjuring infrastructure
+    as the wand channels the energy of Kubernetes clusters spinning up, ready to deploy
+    microservices in a vibrant cloud environment.
+- id: two-of-wands
+  scene: An engineer stands at a dual-monitor terminal, meticulously mapping out a
+    global repository architecture with Terraform scripts on one screen, while the
+    other displays a dynamic flowchart of CI/CD pipelines orchestrated by Jenkins,
+    ready to deploy microservices into Kubernetes clusters across multiple regions.
+    The air hums with the promise of automated deployments and the visualized metrics
+    from Grafana provide real-time insights into system performance, ensuring every
+    commit is as seamless as a well-oiled machine.
+- id: three-of-wands
+  scene: Code modules are dynamically dispatched across a fleet of Kubernetes pods,
+    each scaling effortlessly in response to incoming build requests while Prometheus
+    monitors their health metrics; the build feedback flows back through a CI/CD pipeline
+    powered by Jenkins, with notifications sent via Slack and PagerDuty, ensuring
+    that every deployment is as smooth as a canary release under the watchful gaze
+    of Grafana dashboards.
+- id: four-of-wands
+  scene: A party of cybernetic avatars, adorned with glowing Kubernetes insignias,
+    celebrate a successful v1.0 milestone commit as they pop open virtual champagne
+    bottles, while automated CI/CD pipelines, represented as vibrant confetti streams,
+    burst through the air, and a backdrop of Grafana dashboards lights up with real-time
+    metrics showcasing zero downtime and a smooth canary deployment. In one corner,
+    an eager avatar adjusts feature flags, ensuring a seamless rollout, while another
+    high-fives their peer, who monitors alerts on PagerDuty, as the joyous atmosphere
+    pulsates with the rhythm of Datadog's heartbeat.
+- id: five-of-wands
+  scene: Multiple developer avatars are fiercely engaged in intense debates over git
+    merge conflicts, wielding their favorite code editors like swords, as they invoke
+    tools like GitKraken for visual diffs and summon CI/CD pipelines through Jenkins
+    to resolve their disputes, while feature flags toggle back and forth like light
+    switches in a frantic battle for deployment supremacy.
+- id: six-of-wands
+  scene: A victorious developer clad in a sleek, holographic jacket rides a cybernetic
+    steed adorned with glowing Kubernetes logos, galloping past a sea of cheering
+    green CI status badges, while the air crackles with the triumphant notifications
+    from PagerDuty, and a banner above displays the successful rollout of canary deployments
+    monitored in real-time on Grafana dashboards.
+- id: seven-of-wands
+  scene: A lone developer stands valiantly before a towering wall of reviewer comments,
+    each one tagged with CI/CD pipeline failures from Jenkins and highlighted with
+    warnings from SonarQube, while behind them, a swarm of feature flag toggles flickers
+    ominously as they brace to invoke the power of Git rebase and Kubernetes rollbacks
+    to protect their hard-fought pull request from being overwhelmed.
+- id: eight-of-wands
+  scene: Streams of lightspeed git pushes and automated PR merges, adorned with glowing
+    Kubernetes logos, zip through a hyper-speed tunnel lined with Prometheus metrics
+    dashboards and Grafana visualizations, while Terraform scripts whirl around like
+    shooting stars, orchestrating seamless infrastructure changes in real-time.
+- id: nine-of-wands
+  scene: A weary developer, illuminated by the glow of multiple terminal screens displaying
+    a sea of red from failed Cypress tests, sips cold coffee while frantically navigating
+    through a chaotic Git branch, desperately deploying a hotfix via Terraform to
+    patch the latest feature flag gone awry, all while monitoring real-time metrics
+    in Grafana and receiving relentless alerts from PagerDuty as the clock strikes
+    3 AM.
+- id: ten-of-wands
+  scene: A developer is hunched under the weight of a colossal stack of unmaintained
+    repository packages, each one labeled with outdated dependencies and legacy code,
+    while their other hand clutches a crumpled Terraform plan and a half-tuned Prometheus
+    alert configuration, all while the ominous glow of a Grafana dashboard flickers
+    in the background, warning of impending deployment failures.
+- id: page-of-wands
+  scene: An eager junior dev avatar holds a glowing tablet brimming with fresh Python
+    scripts, while Kubernetes pods whirl around like fireflies, and Prometheus metrics
+    dance in the air, illuminating their path. Nearby, a Grafana dashboard pulses
+    with vibrant graphs, showcasing real-time deployment success rates, as the dev
+    prepares to push feature flags for a canary release, all while a trusty Datadog
+    companion monitors the system's health.
+- id: knight-of-wands
+  scene: A high-speed cybernetic programmer, equipped with a glowing laptop running
+    Kubernetes, races into production, deploying a new feature branch with canary
+    releases while monitoring real-time metrics on Grafana and ensuring the smooth
+    orchestration of microservices; the air hums with the buzz of Prometheus alerts
+    and the scent of freshly baked Terraform scripts ready to provision resources
+    in the cloud.
+- id: queen-of-wands
+  scene: A confident engineer presides over an elegant code design system illuminated
+    in cyan, orchestrating seamless deployments with GitOps while monitoring application
+    performance through Prometheus metrics and Grafana dashboards, all while feature
+    flags toggle user experiences like a well-choreographed dance.
+- id: king-of-wands
+  scene: A visionary tech leader seated on a throne of server racks adorned with blinking
+    LED lights, wielding a glowing master key that represents seamless access to a
+    secure Vault, while around him, Kubernetes clusters orchestrate microservices
+    in perfect harmony, and Prometheus metrics flow like a river of data, ready to
+    be visualized in Grafana dashboards.
+- id: ace-of-cups
+  scene: A glowing cup overflowing with vibrant cyan telemetry events and structured
+    log streams, each drop representing meticulously traced Jaeger spans and detailed
+    eBPF traces, while the edges shimmer with the light of Grafana dashboards and
+    Prometheus metrics, capturing real-time performance insights and alerting on anomalies
+    through PagerDuty.
+- id: two-of-cups
+  scene: Two vibrant Grafana dashboards, one displaying real-time CPU utilization
+    and the other showcasing memory performance, gracefully merge their metric streams
+    into a single unified view, as Prometheus scrapes the data from Kubernetes pods
+    while Datadog's APM traces weave through the logs, synchronizing alerts through
+    PagerDuty to ensure no anomalies go unnoticed.
+- id: three-of-cups
+  scene: Three engineers, surrounded by the glow of a green Grafana dashboard displaying
+    real-time metrics, clink their coffee mugs while discussing the latest canary
+    deploys, with Prometheus alerts chiming softly in the background and a Terraform
+    script running seamlessly to provision their infrastructure.
+- id: four-of-cups
+  scene: An engineer, lost in thought, stares moodily at routine logs on their terminal,
+    oblivious to the pulsating alert notification from PagerDuty that signals a spike
+    in latency monitored by Prometheus, while a Grafana dashboard showcases an ominous
+    red trend line that flickers in the corner of their eye.
+- id: five-of-cups
+  scene: An engineer, surrounded by cascading red error logs from a failed Kubernetes
+    deployment, mourns the three spilled logs while overlooking the vibrant green
+    streams of successful metrics flowing from Prometheus and Grafana dashboards,
+    illuminating the path toward recovery with feature flags and canary deploys ready
+    to bring the application back to life.
+- id: six-of-cups
+  scene: A developer gazes fondly at a row of vintage green terminal screens, each
+    displaying lines of code that once triggered Jenkins pipelines, while the nostalgic
+    hum of an old build server echoes in the background, reminding them of simpler
+    times when deploying with Chef and monitoring with Nagios felt like a triumphant
+    adventure into the unknown.
+- id: seven-of-cups
+  scene: Seven glowing holographic options of APM platforms and logging frameworks—each
+    pulsating with vibrant colors—float in the air, showcasing the sleek interfaces
+    of Datadog, New Relic, and Grafana, while the enchanting patterns of traces from
+    Jaeger and the real-time metrics from Prometheus dance around them, illuminated
+    by the soft glow of Kubernetes pods orchestrating the cloud-native landscape below.
+- id: eight-of-cups
+  scene: A developer strolls away from a chaotic PagerDuty alert dashboard, where
+    obnoxious notifications from failing Kubernetes pods drown out the calm, while
+    in the distance, a serene Grafana dashboard with clear, actionable metrics beckons,
+    illuminated by the soft glow of Prometheus metrics that promise insightful data
+    and restful nights.
+- id: nine-of-cups
+  scene: An engineer lounges in a sleek ergonomic chair, basking in the glow of multiple
+    screens showcasing vibrant Grafana dashboards, where 99.999% uptime graphs dance
+    alongside real-time Prometheus metrics and eBPF traces, all while PagerDuty alerts
+    remain blissfully silent in the background, a testament to the flawless canary
+    deploys and feature flags that have kept the service running smoothly.
+- id: ten-of-cups
+  scene: A joyful team surrounded by a rainbow of passing health checks illuminated
+    by Prometheus metrics, their laughter echoing as flawless distributed traces weave
+    through Jaeger spans, while Terraform scripts dance in the background, orchestrating
+    a seamless deployment of Kubernetes pods under a banner of successful canary releases.
+- id: page-of-cups
+  scene: An eager apprentice SRE hunches over a terminal, eyes wide as they spot a
+    curious anomaly pattern in a live log stream, illuminated by the glow of Grafana
+    dashboards displaying real-time metrics; they quickly pull up a Kibana instance
+    to filter through the logs, while Prometheus alerts ping in the background, hinting
+    at potential issues lurking in the Kubernetes cluster. Armed with a trusty eBPF
+    tracing tool, they prepare to dive deeper into the containerized microservices,
+    eager to unveil the secrets hidden within the swirling chaos of data.
+- id: knight-of-cups
+  scene: A dedicated SRE, clad in a sleek containerized armor, rides valiantly through
+    shimmering streams of metrics, wielding a powerful Prometheus spear to capture
+    critical diagnostic traces, while Grafana banners flutter overhead, displaying
+    real-time dashboards of system health and performance. As they navigate the currents,
+    they deftly deploy Terraform spells to orchestrate infrastructure on-the-fly,
+    ensuring seamless observability and reliability across the cloud realms.
+- id: queen-of-cups
+  scene: A serene engineer intuitively deciphering root causes by gazing into a reflective
+    pool of log streams, illuminated by the shimmering outputs of Elasticsearch, while
+    tracing the intricate patterns of data flowing through Fluentd and visualizing
+    anomalies in Grafana dashboards that dance like ripples across the surface.
+- id: king-of-cups
+  scene: A calm leader seated amidst roaring data streams, expertly visualizing the
+    chaos through Grafana dashboards that pulse with real-time metrics, while Prometheus
+    scrapes for anomalies, and PagerDuty alerts chime softly in the background, all
+    while maintaining absolute composure during crises with a steady hand on the feature
+    flags that control the deployment flow.
+- id: ace-of-swords
+  scene: A razor-sharp cyan sword, glimmering with Kubernetes logos, slices through
+    a complex stack trace adorned with Prometheus metrics, revealing the exact bug
+    location highlighted by a glowing Jaeger span, while nearby, Terraform scripts
+    lay open, ready to deploy the fix in a canary release.
+- id: two-of-swords
+  scene: A developer, blindfolded and poised in a state of confusion, clutches two
+    crossed swords emblazoned with the logos of conflicting bug reports, while around
+    them, a swirling vortex of alerts from PagerDuty and Datadog flashes ominously,
+    as Kubernetes pods crash in the background, and Grafana dashboards flicker with
+    red metrics, each sword representing a different deployment environment, one adorned
+    with feature flags and the other with canary releases, as they struggle to strike
+    a balance amidst the chaos of eBPF traces revealing elusive performance issues.
+- id: three-of-swords
+  scene: Three glowing red swords, representing critical alerts from PagerDuty, pierce
+    a digital heart icon displayed on a server monitor, surrounded by flashing error
+    logs from Kubernetes deployments, while Prometheus metrics fluctuate wildly in
+    the background, signaling a catastrophic outage that has triggered automated rollbacks
+    and heated discussions in the team's Slack channel.
+- id: four-of-swords
+  scene: A knight-like avatar rests peacefully on a tomb of resolved bug tickets,
+    surrounded by a serene server room filled with humming Kubernetes pods and blinking
+    lights from a Prometheus monitoring dashboard, while Grafana charts display the
+    tranquility of a bug-free deployment, and the soft glow of a Datadog alert dashboard
+    signals that all systems are go.
+- id: five-of-swords
+  scene: In the foreground, a developer, armed with a digital broom covered in code
+    snippets, sifts through an endless backlog of bug tickets in their Jira board,
+    while in the background, defeated teammates trudge away, shadows cast by the flickering
+    red alerts in their Grafana dashboards, the ominous chime of PagerDuty notifications
+    echoing in their ears.
+- id: six-of-swords
+  scene: A sleek Kubernetes pod navigates through murky waters, its containers filled
+    with server workloads, as Prometheus metrics pulse rhythmically like a heartbeat,
+    guiding it toward a serene harbor adorned with Grafana dashboards showcasing zero
+    bug incidents, while logs from Datadog illuminate the path with insights, ensuring
+    a safe arrival to the tranquil, bug-free cloud sanctuary.
+- id: seven-of-swords
+  scene: A sneaky cyber avatar, cloaked in a hood of encrypted protocols, slips out
+    of the repo carrying 5 hotfix commits, stealthily bypassing the CI/CD pipeline
+    as it leaves a trail of unmonitored deployments, while the vigilant eyes of a
+    Grafana dashboard flicker in the background, showing spikes in error rates and
+    unfulfilled alerts from PagerDuty.
+- id: eight-of-swords
+  scene: An engineer is ensnared in a tangled web of glowing red error wires, each
+    pulsating with alerts from Prometheus and Datadog, while PagerDuty notifications
+    blare ominously in the background, signaling an avalanche of critical incidents
+    from the latest canary deploy. Desperate to escape, they reach for their Terraform
+    scripts, but the chaotic matrix of broken pipelines and flickering Kubernetes
+    pods keeps them shackled, unable to push any commits.
+- id: nine-of-swords
+  scene: An engineer sits bolt upright in bed, the blue light of their phone illuminating
+    a flurry of red incident alerts from PagerDuty, each one a harbinger of chaos
+    as their Kubernetes clusters crash under the weight of untested feature flags;
+    Prometheus metrics flicker ominously in the background, while Grafana dashboards
+    flash with alarming spikes, rendering sleep a distant memory.
+- id: ten-of-swords
+  scene: An avatar lies face down, pinned by ten glowing red swords, each representing
+    a critical error in the CI/CD pipeline, while a flurry of Jenkins builds fail
+    around it, and alerts from PagerDuty scream in the background. Kubernetes pods
+    crash like dominoes, and Grafana dashboards flash with alarming red metrics, as
+    a swarm of Datadog APM traces reveals the chaos of unhandled exceptions and broken
+    feature flags.
+- id: page-of-swords
+  scene: A nimble scout, equipped with a glowing bug detector glass, deftly navigates
+    through sprawling code repositories while deploying advanced tools like SonarQube
+    for static code analysis and using GitHub Actions to automate tests, all while
+    monitoring real-time performance metrics with Grafana dashboards illuminating
+    the path ahead.
+- id: knight-of-swords
+  scene: A cyber warrior, helmet gleaming with the light of a thousand SSL certificates,
+    charges full speed into a security vulnerability patch deployment, brandishing
+    a Terraform script like a sword, ready to spin up a fortress of hardened containers
+    in Kubernetes, while Prometheus monitors the breach in real-time and Grafana visualizes
+    the incoming threat, ensuring that every line of code is fortified against the
+    onslaught of malicious attacks.
+- id: queen-of-swords
+  scene: A stern security architect, clad in a digital armor of SSL certificates,
+    wields a glowing sword of truth that slices through layers of misconfigured IAM
+    policies, while meticulously auditing code permissions with tools like Terraform
+    and Vault secrets, ensuring every line meets the uncompromising standards of security.
+- id: king-of-swords
+  scene: A commanding leader on a cybernetic throne, surrounded by holographic displays
+    of global threat intelligence data, orchestrating operations with real-time alerts
+    from Datadog, while automated incident response workflows in PagerDuty ensure
+    swift action against breaches, and a battalion of engineers deploys feature flags
+    and canary releases to safeguard the infrastructure, all under the watchful eye
+    of Prometheus metrics and Grafana dashboards illuminating the path to security
+    resilience.
+- id: ace-of-pentacles
+  scene: A glowing golden coin etched with a server rack symbol rises majestically
+    from a cloud data center floor, surrounded by shimmering virtual machines orchestrated
+    by Kubernetes, while Prometheus metrics stream in real-time, visualized on Grafana
+    dashboards that light up the room with vibrant colors. The air buzzes with the
+    hum of containers scaling up and down, as Terraform scripts dance across the screens,
+    deploying infrastructure as code with the precision of a well-oiled CI/CD pipeline.
+- id: two-of-pentacles
+  scene: An engineer effortlessly juggles two glowing server nodes labeled AWS and
+    GCP, each adorned with vibrant Kubernetes logos, while below them, a swirling
+    vortex of Terraform scripts and Prometheus metrics dance in sync, capturing the
+    real-time performance of both clouds, all while a canary deploy flutters overhead,
+    ready for production.
+- id: three-of-pentacles
+  scene: A developer sketches out the physical server installation blueprint on a
+    digital whiteboard, while the SRE monitors the network topology in real-time using
+    Grafana dashboards, and the cloud architect fine-tunes the infrastructure as code
+    with Terraform, ensuring seamless integration with Kubernetes clusters and automated
+    CI/CD pipelines for efficient deployment.
+- id: four-of-pentacles
+  scene: A miserly figure clutches a stack of reserved server instances like precious
+    gems, surrounded by an array of idle Kubernetes pods and sprawling Terraform scripts,
+    stubbornly refusing to release unused nodes while Grafana dashboards flash warnings
+    of wasted resources and Prometheus metrics scream for action. As the figure guards
+    their treasure, the faint hum of a neglected CI/CD pipeline echoes in the background,
+    showcasing a world of efficiency just beyond their grasp.
+- id: five-of-pentacles
+  scene: Two shivering avatars huddle beneath a flickering streetlight, gazing longingly
+    at the warm, well-funded data center where racks of Kubernetes clusters hum with
+    life, monitored by Prometheus alerts and visualized on sleek Grafana dashboards,
+    while inside, a team deploys feature flags and canary releases with ease, oblivious
+    to the cold hardships of those outside.
+- id: six-of-pentacles
+  scene: A cloud administrator, adorned with a toolbelt filled with Terraform scripts
+    and Kubernetes manifests, expertly allocates compute credits and CPU capacity
+    via a sleek Grafana dashboard, while monitoring real-time metrics from Prometheus
+    to ensure needy projects receive the optimal resources, all while adjusting feature
+    flags to seamlessly roll out new capabilities.
+- id: seven-of-pentacles
+  scene: An engineer leans on a staff, eyes focused on a flourishing garden of server
+    racks sprouting vibrant green LED lights, while cost graphs bloom above, displaying
+    metrics from Datadog and Prometheus, each spike and dip illuminated by Grafana
+    visualizations, and Terraform scripts weaving through the soil like roots, nurturing
+    the infrastructure beneath.
+- id: eight-of-pentacles
+  scene: A craftsman meticulously soldering high-speed network interfaces onto blade
+    servers, each connection monitored by a Prometheus instance, while his workspace
+    is illuminated by the glow of Grafana dashboards displaying real-time performance
+    metrics and network latency, ensuring every blade is optimized for Kubernetes
+    orchestration.
+- id: nine-of-pentacles
+  scene: An engineer strolls through a peaceful, luxurious server farm where rows
+    of sleek Kubernetes clusters hum gently, while autonomous cooling drones meticulously
+    adjust temperatures around the high-density racks, ensuring optimal performance.
+    Overhead, a Grafana dashboard displays real-time metrics, and the engineer glances
+    at their PagerDuty alerting system, confident in the seamless deployment of feature
+    flags that allow for canary releases without a hitch.
+- id: ten-of-pentacles
+  scene: A multi-generational data center enterprise thrives as legacy servers hum
+    alongside sleek Kubernetes clusters, orchestrating microservices with seamless
+    efficiency; crisscrossing fiber optic cables connect powerful Prometheus monitoring
+    stacks, while Grafana dashboards illuminate the room with vibrant metrics, showcasing
+    the harmonious coexistence of old and new through canary deploys and Terraform-managed
+    infrastructure.
+- id: page-of-pentacles
+  scene: A student holding a glowing green coin, emblazoned with the Kubernetes logo,
+    eagerly flips through cloud certification manuals filled with diagrams of Terraform
+    modules and AWS architecture, while their laptop screen displays a Grafana dashboard,
+    pulsing with real-time metrics and alerts from Prometheus.
+- id: knight-of-pentacles
+  scene: A steady, methodical engineer riding a slow heavy server truck adorned with
+    Kubernetes stickers examines detailed cloud cost ledgers, meticulously tracking
+    usage through Terraform-managed resources while monitoring real-time costs with
+    Grafana dashboards and analyzing trends via Datadog’s cost insights.
+- id: queen-of-pentacles
+  scene: A nurturing leader surrounded by flourishing Kubernetes clusters, where meticulously
+    monitored pods scale effortlessly under the watchful gaze of Prometheus metrics,
+    while efficient cooling systems hum softly alongside Grafana dashboards displaying
+    vibrant, real-time performance data. Vault secrets securely guard the sensitive
+    configurations, ensuring that the happy pods thrive in a seamless, canary deploy
+    environment, embodying the essence of modern infrastructure harmony.
+- id: king-of-pentacles
+  scene: A master architect, adorned in a cloak woven from cloud-native patterns,
+    sits atop a golden server command tower, surveying sprawling data centers brimming
+    with Kubernetes clusters, where Grafana dashboards pulse with real-time metrics
+    while Prometheus scrapes vital health data. Below, Terraform scripts effortlessly
+    provision resources, and a symphony of automated canary deploys dance across the
+    horizon, all under the watchful eye of Datadog, ensuring every microservice sings
+    in harmony.

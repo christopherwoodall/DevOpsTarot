@@ -1,0 +1,392 @@
+{
+  "00-the-fool": {
+    "name": "The Commit",
+    "upright": "Leap of faith, new features, continuous integration, raw potential, bold deployment.",
+    "reversed": "Reckless force push, broken builds, skipping tests, unreviewed code, production risk."
+  },
+  "01-the-magician": {
+    "name": "The Architect",
+    "upright": "Mastery of infrastructure, automation skills, resourcefulness, manifestation of system vision.",
+    "reversed": "Over-engineering, resume-driven development, misconfigured tooling, chaos without discipline."
+  },
+  "02-the-high-priestess": {
+    "name": "The Root CA",
+    "upright": "Intuition, hidden security secrets, zero-trust discipline, deep cryptographic truth.",
+    "reversed": "Expired TLS certificates, leaked private keys, shadow IT, ignored security warnings."
+  },
+  "03-the-empress": {
+    "name": "The Mainframe",
+    "upright": "Abundance, high availability, fertile ecosystem, flourishing service mesh.",
+    "reversed": "Resource starvation, memory leak expansion, unmanaged growth, compute bloat."
+  },
+  "04-the-emperor": {
+    "name": "The Monolith",
+    "upright": "Structure, stability, battle-tested architecture, centralized control, strong governance.",
+    "reversed": "Rigid legacy lock-in, single point of failure, refusal to refactor, bureaucratic overhead."
+  },
+  "05-the-hierophant": {
+    "name": "The Documentation",
+    "upright": "Established standards, clear runbooks, tribal knowledge codified, compliance harmony.",
+    "reversed": "Outdated Wiki pages, dogmatic adherence to obsolete rules, cargo-cult engineering."
+  },
+  "06-the-lovers": {
+    "name": "The Microservice Pair",
+    "upright": "Harmonious integration, tight API contract agreement, mutual fallback support, synergy.",
+    "reversed": "Tight coupling, cascading network failures, API contract drift, toxic service dependencies."
+  },
+  "07-the-chariot": {
+    "name": "The CI/CD Pipeline",
+    "upright": "Unstoppable momentum, automated release velocity, targeted deployment triumph, discipline.",
+    "reversed": "Pipeline queue congestion, flaky integration test blocks, broken build trains, lost velocity."
+  },
+  "08-the-strength": {
+    "name": "The Load Balancer",
+    "upright": "Grace under heavy load, resilience, traffic smoothing, elegant rate throttling, calm endurance.",
+    "reversed": "DDoS vulnerability, server saturation, uneven pod distribution, collapsing under pressure."
+  },
+  "09-the-hermit": {
+    "name": "The Air-Gapped Vault",
+    "upright": "Deep audit introspection, isolated testing environment, high security air-gapping, focus.",
+    "reversed": "Isolation paralysis, missing upstream patches, siloed knowledge, disconnected team."
+  },
+  "10-wheel-of-fortune": {
+    "name": "The Chaos Monkey",
+    "upright": "Embracing chaos, continuous resilience testing, dynamic auto-scaling, adapting to change.",
+    "reversed": "Unpredictable outages, bad luck during on-call, unexpected cloud vendor zone downtime."
+  },
+  "11-justice": {
+    "name": "The Audit Log",
+    "upright": "Accountability, immutable event logs, fair root cause analysis, SOC2 compliance balance.",
+    "reversed": "Blame-shifting post-mortems, tampered log files, regulatory fines, unmonitored privilege escalation."
+  },
+  "12-the-hanged-man": {
+    "name": "The Deadlock",
+    "upright": "Strategic pause, waiting for lock resolution, changing perspective, deliberate delay.",
+    "reversed": "Permanent thread deadlock, infinite wait loop, resource starvation, wasted CPU cycles."
+  },
+  "13-death": {
+    "name": "The Deprecation",
+    "upright": "End of legacy code, necessary sunsetting, clean architecture rebirth, transformation.",
+    "reversed": "Clinging to legacy tech, refactoring fear, broken backward compatibility, abrupt vendor death."
+  },
+  "14-temperance": {
+    "name": "The Rate Limiter",
+    "upright": "Optimal resource allocation, token bucket balance, controlled API throughput, harmony.",
+    "reversed": "Throttling chaos, aggressive 429 Too Many Requests, bottlenecked queues, uncalibrated limits."
+  },
+  "15-the-devil": {
+    "name": "The Technical Debt",
+    "upright": "Trapped by quick fixes, awareness of technical debt, addiction to hotfixes, shadow dependencies.",
+    "reversed": "Breaking free from legacy code, refactoring breakthrough, paying down tech debt, liberation."
+  },
+  "16-the-tower": {
+    "name": "The Production Outage",
+    "upright": "Catastrophic system crash, sudden infrastructure collapse, hard truth, necessary rebuilding.",
+    "reversed": "Near-miss disaster, disaster recovery plan success, mitigated breach, structural panic."
+  },
+  "17-the-star": {
+    "name": "The Green Build",
+    "upright": "Hope, flawless pipeline pass, clarity, restored team confidence, bright future.",
+    "reversed": "False sense of security, green build with skipped tests, hidden bugs, test suite apathy."
+  },
+  "18-the-moon": {
+    "name": "The Undocumented API",
+    "upright": "Illusion, hidden side effects, mystery bugs, navigating obscure legacy code, intuition required.",
+    "reversed": "Unveiling mystery root causes, documenting hidden endpoints, dispelling architectural fear."
+  },
+  "19-the-sun": {
+    "name": "The Zero-Downtime Release",
+    "upright": "Joy, seamless release, zero-downtime success, optimal performance, engineering glory.",
+    "reversed": "Minor release hiccups, delayed rollout celebrations, premature victory before metric stabilization."
+  },
+  "20-judgement": {
+    "name": "The Post-Mortem",
+    "upright": "Blameless post-mortem, valuable incident learnings, system evolution, accountability.",
+    "reversed": "Finger-pointing, repeating past mistakes, superficial RCA, failure to implement action items."
+  },
+  "21-the-world": {
+    "name": "The Multi-Region Cluster",
+    "upright": "Global scale achievement, project completion, resilient multi-cloud ecosystem, total fulfillment.",
+    "reversed": "Incomplete global rollout, latency sync lag, regional compliance hurdles, fragmented state."
+  },
+  "ace-of-wands": {
+    "name": "Ace of Code",
+    "upright": "New project spark, creative coding sprint, innovative feature concept.",
+    "reversed": "Writer's block in code, stale repository ideas, uninspired feature pitch."
+  },
+  "two-of-wands": {
+    "name": "Two of Code",
+    "upright": "Strategic roadmap planning, choosing tech stack, future expansion vision.",
+    "reversed": "Analysis paralysis, hesitation to commit to stack, poor architectural planning."
+  },
+  "three-of-wands": {
+    "name": "Three of Code",
+    "upright": "Initial deployment results incoming, expanding codebase scope, remote team synergy.",
+    "reversed": "Build delay frustration, unexpected merge conflicts, remote communication breakdown."
+  },
+  "four-of-wands": {
+    "name": "Four of Code",
+    "upright": "Milestone release celebration, team unity, stable baseline framework.",
+    "reversed": "Premature celebration, unhandled edge cases in v1.0, post-launch fatigue."
+  },
+  "five-of-wands": {
+    "name": "Five of Code",
+    "upright": "Healthy code review debate, competing architecture ideas, active refactoring.",
+    "reversed": "Merge conflict hell, toxic code reviews, bikeshedding over formatting."
+  },
+  "six-of-wands": {
+    "name": "Six of Code",
+    "upright": "Public project recognition, successful demo, high team morale, open-source adoption.",
+    "reversed": "Ego-driven development, demo failure, unearned hype, broken promises."
+  },
+  "seven-of-wands": {
+    "name": "Seven of Code",
+    "upright": "Standing up for good code practices, defending architectural decisions, tenacity.",
+    "reversed": "Stubbornness against constructive feedback, defensive posture, fragile code ego."
+  },
+  "eight-of-wands": {
+    "name": "Eight of Code",
+    "upright": "Rapid feature delivery, high deployment velocity, instant feedback loops.",
+    "reversed": "Rushed code commits, bypassing PR reviews, chaotic release speed leading to bugs."
+  },
+  "nine-of-wands": {
+    "name": "Nine of Code",
+    "upright": "Perseverance through crunch time, final push before launch, resilience.",
+    "reversed": "Burnout, exhaustion, making critical mistakes due to fatigue, refusal to rest."
+  },
+  "ten-of-wands": {
+    "name": "Ten of Code",
+    "upright": "Overwhelmed by maintenance duties, heavy technical burden, solo maintenance strain.",
+    "reversed": "Delegating maintenance tasks, dropping dead weight dependencies, refactoring relief."
+  },
+  "page-of-wands": {
+    "name": "Junior Dev of Code",
+    "upright": "Enthusiasm to learn, fresh perspective, eager experimentation, high curiosity.",
+    "reversed": "Careless commits, lack of experience causing unintended side effects, tutorial hell."
+  },
+  "knight-of-wands": {
+    "name": "Senior Dev of Code",
+    "upright": "Action-oriented coding, fast execution, driving feature delivery with energy.",
+    "reversed": "Impulsive refactoring, breaking existing APIs in a hurry, reckless coding style."
+  },
+  "queen-of-wands": {
+    "name": "Principal Engineer of Code",
+    "upright": "Inspiring tech leadership, clean code principles, magnetic mentoring, elegance.",
+    "reversed": "Domineering code style enforcement, gatekeeping patterns, perfectionism paralysis."
+  },
+  "king-of-wands": {
+    "name": "CTO of Code",
+    "upright": "Bold technical vision, decisive tech stack strategy, empowering engineering culture.",
+    "reversed": "Out of touch leadership, sudden pivot mandates, dogmatic technology mandates."
+  },
+  "ace-of-cups": {
+    "name": "Ace of Logs",
+    "upright": "Fresh observability insights, emotional team alignment, clear telemetry stream.",
+    "reversed": "Log silence, missing telemetry data, emotional disconnect during incidents."
+  },
+  "two-of-cups": {
+    "name": "Two of Logs",
+    "upright": "Cross-service observability integration, dev and ops alignment, mutual trust.",
+    "reversed": "Siloed metrics, conflicting telemetry tools, team miscommunication during outages."
+  },
+  "three-of-cups": {
+    "name": "Three of Logs",
+    "upright": "Collaborative problem solving, shared operational victory, team camaraderie.",
+    "reversed": "Gossip, groupthink during root cause analysis, ignoring warning metrics."
+  },
+  "four-of-cups": {
+    "name": "Four of Cups",
+    "upright": "Alert fatigue, apathy toward warning signals, taking system stability for granted.",
+    "reversed": "Re-engaging with metrics, revamping alert thresholds, renewed focus on telemetry."
+  },
+  "five-of-cups": {
+    "name": "Five of Logs",
+    "upright": "Fixating on a minor failure, regret over bad deployment, temporary despair.",
+    "reversed": "Moving past incident regret, focusing on surviving systems, rebuilding confidence."
+  },
+  "six-of-cups": {
+    "name": "Six of Logs",
+    "upright": "Nostalgia for simple architectures, revisiting legacy codebases with appreciation.",
+    "reversed": "Stuck in the past, resisting modern observability tooling, outdated habits."
+  },
+  "seven-of-cups": {
+    "name": "Seven of Logs",
+    "upright": "Too many monitoring tools to choose from, rich telemetry options, imagination.",
+    "reversed": "Tool sprawl confusion, choice overload, selecting the wrong observability platform."
+  },
+  "eight-of-cups": {
+    "name": "Eight of Logs",
+    "upright": "Abandoning bad monitoring practices, seeking deeper system truth, stepping back.",
+    "reversed": "Clinging to noisy dashboards, fear of changing observability strategy."
+  },
+  "nine-of-cups": {
+    "name": "Nine of Logs",
+    "upright": "Uptime satisfaction, SLA fulfillment, peace of mind, operational success.",
+    "reversed": "Complacency, unexpected edge-case vulnerability hiding behind good SLAs."
+  },
+  "ten-of-cups": {
+    "name": "Ten of Logs",
+    "upright": "Total team harmony, flawless observability culture, sustained operational bliss.",
+    "reversed": "Faked metrics, superficial dashboard happiness, underlying team friction."
+  },
+  "page-of-cups": {
+    "name": "Junior SRE of Logs",
+    "upright": "Curiosity for anomalous data, fresh perspective on log analysis, intuitive catch.",
+    "reversed": "Misinterpreting log anomalies, false alarms, noise-to-signal confusion."
+  },
+  "knight-of-cups": {
+    "name": "Senior SRE of Logs",
+    "upright": "Empathetic incident response, thoughtful diagnostic investigation, cool head.",
+    "reversed": "Overly emotional reaction to outages, chasing false metric leads, drama in chat."
+  },
+  "queen-of-cups": {
+    "name": "Observability Lead of Logs",
+    "upright": "Deep system intuition, compassionate incident leadership, master of telemetry.",
+    "reversed": "Emotional burnout from constant on-call, over-sensitivity to minor anomalies."
+  },
+  "king-of-cups": {
+    "name": "VP of Telemetry",
+    "upright": "Emotional stability during severity-1 incidents, strategic data governance, calm command.",
+    "reversed": "Detached leadership during outages, suppressing critical warning reports."
+  },
+  "ace-of-swords": {
+    "name": "Ace of Bugs",
+    "upright": "Breakthrough diagnosis, sharp analytical clarity, cutting through confusion.",
+    "reversed": "Misdiagnosed root cause, sharp harsh criticisms in code reviews, destructive fixes."
+  },
+  "two-of-swords": {
+    "name": "Two of Bugs",
+    "upright": "Stalemate, difficult choice between trade-offs, needing impartial data to decide.",
+    "reversed": "Information overload, making forced bad decisions without complete debugging context."
+  },
+  "three-of-swords": {
+    "name": "Three of Bugs",
+    "upright": "Heartbreaking severity-1 outage, betrayal of a trusted dependency, bug pain.",
+    "reversed": "Healing after a painful incident, learning from bad bugs, emotional recovery."
+  },
+  "four-of-swords": {
+    "name": "Four of Bugs",
+    "upright": "Rest and recovery after a hectic incident, planned maintenance window, quiet time.",
+    "reversed": "Forced downtime, exhaustion, returning to work too early before full recovery."
+  },
+  "five-of-swords": {
+    "name": "Five of Bugs",
+    "upright": "Pyrrhic victory in bug fixing, political conflicts over bug assignments, tension.",
+    "reversed": "Desire to resolve team conflicts, moving past blame games to fix bugs together."
+  },
+  "six-of-swords": {
+    "name": "Six of Bugs",
+    "upright": "Migrating away from buggy systems, transition to stable platform, smoother sailing.",
+    "reversed": "Failed migration, carrying old bugs into new architecture, rough transition."
+  },
+  "seven-of-swords": {
+    "name": "Seven of Bugs",
+    "upright": "Quick workaround hack, stealth bug fix, shortcut taken to meet urgent deadline.",
+    "reversed": "Uncovered hack caught in audit, unmasked security vulnerability, shortcut backfire."
+  },
+  "eight-of-swords": {
+    "name": "Eight of Bugs",
+    "upright": "Feeling trapped by legacy bugs, mental paralysis, perceived lack of options.",
+    "reversed": "Realizing solutions exist, breaking free from bug paralysis, taking control."
+  },
+  "nine-of-swords": {
+    "name": "Nine of Bugs",
+    "upright": "On-call anxiety, nightmare bugs, overwhelming stress, insomnia from system fear.",
+    "reversed": "Realizing the bug wasn't as bad as feared, relief from false alarm, quiet night."
+  },
+  "ten-of-swords": {
+    "name": "Ten of Bugs",
+    "upright": "Total system rock bottom, absolute breakdown, hit the wall, nowhere to go but up.",
+    "reversed": "Recovery from complete collapse, rebuilding from scratch, worst is finally over."
+  },
+  "page-of-swords": {
+    "name": "Bug Hunter of Swords",
+    "upright": "Vulnerability scanning, proactive bug hunting, sharp curiosity, alert mind.",
+    "reversed": "Spamming issue trackers with minor nitpicks, paranoid false security reports."
+  },
+  "knight-of-swords": {
+    "name": "SecOps Specialist of Swords",
+    "upright": "Swift security intervention, decisive bug hunting, fast threat mitigation.",
+    "reversed": "Impulsive security hotfix that breaks production, aggressive, reckless patching."
+  },
+  "queen-of-swords": {
+    "name": "Security Architect of Swords",
+    "upright": "Strict security hygiene, clear objective judgment, zero-trust enforcement.",
+    "reversed": "Overly punitive security policies, cynical view of dev velocity, gatekeeping."
+  },
+  "king-of-swords": {
+    "name": "CISO of Swords",
+    "upright": "Strategic security leadership, clear regulatory clarity, intellectual authority.",
+    "reversed": "Tyrannical security restrictions, out-of-touch compliance demands, paranoia."
+  },
+  "ace-of-pentacles": {
+    "name": "Ace of Servers",
+    "upright": "New cloud budget approval, tangible infrastructure investment, solid foundation.",
+    "reversed": "Wasted cloud budget grant, missed infrastructure opportunity, financial leak."
+  },
+  "two-of-pentacles": {
+    "name": "Two of Servers",
+    "upright": "Balancing multi-cloud workloads, flexible infrastructure management, adaptability.",
+    "reversed": "Multi-cloud management chaos, dropping the ball on cloud costs, resource imbalance."
+  },
+  "three-of-pentacles": {
+    "name": "Three of Servers",
+    "upright": "Cross-functional teamwork, skilled infrastructure craftsmanship, solid execution.",
+    "reversed": "Poor coordination between dev and infra teams, shoddy hardware execution."
+  },
+  "four-of-pentacles": {
+    "name": "Four of Servers",
+    "upright": "Infrastructure resource hoarding, tight cloud cost controls, asset protection.",
+    "reversed": "Over-conservatism leading to performance throttling, fear of spending on scale."
+  },
+  "five-of-pentacles": {
+    "name": "Five of Servers",
+    "upright": "Cloud budget exhaustion, resource starvation, feeling left out of modern tooling.",
+    "reversed": "Recovery from financial strain, finding budget workarounds, grant approval."
+  },
+  "six-of-pentacles": {
+    "name": "Six of Servers",
+    "upright": "Fair resource distribution, cloud credit allocation, generous mentorship.",
+    "reversed": "Unfair compute quota allocation, budget favoritism, strings-attached credits."
+  },
+  "seven-of-pentacles": {
+    "name": "Seven of Servers",
+    "upright": "Evaluating infrastructure ROI, patient monitoring of long-term cloud investments.",
+    "reversed": "Impatience with infrastructure ROI, frustration over slow cluster spin-up times."
+  },
+  "eight-of-pentacles": {
+    "name": "Eight of Servers",
+    "upright": "Meticulous hardware configuration, continuous skill refinement, dedication.",
+    "reversed": "Repetitive manual server provisioning, failure to automate hardware setup."
+  },
+  "nine-of-pentacles": {
+    "name": "Nine of Servers",
+    "upright": "Infrastructure independence, self-sustaining cloud automation, financial comfort.",
+    "reversed": "Over-dependence on expensive proprietary cloud services, hidden cloud vendor lock-in."
+  },
+  "ten-of-pentacles": {
+    "name": "Ten of Servers",
+    "upright": "Long-term infrastructure legacy, sustained enterprise stability, rich hardware assets.",
+    "reversed": "Legacy hardware inheritance burden, expensive data center lease renewal troubles."
+  },
+  "page-of-pentacles": {
+    "name": "Cloud Apprentice",
+    "upright": "Eager study of cloud architecture, practical learning, solid grounding.",
+    "reversed": "Failing cloud certification exam, lack of practical hands-on lab practice."
+  },
+  "knight-of-pentacles": {
+    "name": "FinOps Engineer",
+    "upright": "Methodical cost optimization, reliable server maintenance, steady FinOps discipline.",
+    "reversed": "Overly slow infrastructure rollout, obsessing over pennies while ignoring velocity."
+  },
+  "queen-of-pentacles": {
+    "name": "Infrastructure Director",
+    "upright": "Nurturing cloud ecosystem, pragmatic resource management, workplace comfort.",
+    "reversed": "Neglecting hardware health, poor physical data center environmental care."
+  },
+  "king-of-pentacles": {
+    "name": "Chief Cloud Architect",
+    "upright": "Mastery over cloud financial assets, enterprise infrastructure leadership, wealth.",
+    "reversed": "Greed for massive unneeded server specs, extravagant cloud spend without value."
+  }
+}
