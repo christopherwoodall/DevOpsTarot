@@ -132,6 +132,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+  white-space: nowrap;
   box-shadow: 0 4px 0 rgba(0, 255, 102, 0.35), 0 0 12px rgba(0, 255, 102, 0.15);
   animation: btnPulse 2.5s ease-in-out infinite;
 }
@@ -474,8 +475,30 @@ header {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding-top: 3.5rem;
+  }
+  .mode-toggle-bar {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .cyber-btn-sm {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .cyber-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
   .modal-content {
     grid-template-columns: 1fr;
+  }
+  .modal-close {
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 
@@ -483,15 +506,17 @@ header {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: transparent;
-  border: 1px solid var(--neon-magenta);
+  background: rgba(11, 13, 18, 0.9);
+  border: 2px solid var(--neon-magenta);
   color: var(--neon-magenta);
   font-family: var(--font-code);
-  font-size: 1.2rem;
-  width: 36px;
-  height: 36px;
-  border-radius: 4px;
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
   cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 0, 127, 0.4);
+  z-index: 10;
 }
 
 .modal-card-img {
