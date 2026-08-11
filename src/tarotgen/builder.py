@@ -205,6 +205,10 @@ def build_html_site():
 
     # Copy static templates to docs/
     pkg_dir = Path(__file__).parent
+    _cfg = load_site_config()
+    cname = _cfg.get("site", {}).get("cname", "devopstarot.com")
+    og_url = f"https://{cname}"
+    og_image = f"https://{cname}/social-preview.png"
 
     for src_name, dst_name in [
         ("style.css", "style.css"),
@@ -214,7 +218,15 @@ def build_html_site():
         src_path = pkg_dir / src_name
         dst_path = DOCS_DIR / dst_name
         if src_path.exists():
-            dst_path.write_text(src_path.read_text(encoding="utf-8"), encoding="utf-8")
+            text = src_path.read_text(encoding="utf-8")
+            if src_name == "index.html":
+                text = text.replace('content="social-preview.png"', f'content="{og_image}"')
+                if 'property="og:url"' not in text:
+                    text = text.replace(
+                        '<meta property="og:type" content="website" />',
+                        f'<meta property="og:url" content="{og_url}" />\n  <meta property="og:type" content="website" />'
+                    )
+            dst_path.write_text(text, encoding="utf-8")
             print(f"Copied {src_name} -> {dst_path}")
         else:
             print(f"[WARNING] Template not found: {src_path}")
