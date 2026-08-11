@@ -106,7 +106,12 @@ GPT-Image-2 (medium quality, 1024×1792) costs roughly **$0.05 per image**.
 
 ## Customization
 
-- **Switch art styles**: Edit the `CARD_FRONT_TEMPLATE` and `CARD_BACK_PROMPT` strings in `src/tarotgen/generator.py`.
+All prompts, generation settings, and site metadata live in **`site.yml`** at the project root. Edit this file to customize without touching Python code:
+
+- **Switch art styles**: Edit `prompts.card_front` and `prompts.card_back` in `site.yml`.
+- **Change generation params**: Edit `generation.model`, `generation.size`, `generation.quality`, etc. in `site.yml`.
+- **Change social preview text**: Edit `social_preview.headline`, `social_preview.subheadline`, etc. in `site.yml`.
+- **Change domain**: Edit `site.cname` in `site.yml`.
 - **Enhance meanings**: Run `tarotgen-generate` to re-generate deeper DevOps terminology using GPT-4o-mini.
 - **Enhance scenes**: Run `tarotgen-generate` to enrich card descriptions with more specific technical imagery.
 - **Toggle datasets**: Edit `meanings.json` and `meanings_original.json`, then rebuild the site.

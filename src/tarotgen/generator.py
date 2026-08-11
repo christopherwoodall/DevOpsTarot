@@ -34,18 +34,24 @@ from tarotgen.cards import (
     load_cards,
     load_meanings,
     id_to_tarot_name,
+    load_site_config,
 )
 
-COST_PER_IMAGE = 0.05  # Conservative estimate for gpt-image-2 medium 1024x1792
-DALL_E_SIZE = "1024x1792"
-DALL_E_MODEL = "gpt-image-2"
-DALL_E_QUALITY = "medium"
-MAX_WORKERS = 4
+_cfg = load_site_config()
+_gen = _cfg.get("generation", {})
+_prompts = _cfg.get("prompts", {})
+
+COST_PER_IMAGE = _gen.get("cost_per_image", 0.05)
+DALL_E_SIZE = _gen.get("size", "1024x1792")
+DALL_E_MODEL = _gen.get("model", "gpt-image-2")
+DALL_E_QUALITY = _gen.get("quality", "medium")
+MAX_WORKERS = _gen.get("max_workers", 4)
 
 # Transparency threshold: pixels with max(R,G,B) below this become fully transparent
-TRANSPARENCY_THRESHOLD = 18
+TRANSPARENCY_THRESHOLD = _gen.get("transparency_threshold", 18)
 
-CARD_FRONT_TEMPLATE = (
+CARD_FRONT_TEMPLATE = _prompts.get(
+    "card_front",
     "DevOps Corporate Comic Tarot Card. {scene}. "
     "Bold line art comic style, thick expressive outlines, bright flat cel-shaded colors, "
     "playful exaggerated cartoon characters, office humor energy, dynamic poses, "
@@ -59,7 +65,8 @@ CARD_FRONT_TEMPLATE = (
     "Both text labels must be centered, flat 2D, integrated into the card frame, no text outside the card."
 )
 
-CARD_BACK_PROMPT = (
+CARD_BACK_PROMPT = _prompts.get(
+    "card_back",
     "DevOps Corporate Comic tarot card back design. "
     "Bold line art comic style, thick expressive outlines, bright flat cel-shaded colors, "
     "A deep multi-layered sacred geometry mandala floating in a dark void. "

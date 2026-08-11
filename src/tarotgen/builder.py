@@ -4,7 +4,7 @@ import yaml
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-from tarotgen.cards import DOCS_DIR, CARDS_YML, MEANINGS_JSON, MEANINGS_ORIGINAL_JSON
+from tarotgen.cards import DOCS_DIR, CARDS_YML, MEANINGS_JSON, MEANINGS_ORIGINAL_JSON, load_site_config
 
 
 def ensure_docs_dir():
@@ -94,17 +94,27 @@ def generate_social_preview():
         img.paste(hero, (hx, hy), hero)
         draw.rectangle([hx - 3, hy - 3, hx + hero.width + 3, hy + hero.height + 3], outline=gold, width=4)
 
+    # Load social preview config
+    _cfg = load_site_config()
+    _sp = _cfg.get("social_preview", {})
+    headline = _sp.get("headline", "DEVOPS TAROT")
+    subheadline = _sp.get("subheadline", "YOUR PIPELINE IS DOOMED")
+    cta = _sp.get("cta", "DRAW A CARD.")
+    tagline = _sp.get("tagline", "78 Oracle Cards for SREs & Devs")
+    _site = _cfg.get("site", {})
+    bottom_badge = _sp.get("bottom_badge", f"⚡ {_site.get('cname', 'devopstarot.com')} ⚡")
+
     # Right side: Fun sales copy
     tx = 520
     # Headline with drop shadow
-    draw.text((tx + 2, 122), "DEVOPS TAROT", font=font_title, fill=(0, 0, 0, 200))
-    draw.text((tx, 120), "DEVOPS TAROT", font=font_title, fill=gold)
-    draw.text((tx, 200), "YOUR PIPELINE IS DOOMED", font=font_sub, fill=cyan)
-    draw.text((tx, 245), "DRAW A CARD.", font=font_sub, fill=green)
-    draw.text((tx, 310), "78 Oracle Cards for SREs & Devs", font=font_body, fill=(200, 220, 245))
+    draw.text((tx + 2, 122), headline, font=font_title, fill=(0, 0, 0, 200))
+    draw.text((tx, 120), headline, font=font_title, fill=gold)
+    draw.text((tx, 200), subheadline, font=font_sub, fill=cyan)
+    draw.text((tx, 245), cta, font=font_sub, fill=green)
+    draw.text((tx, 310), tagline, font=font_body, fill=(200, 220, 245))
 
     # Bottom badge bar
-    badge_text = "⚡ devopstarot.com ⚡"
+    badge_text = bottom_badge
     badge_font = font_body
     bbox = badge_font.getbbox(badge_text)
     bw = bbox[2] - bbox[0]
@@ -118,10 +128,12 @@ def generate_social_preview():
 
 
 def generate_cname_and_readme():
+    _cfg = load_site_config()
+    cname = _cfg.get("site", {}).get("cname", "devopstarot.com")
     cname_path = os.path.join(DOCS_DIR, "CNAME")
     if not os.path.exists(cname_path):
         with open(cname_path, "w", encoding="utf-8") as f:
-            f.write("devopstarot.com\n")
+            f.write(f"{cname}\n")
     print(f"Verified CNAME -> {cname_path}")
 
     readme_path = os.path.join(DOCS_DIR, "README.md")

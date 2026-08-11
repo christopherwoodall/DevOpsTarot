@@ -10,6 +10,14 @@ DOCS_CARDS_DIR = DOCS_DIR / "cards"
 CARDS_YML = Path("cards.yml")
 MEANINGS_JSON = Path("meanings.json")
 MEANINGS_ORIGINAL_JSON = Path("meanings_original.json")
+SITE_YML = Path("site.yml")
+
+
+def load_site_config():
+    if not SITE_YML.exists():
+        return {}
+    with open(SITE_YML, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
 
 
 def load_cards():
