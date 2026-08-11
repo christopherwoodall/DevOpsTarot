@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Tarot // Query The System</title>
+  <meta property="og:title" content="DevOps Tarot" />
+  <meta property="og:description" content="Query the system. 78 cards of operational wisdom." />
+  <meta property="og:image" content="social-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="social-preview.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="mode-toggle-bar">
+    <button class="cyber-btn-sm" id="modeBtn" onclick="toggleMode()">📜 ORIGINAL MODE</button>
+  </div>
+  <div id="app">
+    <header>
+      <div class="logo-badge">SYSTEM VERSION 2.0 // DEVOPS ORACLE</div>
+      <h1 class="app-title">DEVOPS TAROT</h1>
+      <p class="app-subtitle">Query the system. 78 cards of operational wisdom.</p>
+    </header>
+    <main id="mainContent" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></main>
+  </div>
+
+  <div class="modal-overlay" id="cardModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div>
+        <img src="" id="modalImg" class="modal-card-img" alt="Card Artwork" />
+      </div>
+      <div>
+        <div class="logo-badge" id="modalBadge">UPRIGHT</div>
+        <h2 class="card-name-text" id="modalTitle" style="margin-bottom: 1rem;">Card Name</h2>
+        <div class="meaning-block">
+          <div class="meaning-label">Upright Meaning:</div>
+          <div class="meaning-text" id="modalUpright">...</div>
+        </div>
+        <div class="meaning-block" style="margin-top: 1.25rem;">
+          <div class="meaning-label" style="color: var(--neon-magenta);">Reversed Meaning:</div>
+          <div class="meaning-text" id="modalReversed">...</div>
+        </div>
+        <div class="meaning-block" style="margin-top: 1.25rem;">
+          <div class="meaning-label" style="color: var(--neon-gold);">DevOps Visual Scene:</div>
+          <div class="meaning-text" id="modalScene" style="font-size: 0.95rem; font-style: italic;">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let TAROT_CARDS_DEVOPS = [];
+    let TAROT_CARDS_ORIGINAL = [];
+    let TAROT_CARDS = [];
+    let currentMode = 'original';
+    let dataLoaded = false;
+
+    async function loadCardsData() {
+      try {
+        const res = await fetch('cards-data.json');
+        if (!res.ok) throw new Error('Failed to load cards-data.json');
+        const data = await res.json();
+        TAROT_CARDS_DEVOPS = data.devops || [];
+        TAROT_CARDS_ORIGINAL = data.original || [];
+        TAROT_CARDS = TAROT_CARDS_ORIGINAL;
+        dataLoaded = true;
+        renderLanding();
+      } catch (e) {
+        console.error('Failed to load card data:', e);
+        document.getElementById('mainContent').innerHTML = '<div style="text-align:center;padding:2rem;color:#ff007f;font-family:Fira Code,monospace">[ ERROR: Unable to load cards-data.json ]</div>';
+      }
+    }
+
+    function toggleMode() {
+      currentMode = currentMode === 'devops' ? 'original' : 'devops';
+      TAROT_CARDS = currentMode === 'devops' ? TAROT_CARDS_DEVOPS : TAROT_CARDS_ORIGINAL;
+      document.getElementById('modeBtn').innerText = currentMode === 'devops' ? '⚡ OPS MODE' : '📜 ORIGINAL MODE';
+      if (currentSpread.length > 0) {
+        const main = document.getElementById('mainContent');
+        if (main.querySelector('.cards-flex')) {
+          if (currentSpread.length === 1) {
+            drawSingleSpread();
+          } else if (currentSpread.length === 3) {
+            drawThreeSpread();
+          }
+        }
+      }
+    }
+
+    let currentSpread = [];
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initParticleBackground();
+      loadCardsData();
+    });
+
+    function renderLanding() {
+      const main = document.getElementById('mainContent');
+      main.innerHTML = `
+        <div class="landing-screen">
+          <div class="deck-stats">
+            <div class="stat-card"><div class="num">78</div><div class="label">CARDS IN DECK</div></div>
+            <div class="stat-card"><div class="num">22</div><div class="label">MAJOR ARCANA</div></div>
+            <div class="stat-card"><div class="num">56</div><div class="label">MINOR ARCANA</div></div>
+          </div>
+          <div class="button-group">
+            <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ONE CARD ]</button>
+            <button class="cyber-btn cyan" onclick="drawThreeSpread()">[ DRAW 3-CARD SPREAD ]</button>
+          </div>
+          <div class="cards-link-section">
+            <a href="cards.html" class="cyber-btn gold">[ BROWSE ALL 78 CARDS ]</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function getRandomCards(count) {
+      const shuffled = [...TAROT_CARDS].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count).map(card => ({
+        card: card,
+        isReversed: Math.floor(Math.random() * 100) % 2 === 1
+      }));
+    }
+
+    function drawSingleSpread() {
+      currentSpread = getRandomCards(1);
+      const item = currentSpread[0];
+      const main = document.getElementById('mainContent');
+      main.innerHTML = `
+        <div class="spread-container">
+          <div class="cards-flex">
+            <div class="card-wrapper" id="singleCard" onclick="flipSingleCard()">
+              <div class="card-inner">
+                <div class="card-face back"><img src="cards/card-back.png" alt="Card Back" /></div>
+                <div class="card-face front ${item.isReversed ? 'is-reversed' : ''}">
+                  <img src="${item.card.image}" alt="${item.card.name}" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details-panel ${item.isReversed ? 'reversed-style' : ''}" id="singleDetails" style="display: none;">
+            <div class="card-title-row">
+              <span class="card-name-text">${item.card.name}</span>
+              <span class="orientation-badge ${item.isReversed ? 'reversed' : 'upright'}">
+                ${item.isReversed ? '[ REVERSED ]' : '[ UPRIGHT ]'}
+              </span>
+            </div>
+            <div class="meaning-block">
+              <div class="meaning-label">SYSTEM INTERPRETATION:</div>
+              <div class="meaning-text">${item.isReversed ? item.card.reversed : item.card.upright}</div>
+            </div>
+            <div class="meaning-block" style="margin-top: 1rem;">
+              <div class="meaning-label" style="color: var(--neon-cyan);">ALT ASPECT (${item.isReversed ? 'Upright' : 'Reversed'}):</div>
+              <div class="meaning-text" style="color: var(--text-muted);">${item.isReversed ? item.card.upright : item.card.reversed}</div>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="cyber-btn" onclick="drawSingleSpread()">[ DRAW ANOTHER ]</button>
+            <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
+          </div>
+        </div>
+      `;
+      setTimeout(() => { flipSingleCard(); }, 500);
+    }
+
+    function flipSingleCard() {
+      const el = document.getElementById('singleCard');
+      const details = document.getElementById('singleDetails');
+      if (el && !el.classList.contains('flipped')) {
+        el.classList.add('flipped');
+        if (details) {
+          setTimeout(() => details.style.display = 'block', 400);
+        }
+      }
+    }
+
+    function drawThreeSpread() {
+      const drawn = getRandomCards(3);
+      const positions = [
+        { label: "PAST (Legacy)", color: "var(--neon-cyan)" },
+        { label: "PRESENT (Production)", color: "var(--neon-green)" },
+        { label: "FUTURE (Deployment)", color: "var(--neon-gold)" }
+      ];
+      currentSpread = drawn.map((d, i) => ({ ...d, position: positions[i] }));
+      const main = document.getElementById('mainContent');
+      main.innerHTML = `
+        <div class="spread-container">
+          <div class="cards-flex">
+            ${currentSpread.map((item, idx) => `
+              <div class="card-wrapper" id="spreadCard_${idx}" onclick="handleSpreadCardClick(${idx})">
+                <div class="pos-label" style="border-color: ${item.position.color}; color: ${item.position.color};">${item.position.label}</div>
+                <div class="card-inner">
+                  <div class="card-face back"><img src="cards/card-back.png" alt="Card Back" /></div>
+                  <div class="card-face front ${item.isReversed ? 'is-reversed' : ''}">
+                    <img src="${item.card.image}" alt="${item.card.name}" />
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <div id="threeSpreadSummary" style="width: 100%; max-width: 900px; margin-top: 1rem;"></div>
+          <div class="button-group">
+            <button class="cyber-btn" onclick="drawThreeSpread()">[ DRAW NEW SPREAD ]</button>
+            <button class="cyber-btn cyan" onclick="renderLanding()">[ START OVER ]</button>
+          </div>
+        </div>
+      `;
+      currentSpread.forEach((item, idx) => {
+        setTimeout(() => {
+          const cardEl = document.getElementById(`spreadCard_${idx}`);
+          if (cardEl) { cardEl.classList.add('flipped'); }
+          if (idx === 2) { renderThreeSpreadSummary(); }
+        }, 600 + idx * 500);
+      });
+    }
+
+    function handleSpreadCardClick(idx) {
+      const item = currentSpread[idx];
+      if (item) { openModal(item.card, item.isReversed); }
+    }
+
+    function renderThreeSpreadSummary() {
+      const summaryEl = document.getElementById('threeSpreadSummary');
+      if (!summaryEl) return;
+      summaryEl.innerHTML = `
+        <div class="details-panel" style="border-left-color: var(--neon-cyan);">
+          <h3 style="font-family: var(--font-code); color: var(--neon-cyan); margin-bottom: 1rem;">⬡ SPREAD DIAGNOSTICS & SYSTEM ANALYSIS ⬡</h3>
+          <div style="display: grid; gap: 1rem;">
+            ${currentSpread.map(item => `
+              <div style="background: rgba(11, 13, 18, 0.6); padding: 1rem; border-radius: 6px; border-left: 3px solid ${item.position.color};">
+                <div style="font-family: var(--font-code); font-weight: 700; color: ${item.position.color}; margin-bottom: 0.25rem;">
+                  ${item.position.label}: ${item.card.name} ${item.isReversed ? '<span style="color: var(--neon-magenta)">[REVERSED]</span>' : '<span style="color: var(--neon-green)">[UPRIGHT]</span>'}
+                </div>
+                <div style="font-size: 0.95rem; line-height: 1.5;">${item.isReversed ? item.card.reversed : item.card.upright}</div>
+                <div style="font-size: 0.8rem; color: var(--neon-cyan); margin-top: 0.35rem; cursor: pointer;" onclick="openModalById('${item.card.id}', ${item.isReversed})">
+                  ❯ Click card to view full high-res schematic
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function openModal(card, isReversed = false) {
+      const img = document.getElementById('modalImg');
+      img.src = card.image;
+      img.className = 'modal-card-img' + (isReversed ? ' reversed' : '');
+      document.getElementById('modalTitle').innerText = card.name;
+      document.getElementById('modalBadge').innerText = isReversed ? '[ REVERSED ]' : '[ UPRIGHT ]';
+      document.getElementById('modalBadge').className = 'logo-badge ' + (isReversed ? 'reversed-style' : '');
+      document.getElementById('modalUpright').innerText = card.upright;
+      document.getElementById('modalReversed').innerText = card.reversed;
+      document.getElementById('modalScene').innerText = card.scene;
+      document.getElementById('cardModal').classList.add('active');
+    }
+
+    function openModalById(cardId, isReversed = false) {
+      const card = TAROT_CARDS.find(c => c.id === cardId);
+      if (card) openModal(card, isReversed);
+    }
+
+    function closeModal(e) {
+      document.getElementById('cardModal').classList.remove('active');
+    }
+
+    function initParticleBackground() {
+      const canvas = document.getElementById('particleCanvas');
+      const ctx = canvas.getContext('2d');
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+      const symbols = ['0', '1', '{', '}', ';', '/>', 'git', 'k8s', 'sudo', 'docker', '200', '404', '503', 'gRPC'];
+      const particles = [];
+      const numParticles = 45;
+      for (let i = 0; i < numParticles; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          text: symbols[Math.floor(Math.random() * symbols.length)],
+          speedY: 0.3 + Math.random() * 0.8,
+          speedX: (Math.random() - 0.5) * 0.4,
+          size: 12 + Math.random() * 14,
+          opacity: 0.15 + Math.random() * 0.45,
+          color: Math.random() < 0.5 ? '#00ff66' : '#00e5ff'
+        });
+      }
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.font = '14px "Fira Code", monospace';
+        particles.forEach(p => {
+          p.y -= p.speedY;
+          p.x += p.speedX;
+          if (p.y < -20) p.y = h + 20;
+          if (p.x < -20) p.x = w + 20;
+          if (p.x > w + 20) p.x = -20;
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.opacity;
+          ctx.fillText(p.text, p.x, p.y);
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>
