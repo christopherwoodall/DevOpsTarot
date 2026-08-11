@@ -1,18 +1,14 @@
+"""Generate social preview image for OpenGraph / Twitter Cards."""
+
 import os
-import json
-import yaml
+import math
 from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
 
-from tarotgen.cards import DOCS_DIR, CARDS_YML, MEANINGS_JSON, MEANINGS_ORIGINAL_JSON, load_site_config
-from tarotgen.preview import generate_social_preview
-
-
-def ensure_docs_dir():
-    os.makedirs(DOCS_DIR, exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "cards"), exist_ok=True)
+from tarotgen.cards import DOCS_DIR, load_site_config
 
 
-def generate_cname_and_readme():
+def generate_social_preview():
     """Generates 1200x630 social-preview.png for OpenGraph / Twitter Cards."""
     w, h = 1200, 630
     img = Image.new("RGBA", (w, h), (11, 13, 18, 255))
@@ -35,7 +31,6 @@ def generate_cname_and_readme():
     # Radial starburst rays behind title
     center_x, center_y = 350, 200
     for angle in range(0, 360, 15):
-        import math
         rad = math.radians(angle)
         x2 = int(center_x + math.cos(rad) * 400)
         y2 = int(center_y + math.sin(rad) * 250)
@@ -127,107 +122,11 @@ def generate_cname_and_readme():
     print(f"Generated social preview image -> {out_path}")
 
 
-def generate_cname_and_readme():
-    _cfg = load_site_config()
-    cname = _cfg.get("site", {}).get("cname", "devopstarot.com")
-    cname_path = os.path.join(DOCS_DIR, "CNAME")
-    if not os.path.exists(cname_path):
-        with open(cname_path, "w", encoding="utf-8") as f:
-            f.write(f"{cname}\n")
-    print(f"Verified CNAME -> {cname_path}")
-
-    readme_path = os.path.join(DOCS_DIR, "README.md")
-    readme_content = """# DevOps Tarot - GitHub Pages Site
-
-This directory contains the production-ready static site deployment for **DevOps Tarot**.
-
-## Features
-- **78 Custom DevOps Tarot Cards**: Major & Minor Arcana (Code, Logs, Bugs, Servers).
-- **Single Card Draw & 3-Card Spread**: Past (Legacy), Present (Production), Future (Deployment).
-- **Upright & Reversed Interpretations**: Highlighting both optimal practices and technical debt/outages.
-- **Original / DevOps Toggle**: Switch between classic Rider-Waite tarot meanings and enhanced DevOps/SRE interpretations.
-- **Corporate Comic Style**: Bold line art, thick expressive outlines, bright cel-shaded colors, and playful cartoon energy.
-- **Card Browser**: Browse all 78 cards at `cards.html`.
-
-## Build Instructions
-1. Generate card graphics (GPT-Image-2):
-   ```bash
-   tarotgen-generate
-   ```
-2. Build static HTML site:
-   ```bash
-   tarotgen-build
-   ```
-
-Deploy to GitHub Pages by configuring repository settings to serve from the `/docs` folder!
-"""
-    with open(readme_path, "w", encoding="utf-8") as f:
-        f.write(readme_content)
-    print(f"Generated README -> {readme_path}")
-
-
-def build_html_site():
-    with open(CARDS_YML, "r", encoding="utf-8") as f:
-        cards_yml = yaml.safe_load(f)
-    with open(MEANINGS_JSON, "r", encoding="utf-8") as f:
-        meanings = json.load(f)
-    with open(MEANINGS_ORIGINAL_JSON, "r", encoding="utf-8") as f:
-        meanings_original = json.load(f)
-
-    def build_cards_list(meanings_dict):
-        cards_list = []
-        for c in cards_yml["cards"]:
-            cid = c["id"]
-            info = meanings_dict.get(cid, {})
-            img_url = f"cards/{cid}.png"
-            cards_list.append({
-                "id": cid,
-                "slug": cid,
-                "name": info.get("name", cid.replace("-", " ").title()),
-                "scene": c.get("scene", ""),
-                "upright": info.get("upright", ""),
-                "reversed": info.get("reversed", ""),
-                "image": img_url
-            })
-        return cards_list
-
-    cards_list_devops = build_cards_list(meanings)
-    cards_list_original = build_cards_list(meanings_original)
-
-    cards_data = {
-        "devops": cards_list_devops,
-        "original": cards_list_original,
-    }
-    cards_data_path = os.path.join(DOCS_DIR, "cards-data.json")
-    with open(cards_data_path, "w", encoding="utf-8") as f:
-        json.dump(cards_data, f, indent=2, ensure_ascii=False)
-    print(f"Generated cards data -> {cards_data_path}")
-
-    # Copy static templates to docs/
-    pkg_dir = Path(__file__).parent
-
-    for src_name, dst_name in [
-        ("style.css", "style.css"),
-        ("index.html", "index.html"),
-        ("cards.html", "cards.html"),
-    ]:
-        src_path = pkg_dir / src_name
-        dst_path = DOCS_DIR / dst_name
-        if src_path.exists():
-            dst_path.write_text(src_path.read_text(encoding="utf-8"), encoding="utf-8")
-            print(f"Copied {src_name} -> {dst_path}")
-        else:
-            print(f"[WARNING] Template not found: {src_path}")
-
-    print("Static site build finished successfully!")
-
-
 def main():
-    ensure_docs_dir()
+    os.makedirs(DOCS_DIR, exist_ok=True)
+    os.makedirs(os.path.join(DOCS_DIR, "cards"), exist_ok=True)
     generate_social_preview()
-    generate_cname_and_readme()
-    build_html_site()
-    print("All done.")
+    print("Done.")
 
 
 if __name__ == "__main__":

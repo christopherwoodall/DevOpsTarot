@@ -19,6 +19,8 @@ tarotgen-generate = "tarotgen.generator:main"
 tarotgen-build = "tarotgen.builder:main"
 tarotgen-serve = "tarotgen.server:main"
 tarotgen-samples = "tarotgen.samples:main"
+tarotgen-preview = "tarotgen.preview:main"
+tarotgen-favicon = "tarotgen.favicon:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

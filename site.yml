@@ -46,3 +46,11 @@ social_preview:
 
 site:
   cname: "devopstarot.com"
+  description: "Query the system. 78 cards of operational wisdom."
+
+favicon:
+  text: "🎴"
+  size: 64
+  background: "#0B0D12"
+  border_color: "#00FFD7"
+  text_color: "#FFD700"
