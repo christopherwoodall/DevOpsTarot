@@ -1,0 +1,48 @@
+# DevOps Tarot site configuration
+# Edit this file to customize prompts, generation settings, and site metadata
+# without touching Python code.
+
+generation:
+  model: "gpt-image-2"
+  size: "1024x1792"
+  quality: "medium"
+  max_workers: 4
+  cost_per_image: 0.05
+  transparency_threshold: 18
+
+prompts:
+  card_front: >
+    DevOps Corporate Comic Tarot Card. {scene}.
+    Bold line art comic style, thick expressive outlines, bright flat cel-shaded colors,
+    playful exaggerated cartoon characters, office humor energy, dynamic poses,
+    clean cartoon shading, friendly techie vibe.
+    Standard tarot card aspect ratio (1:1.75 vertical).
+    Flat 2D straight-on centered view, zero perspective angle, zero drop shadow.
+    The entire card must be isolated on a solid black #000000 background for easy transparent PNG background removal.
+    The card frame itself must have rounded corners, a thick gold comic border with decorative corner accents, and uniform padding on all sides.
+    At the top center, add the classic tarot name '{tarot_name}' in bold uppercase comic lettering with a gold outline.
+    At the bottom center, add the DevOps title '{devops_name}' in bold uppercase comic lettering with a cyan outline.
+    Both text labels must be centered, flat 2D, integrated into the card frame, no text outside the card.
+
+  card_back: >
+    DevOps Corporate Comic tarot card back design.
+    Bold line art comic style, thick expressive outlines, bright flat cel-shaded colors,
+    A deep multi-layered sacred geometry mandala floating in a dark void.
+    At the center, a glowing fiber-optic infinity loop intertwined with an encrypted holographic server core pulsing with cyan light.
+    Radiating outward: concentric rings of fine circuit board traces, occult runes made of binary code, and hexagonal data-cell lattices.
+    Subtle holographic purple and deep blue accent shadows behind the main gold and cyan linework.
+    Scattered micro-constellations of tiny glowing nodes connected by whisper-thin data streams.
+    The entire composition feels alive, breathing with subtle energy pulses.
+    Thick outer rounded-corner frame with a thick gold comic border and decorative corner accents.
+    Standard tarot card aspect ratio (1:1.75 vertical).
+    Isolated on a solid black #000000 background for transparent keying, flat 2D straight-on front view, no drop shadow, no text, no words, no letters.
+
+social_preview:
+  headline: "DEVOPS TAROT"
+  subheadline: "YOUR PIPELINE IS DOOMED"
+  cta: "DRAW A CARD."
+  tagline: "78 Oracle Cards for SREs & Devs"
+  bottom_badge: "⚡ devopstarot.com ⚡"
+
+site:
+  cname: "devopstarot.com"
